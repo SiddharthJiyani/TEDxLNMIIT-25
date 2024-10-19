@@ -4,7 +4,10 @@ import { faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 const Navbar = () => {
   return (
-    <nav className="bg-black p-2 fixed w-10/12 mx-auto mt-4 left-0 right-0 shadow-lg z-50 rounded-full">
+    <nav
+      style={{ backgroundColor: "rgb(20, 20, 20)" }}
+      className="p-3 fixed w-8/12 mx-auto mt-3 left-0 right-0 shadow-lg z-50 rounded-full"
+    >
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-white text-xl font-bold flex items-center">
           <Link to="/" className="text-xl text-white">
