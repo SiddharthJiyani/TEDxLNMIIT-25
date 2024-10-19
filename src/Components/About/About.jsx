@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <section className="bg-black text-white py-16 px-8">
+    <section className="bg-black text-white py-10 px-8">
       <div className="container mx-auto">
         {/* About TEDx Heading */}
         <h1 className="text-5xl font-bold text-gray-200 mb-12 text-center">
@@ -8,7 +8,7 @@ const About = () => {
         </h1>
 
         {/* First Card */}
-        <div className="bg-black p-6 rounded-lg mb-8 shadow-lg border border-gray-500 max-w-3xl  mx-auto">
+        <div className="bg-black p-6 rounded-lg mb-8 shadow-lg border border-gray-500 max-w-4xl  mx-auto">
           <div className="flex items-center mb-4">
             <div className="w-8 h-8 bg-white rounded-full mr-4 flex items-center justify-center">
               <span className="text-black font-bold text-lg">⦿</span>
@@ -24,7 +24,7 @@ const About = () => {
         </div>
 
         {/* Second Card */}
-        <div className="bg-black p-6 rounded-lg shadow-lg border border-gray-500 max-w-3xl mx-auto">
+        <div className="bg-black p-6 rounded-lg shadow-lg border border-gray-500 max-w-4xl mx-auto">
           <div className="flex items-center mb-4">
             <div className="w-8 h-8 bg-white rounded-full mr-4 flex items-center justify-center">
               <span className="text-black font-bold text-lg">⦿</span>

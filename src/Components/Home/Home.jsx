@@ -57,7 +57,7 @@ const Home = () => {
       {/* Previous Speakers Section */}
       <section
         id="previous-speakers"
-        className="prev-speakers-section py-20 h-screen w-full flex flex-col justify-center items-center bg-black text-red-500"
+        className="prev-speakers-section py-20  w-full flex flex-col justify-center items-center bg-black text-red-500"
       >
         <PrevSpeakers />
       </section>
@@ -65,7 +65,7 @@ const Home = () => {
       {/* FAQ Section */}
       <section
         id="faq"
-        className="faq-section py-20 h-screen w-full flex flex-col justify-center items-center bg-black text-red-500"
+        className="faq-section py-20  w-full flex flex-col justify-center items-center bg-black text-red-500"
       >
         <Faq />
       </section>
