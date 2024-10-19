@@ -4,7 +4,7 @@ import { faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 const Navbar = () => {
   return (
-    <nav className="bg-[rgba(20,20,20,0.5)] backdrop-blur-md border border-white/20 p-2 sm:p-3 md:p-4 lg:p-4 fixed left-0 right-0 mx-auto mt-4 max-w-[1000px] min-h-[48px] flex items-center justify-between gap-4 rounded-[60px] shadow-lg z-50">
+    <nav className="bg-[rgba(20,20,20,0.5)] backdrop-blur-md border border-white/20 p-2 sm:p-3 md:p-4 lg:p-2 fixed left-0 right-0 mx-auto mt-4 max-w-[1100px] min-h-[48px] flex items-center justify-between gap-4 rounded-[60px] shadow-lg z-50">
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-white text-xl font-bold flex items-center">
           <Link to="/" className="text-xl text-white">
