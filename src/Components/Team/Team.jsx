@@ -7,7 +7,7 @@ const Team = () => {
       <h1 className="text-4xl font-bold mb-4">The Team</h1>
       <p className="text-lg mb-10 italic text-gray-400">
         A Canvas of Creativity, Innovation, and Excellence. Checkout the team
-        behind TEDxMEC.
+        behind TEDxLnmiit.
       </p>
 
       {/* Member Cards */}
