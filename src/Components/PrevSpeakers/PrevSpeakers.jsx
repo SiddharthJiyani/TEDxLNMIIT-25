@@ -3,7 +3,7 @@ import speaker2 from "../../assets/speaker2.png";
 import speaker3 from "../../assets/speaker3.png";
 import speaker4 from "../../assets/speaker4.webp";
 import speaker5 from "../../assets/speaker5.webp";
-import speaker6 from "../../assets/speaker6.webp";
+import speaker6 from "../../assets/speaker6.jpg";
 import speaker7 from "../../assets/speaker7.webp";
 import speaker8 from "../../assets/speaker8.jpg";
 import speaker9 from "../../assets/speaker9.webp";

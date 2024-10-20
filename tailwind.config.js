@@ -6,7 +6,7 @@ export default {
     extend: {
       colors: {
         customDark: "#141414", // Custom dark background color
-        bordorColor: "#2b2b2b", // Border color
+        bordorColor: "#3b3b3b", // Border color
       },
       fontFamily: {
         generalSans: [

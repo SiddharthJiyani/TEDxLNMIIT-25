@@ -30,7 +30,7 @@ const Home = () => {
 
 
       <div className="bg-black flex justify-center w-full ">
-        <div className="w-5/6 border-[1px] border-[#2B2B2B] rounded-[18px] flex box-border justify-center items-center">
+        <div className="w-5/6 border-[1px] border-bordorColor rounded-[18px] flex box-border justify-center items-center">
           <div className="bg-black flex justify-center items-center h-80">
             <img
               src="https://www.tedxmec.in/assets/Cube%20Light.jpg"
