@@ -1,5 +1,6 @@
 // import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
 import Navbar from "./Components/Navbar/Navbar.jsx";
 import Home from "./Components/Home/Home.jsx";
 import About from "./Components/About/About.jsx";
@@ -12,7 +13,7 @@ import Faq from "./Components/FAQ/Faq.jsx";
 export default function App() {
   return (
     <Router>
-      <div className="w-full h-screen overflow-y-auto">
+      <div className="w-full h-screen overflow-y-auto font-generalSans ">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
