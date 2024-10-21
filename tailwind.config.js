@@ -10,14 +10,18 @@ export default {
       },
       fontFamily: {
         generalSans: [
-          'GeneralSans-Regular', 
-          'GeneralSans-Extralight', 
-          'GeneralSans-Light', 
-          'GeneralSans-Medium', 
-          'GeneralSans-Semibold', 
-          'GeneralSans-Bold', 
-          'sans-serif'
+          "GeneralSans-Regular",
+          "GeneralSans-Extralight",
+          "GeneralSans-Light",
+          "GeneralSans-Medium",
+          "GeneralSans-Semibold",
+          "GeneralSans-Bold",
+          "sans-serif",
         ],
+      },
+      screens: {
+        xs: "480px",
+        xxs: "360px",
       },
     },
   },

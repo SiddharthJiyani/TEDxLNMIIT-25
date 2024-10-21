@@ -11,7 +11,8 @@ const Home = () => {
       {/* Hero Section */}
       <section
         id="hero"
-        className="hero-section py-20 h-screen w-full flex flex-col justify-center items-center bg-black text-red-500">
+        className="hero-section py-20 h-screen w-full flex flex-col justify-center items-center bg-black text-red-500"
+      >
         <div className="hero-content home-content text-center">
           <div className="hero-title-wrap">
             <h2 className="hero-title text-5xl font-bold mb-4">
@@ -21,37 +22,37 @@ const Home = () => {
             <p className="text-lg">Venue: </p>
 
             <div className="hero-buttons mt-8 space-x-4">
-            <RedButton to="/contact-us">Contact Us</RedButton>
-             <RedButton to="/buy-tickets">Buy Tickets</RedButton>
+              <RedButton to="/contact-us">Contact Us</RedButton>
+              <RedButton to="/buy-tickets">Buy Tickets</RedButton>
             </div>
           </div>
         </div>
       </section>
 
-
-      <div className="bg-black flex justify-center w-full ">
-        <div className="w-5/6 border-[1px] border-bordorColor rounded-[18px] flex box-border justify-center items-center">
-          <div className="bg-black flex justify-center items-center h-80">
+      <div className="bg-black flex justify-center w-full">
+        <div className="w-full max-w-[970px] border border-bordorColor rounded-[18px] flex box-border justify-center items-center flex-col sm:flex-row">
+          <div className="bg-black flex justify-center items-center h-[50vh] md:h-[80vh] w-full">
             <img
               src="https://www.tedxmec.in/assets/Cube%20Light.jpg"
-              className="p-[100px_40px] w-[970px] max-w-full align-middle block box-border border-none"
+              className="p-4 md:p-10 w-full max-w-[970px] align-middle block box-border border-none"
               alt="Cube Light"
             />
           </div>
 
           {/* About theme */}
-          <div className="w-full p-[80px_60px] ">
-            <div className="mb-[40px] z-10 max-w-[500px] text-white text-[18px] leading-[28px] font-medium font-[Generalsans Medium]">
-              Our voyage through existence is an intricate tapestry woven with
-              the threads of philosophical inquiry, personal growth, and shared
-              experiences. At TEDxLNMIIT, we journey on a profound exploration of
-              the multidimensional nature of human existence. Our vision is to
-              build a platform where you can forge connections and build
-              conversations that explore multifaceted humanness. Through fervent
-              words and engagement, we foster a community where philosophical
-              inquiry into the fundamentals of life is celebrated.
+          <div className="w-full p-4 md:p-10">
+            <div className="mb-10 z-10 max-w-[500px] text-white text-base md:text-[18px] leading-[1.5] font-medium font-[Generalsans Medium]">
+              TEDxLNMIIT 2025 Theme: Navigating the New In a world constantly
+              evolving, "Navigating the New" represents the journey of embracing
+              change, exploring uncharted territories, and seeking growth
+              through uncertainty. This theme captures the essence of venturing
+              into unknown landscapes—whether in technology, society, or
+              personal development—and calls for innovative thinking,
+              resilience, and open-mindedness. It invites us to transform
+              challenges into opportunities, turning disruption into progress
+              and helping us forge new pathways in an ever-changing world.
             </div>
-            <RedButton to="/Our Theme">Our Theme</RedButton>
+            <RedButton to="/">Our Theme</RedButton>
           </div>
         </div>
       </div>
@@ -59,28 +60,32 @@ const Home = () => {
       {/* Speakers Section */}
       <section
         id="speakers"
-        className="speakers-section py-20 h-screen w-full flex flex-col justify-center items-center bg-black text-red-500">
+        className="speakers-section py-20 h-screen w-full flex flex-col justify-center items-center bg-black text-red-500"
+      >
         <Speakers />
       </section>
 
       {/* About Section */}
       <section
         id="about"
-        className="about-section py-20 h-screen w-full flex flex-col justify-center items-center bg-black text-red-500">
+        className="about-section py-20 w-full flex flex-col justify-center items-center bg-black text-red-500"
+      >
         <About />
       </section>
 
       {/* Previous Speakers Section */}
       <section
         id="previous-speakers"
-        className="prev-speakers-section py-20  w-full flex flex-col justify-center items-center bg-black text-red-500">
+        className="prev-speakers-section py-20  w-full flex flex-col justify-center items-center bg-black text-red-500"
+      >
         <PrevSpeakers />
       </section>
 
       {/* FAQ Section */}
       <section
         id="faq"
-        className="faq-section py-20  w-full flex flex-col justify-center items-center bg-black text-red-500">
+        className="faq-section py-20  w-full flex flex-col justify-center items-center bg-black text-red-500"
+      >
         <Faq />
       </section>
     </div>

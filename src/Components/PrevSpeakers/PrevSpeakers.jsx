@@ -11,10 +11,10 @@ import PrevBox from "./PrevBox.jsx";
 
 const PrevSpeakers = () => {
   return (
-    <div className="flex flex-col justify-around items-center bg-black text-[#7d7d7d] text-left w-full h-screen">
-      <h1 className="text-3xl mb-4">PREVIOUS SPEAKERS</h1>
+    <div className="flex flex-col justify-around items-center bg-black text-[#7d7d7d] text-left w-full ">
+      <h1 className="text-4xl mb-5">PREVIOUS SPEAKERS</h1>
       <div className="flex flex-wrap justify-center flex-grow">
-        <div className="flex flex-wrap justify-center">
+        <div className="flex flex-wrap justify-center w-full ">
           {/* First Speaker */}
           <PrevBox
             imgSrc={speaker1}
@@ -91,7 +91,6 @@ an established Psychologist, Happiness Coach, and
 Wellness Expert with 15+ years of Fortune 500
 experience."
           />
-
         </div>
       </div>
     </div>

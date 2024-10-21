@@ -1,14 +1,14 @@
 const About = () => {
   return (
     <section className="bg-black text-white py-10 px-8">
-      <div className="container mx-auto">
+      <div className="mt-14 container mx-auto">
         {/* About TEDx Heading */}
         <h1 className="text-5xl font-bold text-gray-200 mb-12 text-center">
           About TEDx
         </h1>
 
         {/* First Card */}
-        <div className="bg-black p-6 rounded-lg mb-8 shadow-lg border border-bordorColor max-w-4xl  mx-auto">
+        <div className="bg-customDark p-10 rounded-xl mb-8 shadow-lg border border-bordorColor max-w-5xl  mx-auto">
           <div className="flex items-center mb-4">
             <div className="w-8 h-8 bg-white rounded-full mr-4 flex items-center justify-center">
               <span className="text-black font-bold text-lg">⦿</span>
@@ -16,15 +16,22 @@ const About = () => {
             <h2 className="text-xl font-semibold text-red-500">WHAT IS TEDx</h2>
           </div>
           <p className="text-gray-300">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-            nec venenatis nisi. Phasellus sit amet purus vel metus dignissim
-            tincidunt. Sed ut augue scelerisque, ultrices urna ut, dignissim
-            elit. Nulla facilisi.
+            TEDx is a series of independently organized events under a license
+            from TED, the globally recognized platform dedicated to sharing
+            ideas that matter. While TED is renowned for its flagship annual
+            conferences, where influential voices from all fields come together,
+            TEDx allows local communities to create their own events inspired by
+            TED's mission of "Ideas Worth Spreading." These events unite
+            individuals to ignite discussions, foster creativity, and promote a
+            culture of curiosity and openness. TEDx showcases live speakers,
+            performances, and pre-recorded TED Talks, providing a platform for
+            passionate thinkers to present their insights and innovations to
+            a wider audience.
           </p>
         </div>
 
         {/* Second Card */}
-        <div className="bg-black p-6 rounded-lg shadow-lg border border-bordorColor max-w-4xl mx-auto">
+        <div className="bg-customDark p-10 rounded-xl shadow-lg border border-bordorColor max-w-5xl mx-auto">
           <div className="flex items-center mb-4">
             <div className="w-8 h-8 bg-white rounded-full mr-4 flex items-center justify-center">
               <span className="text-black font-bold text-lg">⦿</span>

@@ -1,9 +1,9 @@
 const PartnerBox = ({ imgSrc, name }) => {
   return (
     <div className="hover:-translate-y-3 transition-transform duration-300">
-      <div className="m-10 group relative border-4 border-[#141414] rounded-2xl w-[80%] md:w-[250px] h-[80%] md:h-[250px] p-1 bg-[#141414] overflow-hidden">
+      <div className="m-10 group relative border-4 border-[#141414] rounded-2xl w-[80%] md:w-[250px] h-[80%] md:h-[250px] p-1 bg-white overflow-hidden">
         <img
-          className="rounded-2xl transition-opacity duration-300 group-hover:opacity-0 w-full h-full object-cover"
+          className="rounded-2xl transition-opacity duration-300 group-hover:opacity-0 w-full h-full object-contain"
           src={imgSrc}
           alt={name}
           aria-label={name} // Accessibility improvement

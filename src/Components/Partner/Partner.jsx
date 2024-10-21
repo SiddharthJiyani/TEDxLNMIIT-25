@@ -1,27 +1,42 @@
 import PrevBox from "./PartnerBox";
+import image1 from "../../assets/sponsors/BP.png";
+import image2 from "../../assets/sponsors/EP.png";
+import image3 from "../../assets/sponsors/HP.png";
+import image4 from "../../assets/sponsors/PP.png";
+import image5 from "../../assets/sponsors/UB.png";
 
 const Partner = () => {
   const partners = [
     {
-      imgSrc: "https://via.placeholder.com/150",
-      name: "Partner 1",
-      link: "https://example.com/partner1",
+      imgSrc: image1,
+      name: "Petite Pâtisserie",
+      link: "https://www.instagram.com/petitepatisserie_jaipur/?hl=en",
     },
     {
-      imgSrc: "https://via.placeholder.com/150",
-      name: "Partner 2",
-      link: "https://example.com/partner2",
+      imgSrc: image2,
+      name: "Kalam IAS Academy",
+      link: "https://kalamias.academy/",
     },
     {
-      imgSrc: "https://via.placeholder.com/150",
-      name: "Partner 3",
-      link: "https://example.com/partner3",
+      imgSrc: image3,
+      name: "Sarovar Hotels & Resorts",
+      link: "https://www.sarovarhotels.com/",
+    },
+    {
+      imgSrc: image4,
+      name: "Regal Offset",
+      link: "https://regal-offset-cards.business.site/",
+    },
+    {
+      imgSrc: image5,
+      name: "Union Bank",
+      link: "https://www.unionbankofindia.co.in/english/home.aspx",
     },
   ];
 
   return (
     <div className="flex flex-col items-center bg-black text-white min-h-screen py-20">
-      <h2 className="mt-5 text-2xl font-bold mb-5">Previous Partners</h2>
+      <h2 className="mt-5 text-7xl font-bold mb-5">Previous Partners</h2>
       <div className="flex flex-wrap justify-center mb-10">
         {partners.map((partner, index) => (
           <a
@@ -36,7 +51,7 @@ const Partner = () => {
         ))}
       </div>
       <div className="text-center max-w-2xl px-4">
-        <h3 className="text-xl font-semibold mb-4">
+        <h3 className="text-7xl font-semibold mb-4">
           Interested in partnership?
         </h3>
         <p className="text-lg mb-4">
