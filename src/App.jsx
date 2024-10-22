@@ -13,7 +13,7 @@ import Footer from "./Components/Footer/Footer.jsx";
 export default function App() {
   return (
     <Router>
-      <div className="w-full h-screen overflow-y-auto font-generalSans ">
+      <div className="w-full h-screen overflow-y-auto font-generalSans  bg-customDark backdrop-blur-md  ">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
