@@ -16,7 +16,7 @@ const FaqBox = ({ index, question, answer, isActive, handleClick }) => {
         <span className="text-red-500">
           {isActive ? (
             <FontAwesomeIcon icon={faChevronUp} />
-          ) : (
+          ) : ( 
             <FontAwesomeIcon icon={faChevronDown} />
           )}
         </span>
