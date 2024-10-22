@@ -4,25 +4,12 @@ const Team = () => {
   return (
     <div className="bg-black py-20 text-center text-white">
       {/* Team Section Title */}
-      <h1 className="mt-5 text-4xl font-bold mb-8 text-center text-customDark-200">
-        TEDxLNMIIT’25 Core Team
+      <h1 className="mt-5 text-5xl font-bold mb-8 text-center text-customDark-200">
+        Our Team
       </h1>
-      <h2 className="text-lg mb-10 italic text-gray-400">Y-22 & Y-23</h2>
+      {/* <hr className="border-t-2 border-gray-400 my-8" /> */}
+      {/* <h2 className="text-lg mb-10 italic text-gray-400">Y-22 & Y-23</h2> */}
 
-      {/* Website Development Head */}
-      <h2 className="text-2xl font-semibold mt-10 mb-6">
-        Website Development Head
-      </h2>
-      <div className="flex flex-wrap justify-center ">
-        <MemberCard name="Siddharth Jiyani" />
-      </div>
-
-      {/* Website Development */}
-      <h2 className="text-2xl font-semibold mt-10 mb-6">Website Development</h2>
-      <div className="flex flex-wrap justify-center">
-        <MemberCard name="Saanvi Chabaque" />
-        <MemberCard name="Manav Desai" />
-      </div>
       {/* Organizer */}
       <h2 className="text-2xl font-semibold mt-10 mb-6">Organizer</h2>
       <div className="flex flex-wrap justify-center">
@@ -30,6 +17,14 @@ const Team = () => {
         <MemberCard name="Abhinav Singh" />
         <MemberCard name="Krishna Rohira" />
         <MemberCard name="Suhani Gupta" />
+      </div>
+
+      {/* Website Development Head */}
+      <h2 className="text-2xl font-semibold mt-10 mb-6">
+        Web Development Head
+      </h2>
+      <div className="flex flex-wrap justify-center ">
+        <MemberCard name="Siddharth Jiyani" />
       </div>
 
       {/* Content Writing Head */}
@@ -61,6 +56,21 @@ const Team = () => {
         <MemberCard name="Nemil Kamdar" />
       </div>
 
+      {/* Website Development */}
+      <h2 className="text-2xl font-semibold mt-10 mb-6">Web Development</h2>
+      <div className="flex flex-wrap justify-center">
+        <MemberCard name="Saanvi Chabaque" />
+        <MemberCard name="Manav Desai" />
+      </div>
+
+          {/* Content Writing */}
+          <h2 className="text-2xl font-semibold mt-10 mb-6">Content Writing</h2>
+      <div className="flex flex-wrap justify-center">
+        <MemberCard name="Aryan Jadhav" />
+        <MemberCard name="Alisha Malhotra" />
+        <MemberCard name="Abdul Hadi" />
+      </div>
+
       {/* Speaker Outreach */}
       <h2 className="text-2xl font-semibold mt-10 mb-6">Speaker Outreach</h2>
       <div className="flex flex-wrap justify-center">
@@ -78,13 +88,6 @@ const Team = () => {
         <MemberCard name="Anmol Adwani" />
       </div>
 
-      {/* Content Writing */}
-      <h2 className="text-2xl font-semibold mt-10 mb-6">Content Writing</h2>
-      <div className="flex flex-wrap justify-center">
-        <MemberCard name="Aryan Jadhav" />
-        <MemberCard name="Alisha Malhotra" />
-        <MemberCard name="Abdul Hadi" />
-      </div>
 
       {/* Sponsorship */}
       <h2 className="text-2xl font-semibold mt-10 mb-6">Sponsorship</h2>
