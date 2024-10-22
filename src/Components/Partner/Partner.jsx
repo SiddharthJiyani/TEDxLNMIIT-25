@@ -1,4 +1,5 @@
 import PrevBox from "./PartnerBox";
+import { useEffect } from "react";
 import image1 from "../../assets/sponsors/BP.png";
 import image2 from "../../assets/sponsors/EP.png";
 import image3 from "../../assets/sponsors/HP.png";
@@ -6,6 +7,9 @@ import image4 from "../../assets/sponsors/PP.png";
 import image5 from "../../assets/sponsors/UB.png";
 
 const Partner = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  });
   const partners = [
     {
       imgSrc: image1,

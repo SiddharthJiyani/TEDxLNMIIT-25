@@ -1,11 +1,14 @@
+import { HashLink as Link } from "react-router-hash-link";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom"; // Import useLocation
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
-import Hamburger from "./HamBurger.jsx"; // Ensure this path is correct
+import Hamburger from "./HamBurger.jsx";
 import logo from "../../assets/logo.png";
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation(); // Hook to get current location
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
@@ -15,12 +18,14 @@ const Navbar = () => {
     setIsMenuOpen(false);
   };
 
+  const isActiveLink = (path) => location.pathname === path;
+
   return (
     <div>
       <nav className="bg-[rgba(20,20,20,0.5)] backdrop-blur-md border border-white/20 p-2 sm:p-3 md:p-4 lg:p-2 fixed left-0 right-0 mx-auto mt-6 max-w-[90%] min-h-[48px] flex items-center justify-between gap-4 rounded-[60px] shadow-lg z-50">
         <div className="container mx-auto flex justify-between items-center">
           <div className="text-white text-xl font-bold flex items-center">
-            <Link to="/" className="text-xl text-white">
+            <Link smooth to="/" className="text-xl text-white">
               <img src={logo} alt="TEDx Logo" className="h-9 mr-3 ml-3" />
             </Link>
           </div>
@@ -31,28 +36,59 @@ const Navbar = () => {
               isMenuOpen ? "flex" : "hidden"
             } lg:flex`}
           >
-            <Link to="/" className="hover:text-white" onClick={closeMenu}>
+            <a
+              smooth
+              href="/"
+              className={`hover:text-white ${
+                isActiveLink("/") ? "text-red-500" : ""
+              }`}
+              onClick={closeMenu}
+            >
               Home
-            </Link>
-            <Link to="/about" className="hover:text-white" onClick={closeMenu}>
+            </a>
+            <Link
+              smooth
+              to="/#about"
+              className={`hover:text-white ${
+                isActiveLink("/#about") ? "text-red-500" : ""
+              }`}
+              onClick={closeMenu}
+            >
               About us
             </Link>
-            <Link to="/faq" className="hover:text-white" onClick={closeMenu}>
+            <Link
+              smooth
+              to="/#faq"
+              className={`hover:text-white ${
+                isActiveLink("/#faq") ? "text-red-500" : ""
+              }`}
+              onClick={closeMenu}
+            >
               FAQ
             </Link>
-            <Link to="/team" className="hover:text-white" onClick={closeMenu}>
+            <a
+              href="/team"
+              className={`hover:text-white ${
+                isActiveLink("/team") ? "text-red-500" : ""
+              }`}
+              onClick={closeMenu}
+            >
               Team
-            </Link>
-            <Link
-              to="/partner"
-              className="hover:text-white"
+            </a>
+            <a
+              href="/partner"
+              className={`hover:text-white ${
+                isActiveLink("/partner") ? "text-red-500" : ""
+              }`}
               onClick={closeMenu}
             >
               Partner
-            </Link>
+            </a>
             <Link
               to="/gallery"
-              className="hover:text-white"
+              className={`hover:text-white ${
+                isActiveLink("/gallery") ? "text-red-500" : ""
+              }`}
               onClick={closeMenu}
             >
               Gallery
@@ -106,12 +142,11 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
+
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div
-          className={`sticky  left-0 top-10 z-40 flex h-screen w-full flex-col items-center justify-center gap-12 bg-customDark duration-700 ease-in-out lg:hidden ${
-            close ? "nav-close" : "nav-open"
-          }`}
+          className={`sticky left-0 top-10 z-40 flex h-screen w-full flex-col items-center justify-center gap-12 bg-customDark duration-700 ease-in-out lg:hidden`}
         >
           <Link
             to="/"
@@ -121,14 +156,16 @@ const Navbar = () => {
             Home
           </Link>
           <Link
-            to="/about"
+            smooth
+            to="/#about"
             className="text-white hover:text-gray-300"
             onClick={closeMenu}
           >
             About us
           </Link>
           <Link
-            to="/faq"
+            smooth
+            to="/#faq"
             className="text-white hover:text-gray-300"
             onClick={closeMenu}
           >
