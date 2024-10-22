@@ -1,11 +1,11 @@
-import Heading from "../utility/heading";
+import Title from "../utility/Title";
 import MemberCard from "./MemberCard";
 
 const Team = () => {
   return (
     <div className="bg-black py-20 text-center text-white">
       {/* Team Section Title */}
-      <Heading text="Our Team" />
+      <Title text="Our Team" />
       {/* <hr className="border-t-2 border-gray-400 my-8" /> */}
       {/* <h2 className="text-lg mb-10 italic text-gray-400">Y-22 & Y-23</h2> */}
 
