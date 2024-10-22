@@ -1,12 +1,11 @@
+import Heading from "../utility/heading";
 import MemberCard from "./MemberCard";
 
 const Team = () => {
   return (
     <div className="bg-black py-20 text-center text-white">
       {/* Team Section Title */}
-      <h1 className="mt-5 text-5xl font-bold mb-8 text-center text-customDark-200">
-        Our Team
-      </h1>
+      <Heading text="Our Team" />
       {/* <hr className="border-t-2 border-gray-400 my-8" /> */}
       {/* <h2 className="text-lg mb-10 italic text-gray-400">Y-22 & Y-23</h2> */}
 
@@ -63,8 +62,8 @@ const Team = () => {
         <MemberCard name="Manav Desai" />
       </div>
 
-          {/* Content Writing */}
-          <h2 className="text-2xl font-semibold mt-10 mb-6">Content Writing</h2>
+      {/* Content Writing */}
+      <h2 className="text-2xl font-semibold mt-10 mb-6">Content Writing</h2>
       <div className="flex flex-wrap justify-center">
         <MemberCard name="Aryan Jadhav" />
         <MemberCard name="Alisha Malhotra" />
@@ -87,7 +86,6 @@ const Team = () => {
         <MemberCard name="Naman Agarwal" />
         <MemberCard name="Anmol Adwani" />
       </div>
-
 
       {/* Sponsorship */}
       <h2 className="text-2xl font-semibold mt-10 mb-6">Sponsorship</h2>

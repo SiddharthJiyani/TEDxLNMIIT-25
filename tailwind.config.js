@@ -23,6 +23,9 @@ export default {
         xs: "480px",
         xxs: "360px",
       },
+      backgroundImage: {
+        'heading-gradient': 'linear-gradient(90deg, white, #e6e6e6)'
+      },
     },
   },
   plugins: [],
