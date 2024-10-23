@@ -18,6 +18,7 @@ const PrevSpeakers = () => {
           <PrevBox
             imgSrc={speaker1}
             altText="Speaker"
+            className=" xxxs:ml-8 xxs:ml-10   xs:ml-14 sm:gap-1 "
             name="Dr. Tanu Jain"
             description="Dr. Tanu is currently posted as Assistant Director in the Ministry of Defence. Dr. Tanu has authored two books for UPSC preparation. She is Passionate to help, guiding, and motivating young minds esp."
             url="https://www.youtube.com"
@@ -27,6 +28,7 @@ const PrevSpeakers = () => {
           <PrevBox
             imgSrc={speaker2}
             altText="Speaker"
+            className=" xxxs:ml-8 xxs:ml-10   xs:ml-14 sm:gap-1 "
             name="Krishnan Sunderarajan"
             description="Krishnan Sunderarajan is the visionary mind behind India's First Metaverse App, LOKA, as showcased on Shark Tank. A seasoned entrepreneur, reshaping the landscape of technology and gaming."
             url="https://www.youtube.com"
@@ -36,6 +38,7 @@ const PrevSpeakers = () => {
           <PrevBox
             imgSrc={speaker3}
             altText="Speaker"
+            className=" xxxs:ml-8 xxs:ml-10   xs:ml-14 sm:gap-1 "
             name="Palakh Khanna"
             description="Palakh Khanna, a trailblazing entrepreneur and esteemed speaker, is a beacon of innovation and inspiration. Recognized as one of Asia's 100 Women Power Leaders in 2023, her journey with Break."
             url="https://www.youtube.com"
@@ -45,6 +48,7 @@ const PrevSpeakers = () => {
           <PrevBox
             imgSrc={speaker4}
             altText="Speaker"
+            className=" xxxs:ml-8 xxs:ml-10   xs:ml-14 sm:gap-1 "
             name="Chinmay Gaur"
             description="Chinmay Gaur skillfully wields the flute to enrapture audiences with his enchanting melodies and charismatic presence. As an Indian Classical flutist, esteemed music composer, creating a captivating musical narrative."
             url="https://www.youtube.com/watch?v=KyLREMG86r0"
@@ -55,6 +59,7 @@ const PrevSpeakers = () => {
           <PrevBox
             imgSrc={speaker5}
             altText="Speaker"
+            className=" xxxs:ml-8 xxs:ml-10   xs:ml-14 sm:gap-1 "
             name="Deepak Pareek"
             description="Deepak Pareekh is a renowned seven-time TEDx speaker and co-founder of Iceberg Creations. Deepak is a renowned content creator who was featured in IMPACT's 30 Under 30."
             url="https://www.youtube.com"
@@ -63,6 +68,7 @@ const PrevSpeakers = () => {
           {/* Sixth Speaker */}
           <PrevBox
             imgSrc={speaker6}
+            className=" xxxs:ml-8 xxs:ml-10   xs:ml-14 sm:gap-1 "
             altText="Speaker"
             name="Tejas Patil"
             description="Tejas Patil is a prominent figure in the tech world, celebrated for his insightful content creation and social media strategy. With hands-on expertise in PCs and smartphones, his authentic reviews are highly respected."
@@ -72,6 +78,7 @@ const PrevSpeakers = () => {
           {/* Seventh Speaker */}
           <PrevBox
             imgSrc={speaker7}
+            className=" xxxs:ml-8 xxs:ml-10   xs:ml-14 sm:gap-1 "
             altText="Speaker"
             name="Gunjan Saini"
             description="Gunjan Saini is a multifaceted Indian poet and author. Beyond her literary prowess, Gunjan's talents span across various domains as an actor, dancer, journalist, licensed practical nurse, and Filtercopy's Casting Associate."
@@ -81,6 +88,7 @@ const PrevSpeakers = () => {
           {/* Eighth Speaker */}
           <PrevBox
             imgSrc={speaker9}
+            className=" xxxs:ml-8 xxs:ml-10   xs:ml-14 sm:gap-1 "
             altText="Speaker"
             name="Sakshi Mandhyan"
             description="Sakshi Mandhyan, an accomplished professional, is an established Psychologist, Happiness Coach, and Wellness Expert with 15+ years of Fortune 500 experience."

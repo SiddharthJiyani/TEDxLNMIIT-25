@@ -1,12 +1,16 @@
-import youtube from '../../assets/youtube.png';
+import youtube from "../../assets/youtube.png";
 
-const PrevBox = ({ imgSrc, altText, name, description, url , className }) => {
+const PrevBox = ({ imgSrc, altText, name, description, url, className }) => {
   return (
     <div className="hover:-translate-y-3 transition-transform duration-300">
-      <div className={`m-4 group relative border-[1px] border-bordorColor  rounded-2xl w-[80%] md:w-[250px] h-[80%] md:h-[290px] p-1 bg-[#141414] overflow-hidden ${className} `}>
+      <div
+        className={`m-4 group relative border-[1px] border-bordorColor  rounded-2xl w-[80%] md:w-[250px] h-[80%] md:h-[290px] p-1 bg-[#141414] overflow-hidden ${className} `}
+      >
         {/* Image always shown */}
         <img
-          className={`rounded-2xl transition-opacity mt-8 duration-300 w-full h-full object-contain ${description || url ? 'group-hover:opacity-0' : ''}`}
+          className={`rounded-2xl transition-opacity mt-8 duration-300 w-full h-full object-contain ${
+            description || url ? "group-hover:opacity-0" : ""
+          }`}
           src={imgSrc}
           alt={altText}
         />
@@ -15,7 +19,9 @@ const PrevBox = ({ imgSrc, altText, name, description, url , className }) => {
         {(description || url) && (
           <div className="absolute inset-0 hidden group-hover:flex items-center justify-center bg-[#141414] p-1 rounded-2xl transition-opacity duration-300">
             <div className="text-white text-center">
-              <h2 className="m-4 text-xl font-extrabold text-[#e4dbdb]">{name}</h2>
+              <h2 className="m-4 text-xl font-extrabold text-[#e4dbdb]">
+                {name}
+              </h2>
               {description && <p>{description}</p>}
               {url && (
                 <a
@@ -24,7 +30,11 @@ const PrevBox = ({ imgSrc, altText, name, description, url , className }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img className="h-6 w-6 m-2" src={youtube} alt="YouTube logo" />
+                  <img
+                    className="h-6 w-6 m-2"
+                    src={youtube}
+                    alt="YouTube logo"
+                  />
                   Watch Talk here
                 </a>
               )}
@@ -32,7 +42,7 @@ const PrevBox = ({ imgSrc, altText, name, description, url , className }) => {
           </div>
         )}
       </div>
-      <h2 className="text-xl text-[#7d7d7d] text-left pl-1 md:pl-10">
+      <h2 className="text-xl text-[#7d7d7d] text-left pl-1 md:pl-10 xxxs:ml-8 xxs:ml-10   xs:ml-14 sm:gap-1 ">
         {name}
       </h2>
     </div>

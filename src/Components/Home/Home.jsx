@@ -31,7 +31,7 @@ const Home = () => {
 
       <div className="bg-black flex justify-center w-full">
         <div className="w-full max-w-[970px] border border-bordorColor rounded-[18px] flex box-border justify-center items-center flex-col sm:flex-row">
-          <div className="bg-black flex justify-center items-center h-[50vh] md:h-[80vh] w-full">
+          <div className="bg-black flex justify-center items-center rounded-[18px] h-[50vh] md:h-[80vh] w-full">
             <img
               src="https://www.tedxmec.in/assets/Cube%20Light.jpg"
               className="p-4 md:p-10 w-full max-w-[970px] align-middle block box-border border-none"

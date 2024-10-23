@@ -3,22 +3,37 @@ import PrevBox from "../PrevSpeakers/PrevBox";
 
 const Gallery = () => {
   return (
-    <div className="mt-10 flex flex-col items-center justify-center bg-black backdrop-blur-md">
-      <div className="mt-12 w-full top-20 backdrop-blur-md">
-        <div className="flex flex-wrap justify-center gap-4">
-          <PrevBox imgSrc={img} />
-          <PrevBox imgSrc={img} />
-          <PrevBox imgSrc={img} />
+    <div className="flex flex-col items-center justify-center bg-black backdrop-blur-md">
+      <div className="mt-24 w-full top-20 backdrop-blur-md">
+        {/* First Row */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-center">
+          {[...Array(3)].map((_, index) => (
+            <PrevBox
+              key={index}
+              imgSrc={img}
+              className=" xxxs:ml-8 xxs:ml-10   xs:ml-14 sm:gap-1 "
+            />
+          ))}
         </div>
-        <div className="flex flex-wrap justify-center gap-4 mt-4">
-          <PrevBox imgSrc={img} />
-          <PrevBox imgSrc={img} />
-          <PrevBox imgSrc={img} />
+        {/* Second Row */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-center mt-4">
+          {[...Array(3)].map((_, index) => (
+            <PrevBox
+              key={index + 3}
+              imgSrc={img}
+              className=" xxxs:ml-8 xxs:ml-10   xs:ml-14  "
+            />
+          ))}
         </div>
-        <div className="flex flex-wrap justify-center gap-4 mt-4">
-          <PrevBox imgSrc={img} />
-          <PrevBox imgSrc={img} />
-          <PrevBox imgSrc={img} />
+        {/* Third Row */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-center mt-4">
+          {[...Array(3)].map((_, index) => (
+            <PrevBox
+              key={index + 6}
+              imgSrc={img}
+              className=" xxxs:ml-8 xxs:ml-10  xs:ml-14 "
+            />
+          ))}
         </div>
       </div>
     </div>
