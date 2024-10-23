@@ -3,22 +3,22 @@ import PrevBox from "../PrevSpeakers/PrevBox";
 
 const Gallery = () => {
   return (
-    <div className=" h-screen flex flex-col items-center justify-center bg-black backdrop-blur-md ">
-      <div className="  top-20  bg-black backdrop-blur-md ">
+    <div className="mt-10 flex flex-col items-center justify-center bg-black backdrop-blur-md">
+      <div className="mt-12 w-full top-20 backdrop-blur-md">
         <div className="flex flex-wrap justify-center gap-4">
-          <PrevBox imgSrc={img} className={"border-none bg-black"} />
-          <PrevBox imgSrc={img} className={"border-none"} />
-          <PrevBox imgSrc={img} className={"border-none"} />
+          <PrevBox imgSrc={img} />
+          <PrevBox imgSrc={img} />
+          <PrevBox imgSrc={img} />
         </div>
         <div className="flex flex-wrap justify-center gap-4 mt-4">
-          <PrevBox imgSrc={img} className={"border-none"} />
-          <PrevBox imgSrc={img} className={"border-none"} />
-          <PrevBox imgSrc={img} className={"border-none"} />
+          <PrevBox imgSrc={img} />
+          <PrevBox imgSrc={img} />
+          <PrevBox imgSrc={img} />
         </div>
         <div className="flex flex-wrap justify-center gap-4 mt-4">
-          <PrevBox imgSrc={img} className={"border-none"} />
-          <PrevBox imgSrc={img} className={"border-none"} />
-          <PrevBox imgSrc={img} className={"border-none"} />
+          <PrevBox imgSrc={img} />
+          <PrevBox imgSrc={img} />
+          <PrevBox imgSrc={img} />
         </div>
       </div>
     </div>
