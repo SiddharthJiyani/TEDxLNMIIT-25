@@ -1,11 +1,11 @@
-import speaker1 from "../../assets/speaker1.jpg";
-import speaker2 from "../../assets/speaker2.png";
-import speaker3 from "../../assets/speaker3.png";
-import speaker4 from "../../assets/speaker4.webp";
-import speaker5 from "../../assets/speaker5.webp";
-import speaker6 from "../../assets/speaker6.webp";
-import speaker7 from "../../assets/speaker7.webp";
-import speaker9 from "../../assets/speaker9.webp";
+import speaker1 from "../../assets/PastSpeakers/speaker1.png";
+import speaker2 from "../../assets/PastSpeakers/speaker2.png";
+import speaker3 from "../../assets/PastSpeakers/speaker3.png";
+import speaker4 from "../../assets/PastSpeakers/speaker4.png";
+import speaker5 from "../../assets/PastSpeakers/speaker5.png";
+import speaker6 from "../../assets/PastSpeakers/speaker6.png";
+import speaker7 from "../../assets/PastSpeakers/speaker7.png";
+import speaker9 from "../../assets/PastSpeakers/speaker9.png";
 import PrevBox from "./PrevBox.jsx";
 
 const PrevSpeakers = () => {
