@@ -22,9 +22,10 @@ export default {
       screens: {
         xs: "480px",
         xxs: "360px",
+        xxxs: "240px",
       },
       backgroundImage: {
-        'heading-gradient': 'linear-gradient(90deg, white, #e6e6e6)'
+        "heading-gradient": "linear-gradient(90deg, white, #e6e6e6)",
       },
     },
   },
