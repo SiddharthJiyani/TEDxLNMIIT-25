@@ -66,24 +66,24 @@ const Navbar = () => {
             >
               FAQ
             </Link>
-            <a
-              href="/team"
+            <Link
+              to="/team"
               className={`hover:text-white ${
                 isActiveLink("/team") ? "text-red-500" : ""
               }`}
               onClick={closeMenu}
             >
               Team
-            </a>
-            <a
-              href="/partner"
+            </Link>
+            <Link
+              to="/partner"
               className={`hover:text-white ${
                 isActiveLink("/partner") ? "text-red-500" : ""
               }`}
               onClick={closeMenu}
             >
               Partner
-            </a>
+            </Link>
             <Link
               to="/gallery"
               className={`hover:text-white ${
