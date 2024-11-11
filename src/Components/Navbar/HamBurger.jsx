@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 export default function Hamburger(props) {
   return (
     <div
-      className="flex h-[30px] w-[30px] cursor-pointer flex-col justify-around"
+      className="flex h-[30px] w-[30px] cursor-pointer flex-col justify-around "
       onClick={props.toggleMenu} // Call a function to toggle the menu
     >
       <span
@@ -25,7 +25,6 @@ export default function Hamburger(props) {
   );
 }
 
-// Prop types for better type checking
 Hamburger.propTypes = {
   close: PropTypes.bool.isRequired, // Indicates if the menu is open
   toggleMenu: PropTypes.func.isRequired, // Function to toggle the menu state

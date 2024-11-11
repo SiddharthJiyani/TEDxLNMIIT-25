@@ -1,6 +1,6 @@
 import { HashLink as Link } from "react-router-hash-link";
 import { useState } from "react";
-import { useLocation } from "react-router-dom"; // Import useLocation
+import { useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import Hamburger from "./HamBurger.jsx";
@@ -8,7 +8,7 @@ import logo from "../../assets/logo.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const location = useLocation(); // Hook to get current location
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
@@ -22,8 +22,8 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="bg-[rgba(20,20,20,0.5)]  backdrop-blur-md border border-white/20 p-2 sm:p-3 md:p-4 lg:p-2 fixed left-0 right-0 mx-auto mt-6 max-w-[90%] min-h-[48px] flex items-center justify-between gap-4 rounded-[60px] shadow-lg z-50">
-        <div className="container  mx-auto flex justify-between items-center">
+      <nav className="bg-[rgba(20,20,20,0.5)] sticky fixed backdrop-blur-md border border-white/20 p-2 sm:p-3 md:p-4 lg:p-2 left-0 right-0 mx-auto mt-6 max-w-[90%] min-h-[48px] flex items-center justify-between gap-4 rounded-[60px] shadow-lg z-50">
+        <div className="container mx-auto flex justify-between items-center">
           <div className="text-white text-xl font-bold flex items-center">
             <Link smooth to="/" className="text-xl text-white">
               <img src={logo} alt="TEDx Logo" className="h-9 mr-3 ml-3" />
@@ -36,16 +36,16 @@ const Navbar = () => {
               isMenuOpen ? "flex" : "hidden"
             } lg:flex`}
           >
-            <a
+            <Link
               smooth
-              href="/"
+              to="/"
               className={`hover:text-white ${
                 isActiveLink("/") ? "text-red-500" : ""
               }`}
               onClick={closeMenu}
             >
               Home
-            </a>
+            </Link>
             <Link
               smooth
               to="/#about"
@@ -96,7 +96,7 @@ const Navbar = () => {
           </div>
 
           {/* Right Side - Social Icons and Contact Button */}
-          <div className="flex items-center gap-2 ">
+          <div className="flex items-center gap-2">
             <a
               href="https://www.linkedin.com/company/tedxlnmiit/"
               target="_blank"
@@ -142,11 +142,10 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div
-          className={`sticky left-0 top-10 z-40 flex h-screen w-full flex-col items-center justify-center gap-12 bg-customDark duration-700 ease-in-out lg:hidden`}
+          className={`sticky  left-0 top-10 z-60 flex h-screen w-full flex-col items-center justify-center gap-12 bg-customDark duration-700 ease-in-out lg:hidden`}
         >
           <Link
             to="/"
