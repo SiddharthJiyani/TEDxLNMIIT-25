@@ -41,10 +41,13 @@ const About = () => {
             </h2>
           </div>
           <p className="text-gray-300">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-            bibendum libero non felis dignissim, eu viverra ligula sollicitudin.
-            Proin quis faucibus ligula. Integer pharetra felis a tincidunt
-            sagittis. Donec eleifend semper magna, nec varius nunc volutpat at.
+            TEDxLnmiit stands for the mission of TED - to propagate ideas potent
+            enough to change mindsets, inspire youth at large, and equip them to
+            crave a better living, beneficial for themselves and the society
+            they dwell in. TEDxLnmiit features engaging talks inspiring people
+            ranging from veteran performers and social reformers to young
+            innovators. It serves as a stage for promoting fresh thoughts and
+            inspiring innovation.
           </p>
         </div>
       </div>
