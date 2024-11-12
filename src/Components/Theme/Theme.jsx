@@ -62,7 +62,11 @@ const Theme = () => {
         </motion.h1>
         <div className="w-full flex flex-col sm:flex-row justify-center items-center ">
           {/* SVG Illustration */}
-          <div className="flex z-30 justify-center items-center  w-full max-w-[500px]">
+          <motion.div
+            className="flex z-30 justify-center items-center  w-full max-w-[500px]"
+            animate={{ rotate: 360 }}
+            transition={{ repeat: Infinity, duration: 100, ease: "linear" }}
+          >
             <svg
               width="496"
               height="497"
@@ -113,7 +117,7 @@ const Theme = () => {
                 strokeWidth="3"
               />
             </svg>
-          </div>
+          </motion.div>
 
           {/* About Theme Text */}
           <div className="w-full p-3 md:p-10">
