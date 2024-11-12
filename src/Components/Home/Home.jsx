@@ -7,6 +7,7 @@ import PrevSpeakers from "../PrevSpeakers/PrevSpeakers";
 import RedButton from "../utility/RedButton";
 import Theme from "../Theme/Theme";
 import video from "../../assets/video.mp4";
+import CountdownTimer from "../utility/CounterDown";
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -49,8 +50,14 @@ const Home = () => {
               <RedButton to="/contact-us">Contact Us</RedButton>
               <RedButton to="/buy-tickets">Buy Tickets</RedButton>
             </div>
+            <button className="mt-3 inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 shadow h-10 rounded-md px-8 bg-red-600 hover:bg-red-700 text-white py-2 transition-all duration-300 transform hover:scale-105">
+              Registrations Open Soon
+            </button>
           </div>
         </div>
+        <motion.div className="mt-6" variants={sectionVariants}>
+          <CountdownTimer />
+        </motion.div>
       </section>
 
       {/* Theme Section */}
