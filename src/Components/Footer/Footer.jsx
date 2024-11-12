@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <section className="bg-black flex justify-center pb-10 box-border">
+    <section className=" flex justify-center pb-10 box-border">
       <div className="w-full max-w-[1200px] mx-10 box-border">
         <div className="box-border">
           <div
@@ -68,14 +68,6 @@ const Footer = () => {
                 </div>
               ))}
             </div>
-          </div>
-
-          <div className="mt-6 text-center box-border">
-            <a href="/" className="block box-border bg-transparent">
-              <div className="text-[16px] leading-[24px] text-white font-regular px-6 py-4 rounded-[60px] border border-[#444444] bg-gradient-to-r from-[#141414] to-transparent">
-                Get in contact with Us
-              </div>
-            </a>
           </div>
         </div>
       </div>
