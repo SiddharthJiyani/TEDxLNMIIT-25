@@ -8,10 +8,13 @@ const About = () => {
         </h1>
 
         {/* First Card */}
-        <div className="bg-customDark p-10 rounded-xl mb-8 shadow-lg border border-bordorColor max-w-5xl  mx-auto">
+        <div className="bg-customDark p-10 rounded-xl mb-8 shadow-lg border border-bordorColor max-w-4xl  mx-auto">
           <div className="flex items-center mb-4">
             <div className="w-8 h-8 bg-white rounded-full mr-4 flex items-center justify-center">
-              <span className="text-black font-bold text-lg">⦿</span>
+              <span className="text-black font-bold text-lg">
+                {" "}
+                <img src="https://static.thenounproject.com/png/4411728-200.png"></img>
+              </span>
             </div>
             <h2 className="text-xl font-semibold text-red-500">WHAT IS TEDx</h2>
           </div>
@@ -31,10 +34,12 @@ const About = () => {
         </div>
 
         {/* Second Card */}
-        <div className="bg-customDark p-10 rounded-xl shadow-lg border border-bordorColor max-w-5xl mx-auto">
+        <div className="bg-customDark p-10 rounded-xl shadow-lg border border-bordorColor max-w-4xl mx-auto">
           <div className="flex items-center mb-4">
             <div className="w-8 h-8 bg-white rounded-full mr-4 flex items-center justify-center">
-              <span className="text-black font-bold text-lg">⦿</span>
+              <span className="text-black font-bold text-lg">
+                <img src="https://static.thenounproject.com/png/4411728-200.png"></img>
+              </span>
             </div>
             <h2 className="text-xl font-semibold text-red-500">
               x = independently organized event

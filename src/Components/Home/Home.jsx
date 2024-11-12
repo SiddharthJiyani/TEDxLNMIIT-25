@@ -1,22 +1,45 @@
-// import React from "react";
-import About from "../About/About"; // Adjust the import paths as needed
+import React from "react";
+import { motion } from "framer-motion";
+import About from "../About/About";
 import Faq from "../FAQ/Faq";
-import Speakers from "../Speakers/Speakers"; // Ensure you import your Speakers component
-import PrevSpeakers from "../PrevSpeakers/PrevSpeakers"; // Ensure you import your PrevSpeakers component
+import Speakers from "../Speakers/Speakers";
+import PrevSpeakers from "../PrevSpeakers/PrevSpeakers";
 import RedButton from "../utility/RedButton";
 import Theme from "../Theme/Theme";
+import video from "../../assets/video.mp4";
+
+const sectionVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
 
 const Home = () => {
   return (
-    <div className="custom-container">
+    <div className="custom-container bg-black">
       {/* Hero Section */}
       <section
         id="hero"
-        className="hero-section py-20 h-screen w-full flex flex-col justify-center items-center bg-black text-red-500"
+        className="hero-section py-20 h-screen w-full flex flex-col justify-center items-center text-red-500 relative overflow-hidden"
       >
-        <div className="hero-content home-content text-center">
+        {/* Background Video */}
+        <video
+          autoPlay
+          loop
+          muted
+          className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        >
+          <source src={video} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        {/* Content Over the Video */}
+        <div className="hero-content home-content text-center z-10">
           <div className="hero-title-wrap">
-            <h2 className="hero-title text-5xl font-bold mb-4">
+            <h2 className="hero-title text-7xl font-bold mb-4">
               <strong>Tedx Lnmiit</strong>
             </h2>
             <p className="text-lg">Date: </p>
@@ -30,44 +53,65 @@ const Home = () => {
         </div>
       </section>
 
-      <section
+      {/* Theme Section */}
+      <motion.section
         id="theme"
-        className="speakers-section py-20 h-screen w-full flex flex-col justify-center items-center bg-black text-red-500"
+        className="theme-section py-20 h-screen w-full flex flex-col justify-center items-center bg-black text-red-500"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={sectionVariants}
       >
         <Theme />
-      </section>
+      </motion.section>
 
       {/* Speakers Section */}
-      <section
+      <motion.section
         id="speakers"
         className="speakers-section py-20 h-screen w-full flex flex-col justify-center items-center bg-black text-red-500"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={sectionVariants}
       >
         <Speakers />
-      </section>
+      </motion.section>
 
       {/* About Section */}
-      <section
+      <motion.section
         id="about"
         className="about-section py-20 w-full flex flex-col justify-center items-center bg-black text-red-500"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={sectionVariants}
       >
         <About />
-      </section>
+      </motion.section>
 
       {/* Previous Speakers Section */}
-      <section
+      <motion.section
         id="previous-speakers"
-        className="prev-speakers-section py-20  w-full flex flex-col justify-center items-center bg-black text-red-500"
+        className="prev-speakers-section py-20 w-full flex flex-col justify-center items-center bg-black text-red-500"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={sectionVariants}
       >
         <PrevSpeakers />
-      </section>
+      </motion.section>
 
       {/* FAQ Section */}
-      <section
+      <motion.section
         id="faq"
-        className="faq-section py-20  w-full flex flex-col justify-center items-center bg-black text-red-500"
+        className="faq-section py-20 w-full flex flex-col justify-center items-center bg-black text-red-500"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={sectionVariants}
       >
         <Faq />
-      </section>
+      </motion.section>
     </div>
   );
 };
