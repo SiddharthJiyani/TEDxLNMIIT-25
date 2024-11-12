@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import Hamburger from "./HamBurger.jsx";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/tednewlogo.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,7 +26,7 @@ const Navbar = () => {
         <div className="container mx-auto flex justify-between items-center">
           <div className="text-white text-xl font-bold flex items-center">
             <Link smooth to="/" className="text-xl text-white">
-              <img src={logo} alt="TEDx Logo" className="h-9 mr-3 ml-3" />
+              <img src={logo} alt="TEDx Logo" className="h-11 mr-3 ml-1" />
             </Link>
           </div>
 
