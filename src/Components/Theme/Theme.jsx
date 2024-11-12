@@ -3,6 +3,40 @@ import { motion } from "framer-motion";
 import birdSvg from "../../assets/Bird.svg";
 
 const Theme = () => {
+  const variants = {
+    initial: {
+      x: "180%",
+      y: "50%",
+      opacity: 0.9,
+      scale: 0.9,
+    },
+    animate: {
+      x: "-100%",
+      y: "-60%",
+      opacity: 1,
+      scale: 1,
+      transition: {
+        repeat: Infinity,
+        duration: 8,
+        ease: "easeIn",
+      },
+    },
+  };
+
+  const textPart = {
+    initial: {
+      opacity: 0,
+      scale: 0.9,
+    },
+    animate: {
+      opacity: 1,
+      scale: 1.1,
+      y: 30,
+      transition: {
+        duration: 1,
+      },
+    },
+  };
   return (
     <div className="relative w-full flex justify-center items-center p-2">
       {/* Animated Background SVG */}
@@ -11,22 +45,18 @@ const Theme = () => {
         style={{
           backgroundImage: `url(${birdSvg})`,
         }}
-        initial={{ x: "180%", y: "50%" }}
-        animate={{ x: "-100%", y: "-60%" }}
-        transition={{
-          repeat: Infinity,
-          duration: 8,
-          ease: "easeIn",
-        }}
+        initial="initial"
+        whileInView="animate"
+        variants={variants}
       ></motion.div>
 
       {/* Main Content */}
       <div className="relative z-10 w-full max-w-7xl flex flex-col items-center">
         <motion.h1
           className="text-9xl sm:text-6xl md:text-7xl font-bold text-white text-center "
-          initial={{ opacity: 0, scale: 1 }} // Initial state: invisible and scaled down
-          animate={{ opacity: 1, scale: 1.1, y: 30 }} // Final state: fully visible and normal scale
-          transition={{ duration: 1 }}
+          initial="initial"
+          whileInView="animate"
+          variants={textPart}
         >
           Our Theme
         </motion.h1>
@@ -89,9 +119,9 @@ const Theme = () => {
           <div className="w-full p-3 md:p-10">
             <motion.div
               className="text-white text-10xl text-justify text-base md:text-lg leading-relaxed font-medium max-w-[600px]"
-              initial={{ opacity: 0, scale: 1 }} // Initial state: invisible and scaled down
-              animate={{ opacity: 1, scale: 1.1 }} // Final state: fully visible and normal scale
-              transition={{ duration: 1 }}
+              initial="initial"
+              whileInView="animate"
+              variants={textPart}
             >
               TEDxLNMIIT 2025 Theme: Navigating the New In a world constantly
               evolving, "Navigating the New" represents the journey of embracing

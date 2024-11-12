@@ -40,7 +40,7 @@ const Partner = () => {
 
   return (
     <div className="flex flex-col items-center bg-black text-white min-h-screen py-20">
-      <h2 className="mt-5 text-7xl font-bold mb-5">Previous Partners</h2>
+      <h2 className="mt-5 text-7xl font-bold mb-5">Current Partners</h2>
       <div className="flex flex-wrap justify-center mb-10">
         {partners.map((partner, index) => (
           <a
