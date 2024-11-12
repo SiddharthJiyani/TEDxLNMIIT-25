@@ -8,6 +8,7 @@ import RedButton from "../utility/RedButton";
 import Theme from "../Theme/Theme";
 import video from "../../assets/video.mp4";
 import CountdownTimer from "../utility/CounterDown";
+import { Youtube } from "../utility/Youtube";
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -118,6 +119,16 @@ const Home = () => {
         variants={sectionVariants}
       >
         <Faq />
+      </motion.section>
+      <motion.section
+        id="faq"
+        className="faq-section py-20 w-full flex flex-col justify-center items-center bg-black text-red-500"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={sectionVariants}
+      >
+        <Youtube />
       </motion.section>
     </div>
   );
