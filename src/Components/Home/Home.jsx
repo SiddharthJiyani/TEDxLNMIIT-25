@@ -4,6 +4,7 @@ import Faq from "../FAQ/Faq";
 import Speakers from "../Speakers/Speakers"; // Ensure you import your Speakers component
 import PrevSpeakers from "../PrevSpeakers/PrevSpeakers"; // Ensure you import your PrevSpeakers component
 import RedButton from "../utility/RedButton";
+import Theme from "../Theme/Theme";
 
 const Home = () => {
   return (
@@ -29,33 +30,12 @@ const Home = () => {
         </div>
       </section>
 
-      <div className="bg-black flex justify-center w-full">
-        <div className="w-full max-w-[970px] border border-bordorColor rounded-[18px] flex box-border justify-center items-center flex-col sm:flex-row">
-          <div className="bg-black flex justify-center items-center rounded-[18px] h-[50vh] md:h-[80vh] w-full">
-            <img
-              src="https://www.tedxmec.in/assets/Cube%20Light.jpg"
-              className="p-4 md:p-10 w-full max-w-[970px] align-middle block box-border border-none"
-              alt="Cube Light"
-            />
-          </div>
-
-          {/* About theme */}
-          <div className="w-full p-4 md:p-10">
-            <div className="mb-10 z-10 max-w-[500px] text-white text-base md:text-[18px] leading-[1.5] font-medium font-[Generalsans Medium]">
-              TEDxLNMIIT 2025 Theme: Navigating the New In a world constantly
-              evolving, "Navigating the New" represents the journey of embracing
-              change, exploring uncharted territories, and seeking growth
-              through uncertainty. This theme captures the essence of venturing
-              into unknown landscapes—whether in technology, society, or
-              personal development—and calls for innovative thinking,
-              resilience, and open-mindedness. It invites us to transform
-              challenges into opportunities, turning disruption into progress
-              and helping us forge new pathways in an ever-changing world.
-            </div>
-            <RedButton to="/">Our Theme</RedButton>
-          </div>
-        </div>
-      </div>
+      <section
+        id="theme"
+        className="speakers-section py-20 h-screen w-full flex flex-col justify-center items-center bg-black text-red-500"
+      >
+        <Theme />
+      </section>
 
       {/* Speakers Section */}
       <section
