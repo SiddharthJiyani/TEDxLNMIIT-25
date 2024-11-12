@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
-    <section className=" flex justify-center pb-10 box-border">
-      <div className="w-full max-w-[1200px] mx-10 box-border">
+    <section className=" flex justify-center pb-2 box-border">
+      <div className="w-full max-w-[1200px] box-border">
         <div className="box-border">
           <div
             className="flex flex-col items-center pt-20 pb-20 box-border bg-[#141414] border border-[#2B2B2B] rounded-[24px] px-10"
