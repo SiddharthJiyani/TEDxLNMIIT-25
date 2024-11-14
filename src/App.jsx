@@ -9,13 +9,14 @@ import Partner from "./Components/Partner/Partner.jsx";
 import Gallery from "./Components/Gallery/Gallery.jsx";
 import Faq from "./Components/FAQ/Faq.jsx";
 import Footer from "./Components/Footer/Footer.jsx";
+import Particle from "./Particle.jsx";
 
 export default function App() {
   return (
     <Router>
       <div className="w-full overflow-y-auto font-generalSans  bg-customDark backdrop-blur-md relative ">
         <Navbar />
-
+        <Particle />
         <Routes>
           <Route path="/" element={<Home />} />
           {/* <Route path="/about" element={<About />} /> */}
