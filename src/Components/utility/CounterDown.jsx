@@ -111,7 +111,7 @@ const CountdownTimer = () => {
 
         {/* Second */}
         <motion.div
-          className="flex flex-col items-center justify-center bg-gradient-to-b  from-red-500 to-red-900 rounded-lg shadow-lg p-4 w-full aspect-square overflow-hidden border border-red-500/30"
+          className="flex flex-col items-center justify-center bg-gradient-to-b  from-red-500 to-red-900 rounded-lg shadow-lg p-2 w-full aspect-square overflow-hidden border border-red-500/30"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}

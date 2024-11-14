@@ -1,12 +1,12 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import birdSvg from "../../assets/Bird.svg";
 
 const Theme = () => {
   const variants = {
     initial: {
-      x: "170%",
-      y: "50%",
+      x: "100vw",
+      y: "100vh",
       opacity: 0.9,
       scale: 0.9,
     },
@@ -21,6 +21,14 @@ const Theme = () => {
         ease: "linear",
       },
     },
+    exit: {
+      opacity: 0,
+      scale: 0.5,
+      transition: {
+        duration: 0.5,
+        ease: "easeInOut",
+      },
+    },
   };
 
   const textPart = {
@@ -33,37 +41,42 @@ const Theme = () => {
       scale: 1.1,
       y: 30,
       transition: {
-        duration: 1,
+        duration: 0.5,
       },
     },
   };
-  return (
-    <div className="relative w-full flex justify-center items-center p-2">
-      {/* Animated Background SVG */}
-      <motion.div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat h-[500px] w-[500px] overflow-hidden"
-        style={{
-          backgroundImage: `url(${birdSvg})`,
-        }}
-        initial="initial"
-        whileInView="animate"
-        variants={variants}
-      ></motion.div>
 
+  return (
+    <div className="relative w-full flex justify-center items-center p-2 ">
+      {/* Wrap the animation inside AnimatePresence */}
+      <AnimatePresence>
+        <motion.div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat h-[300px] md:h-[500px] w-full md:w-[500px] xs:h-[250px] xs:w-[200px] sm:h-[300px] sm:w-[300px]"
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          variants={variants}
+          style={{
+            backgroundImage: `url(${birdSvg})`, // Corrected template literal syntax
+          }}
+        />
+      </AnimatePresence>
       {/* Main Content */}
-      <div className="relative z-10 w-full max-w-7xl flex flex-col items-center">
+      <div className="relative z-10 w-full max-w-7xl flex flex-col items-center p-4 ">
         <motion.h1
-          className="text-9xl sm:text-6xl md:text-7xl font-bold text-white text-center "
+          className="text-6xl sm:text-7xl md:text-7xl lg:text-8xl font-bold text-center bg-gradient-to-r from-red-800  to-red-300 bg-clip-text text-transparent"
           initial="initial"
           whileInView="animate"
+          exit="exit"
           variants={textPart}
         >
           Our Theme
         </motion.h1>
-        <div className="w-full flex flex-col sm:flex-row justify-center items-center ">
+
+        <div className="w-full flex flex-col sm:flex-row justify-center items-center mt-4 sm:mt-8">
           {/* SVG Illustration */}
           <motion.div
-            className="flex z-30 justify-center items-center  w-full max-w-[500px]"
+            className="flex z-30 justify-center items-center h-full max-w-[250px] sm:max-w-[300px]  sm:max-h-[100px] xs:h-[300px] xxs:h-[300px] xxxs:h-[300px] md:max-w-[400px] lg:max-w-[500px] "
             animate={{ rotate: 360 }}
             transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
           >
@@ -120,14 +133,14 @@ const Theme = () => {
           </motion.div>
 
           {/* About Theme Text */}
-          <div className="w-full p-3 md:p-10">
+          <div className="w-full p-3 md:p-8 lg:p-10 flex items-center justify-center">
             <motion.div
-              className="text-white text-10xl text-justify text-base md:text-lg leading-relaxed font-medium max-w-[600px]"
+              className="text-white text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-medium max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px] text-justify"
               initial="initial"
               whileInView="animate"
               variants={textPart}
             >
-              TEDxLNMIIT 2025 Theme: Navigating the New In a world constantly
+              TEDxLNMIIT 2025 Theme: Navigating the New. In a world constantly
               evolving, "Navigating the New" represents the journey of embracing
               change, exploring uncharted territories, and seeking growth
               through uncertainty. This theme captures the essence of venturing
