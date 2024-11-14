@@ -13,14 +13,17 @@ import Footer from "./Components/Footer/Footer.jsx";
 export default function App() {
   return (
     <Router>
-      <div className="w-full overflow-y-auto font-generalSans  bg-customDark backdrop-blur-md  ">
+      <div className="w-full overflow-y-auto font-generalSans  bg-customDark backdrop-blur-md relative ">
         <Navbar />
+
         <Routes>
           <Route path="/" element={<Home />} />
           {/* <Route path="/about" element={<About />} /> */}
+
           <Route path="/team" element={<Team />} />
           <Route path="/partner" element={<Partner />} />
           <Route path="/gallery" element={<Gallery />} />
+
           {/* <Route path="/faq" element={<Faq />} /> */}
         </Routes>
         <Footer />

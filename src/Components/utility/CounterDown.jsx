@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const CountdownTimer = () => {
-  const targetDate = new Date("2025-09-30T00:00:00"); // Set your target event date here
+  const targetDate = new Date("2024-12-09T00:00:00"); // Set your target event date here
 
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -82,7 +82,7 @@ const CountdownTimer = () => {
               {timeLeft.hours}
             </motion.div>
           </div>
-          <span className="text-xs sm:text-sm md:text-base capitalize text-white mt-2 font-semibold">
+          <span className="text-xs sm:text-sm md:text-base capitalize text-white mt-2 px-6 font-semibold">
             hours
           </span>
         </motion.div>

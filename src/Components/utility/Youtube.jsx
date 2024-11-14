@@ -18,7 +18,7 @@ export function Youtube() {
         }
       >
         <video autoPlay loop muted>
-          <source src={video} type="video/mp4" />
+          <source src={video} type="video/mp4" className="w-full h-full" />
           Your browser does not support the video tag.
         </video>
       </ContainerScroll>

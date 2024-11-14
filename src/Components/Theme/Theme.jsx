@@ -5,7 +5,7 @@ import birdSvg from "../../assets/Bird.svg";
 const Theme = () => {
   const variants = {
     initial: {
-      x: "180%",
+      x: "170%",
       y: "50%",
       opacity: 0.9,
       scale: 0.9,
@@ -17,8 +17,8 @@ const Theme = () => {
       scale: 1,
       transition: {
         repeat: Infinity,
-        duration: 8,
-        ease: "easeIn",
+        duration: 6,
+        ease: "linear",
       },
     },
   };
@@ -41,7 +41,7 @@ const Theme = () => {
     <div className="relative w-full flex justify-center items-center p-2">
       {/* Animated Background SVG */}
       <motion.div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat h-[500px] w-[500px]"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat h-[500px] w-[500px] overflow-hidden"
         style={{
           backgroundImage: `url(${birdSvg})`,
         }}
@@ -65,7 +65,7 @@ const Theme = () => {
           <motion.div
             className="flex z-30 justify-center items-center  w-full max-w-[500px]"
             animate={{ rotate: 360 }}
-            transition={{ repeat: Infinity, duration: 100, ease: "linear" }}
+            transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
           >
             <svg
               width="496"

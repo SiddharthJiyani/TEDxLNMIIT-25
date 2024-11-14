@@ -122,7 +122,7 @@ const Home = () => {
       </motion.section>
       <motion.section
         id="faq"
-        className="faq-section py-20 w-full flex flex-col justify-center items-center bg-black text-red-500"
+        className="faq-section  w-full flex flex-col justify-center items-center bg-black text-red-500"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
