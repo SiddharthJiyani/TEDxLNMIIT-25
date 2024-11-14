@@ -6,7 +6,7 @@ import image3 from "../../assets/sponsors/HP.png";
 import image4 from "../../assets/sponsors/PP.png";
 import image5 from "../../assets/sponsors/UB.png";
 import PartnerSmallBox from "./PartnerSmallBox";
-
+import { motion } from "framer-motion";
 const Partner = () => {
   useEffect(() => {
     window.scrollTo(0, 0); // Scroll to the top of the page
@@ -41,7 +41,9 @@ const Partner = () => {
 
   return (
     <div className="flex flex-col items-center bg-black text-white min-h-screen py-20">
-      <h2 className="mt-5 text-7xl font-bold mb-5">Current Partners</h2>
+      <h2 className="mt-5 text-7xl font-bold mb-5 text-center">
+        Current Partners
+      </h2>
       <div className="flex flex-wrap justify-center mb-10">
         {partners.map((partner, index) => (
           <a
@@ -59,26 +61,58 @@ const Partner = () => {
           </a>
         ))}
       </div>
-      <h3 className="mt-5 text-7xl font-bold mb-5">Previous Partners</h3>
-      <div className="flex flex-wrap justify-center mb-10   w-full">
+      <h3 className="mt-5 text-7xl font-bold mb-5 text-center">
+        Previous Partners
+      </h3>
+      <motion.div
+        className="flex justify-center mb-10 w-full overflow-x-hidden"
+        animate={{ x: ["0%", "-10%"] }}
+        transition={{
+          duration: 6,
+          ease: "linear",
+          repeat: Infinity,
+        }}
+        style={{ display: "flex" }}
+      >
         {partners.map((partner, index) => (
           <a
             key={index}
             href={partner.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="m-4"
           >
             <PartnerSmallBox imgSrc={partner.imgSrc} name={partner.name} />
           </a>
         ))}
-      </div>
+        {/* Repeat the partners list to create a seamless looping effect */}
+        {partners.map((partner, index) => (
+          <a
+            key={`${index}-copy`}
+            href={partner.link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <PartnerSmallBox imgSrc={partner.imgSrc} name={partner.name} />
+          </a>
+        ))}
 
-      <div className="text-center max-w-2xl px-4">
-        <h3 className="text-7xl font-semibold mb-4">
+        {partners.map((partner, index) => (
+          <a
+            key={`${index}-copy`}
+            href={partner.link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <PartnerSmallBox imgSrc={partner.imgSrc} name={partner.name} />
+          </a>
+        ))}
+      </motion.div>
+
+      <div className="text-center max-w-2xl px-4 md:px-6 lg:px-8">
+        <h3 className="text-4xl md:text-5xl lg:text-7xl font-semibold mb-4">
           Interested in partnership?
         </h3>
-        <p className="text-lg mb-4">
+        <p className="text-base md:text-lg lg:text-xl mb-4">
           Collaborating with TED×Lnmiit offers a rare chance to expand your
           organization&apos;s global network within the TED and TEDx community.
           Harness ideas, technology, and local investments to empower education,

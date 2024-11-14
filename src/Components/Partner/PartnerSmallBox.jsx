@@ -1,7 +1,7 @@
 const PartnerSmallBox = ({ imgSrc, name }) => {
   return (
     <div className="hover:-translate-y-3 transition-transform duration-300">
-      <div className="m-1 group relative border-4 border-[#141414] rounded-2xl w-[195px] h-[160px] bg-white overflow-hidden xs:w-[100px] xs:h-[100px] sm:w-[150px] sm:h-[120px] md:w-[180px] md:h-[140px]">
+      <div className="m-1 group relative border-4 border-[#141414] rounded-2xl w-[195px] h-[160px] bg-white overflow-hidden xxs:w-[100px] xxs:h-[90px] xs:w-[100px] xs:h-[100px] sm:w-[150px] sm:h-[120px] md:w-[180px] md:h-[140px]">
         <img
           className="rounded-2xl transition-opacity duration-300 w-full h-full object-contain"
           src={imgSrc}

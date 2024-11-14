@@ -27,7 +27,7 @@ const FaqBox = ({ index, question, answer, isActive, handleClick }) => {
 
   return (
     <motion.li
-      className={`border border-bordorColor p-5 bg-customDark rounded-lg w-full max-w-full w-auto ${
+      className={`border border-bordorColor p-6 bg-customDark rounded-lg w-full max-w-full w-auto ${
         isActive ? "active" : ""
       }`}
       initial="initial"
