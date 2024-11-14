@@ -25,7 +25,7 @@ const Home = () => {
       {/* Hero Section */}
       <section
         id="hero"
-        className="hero-section py-20 h-screen w-full flex flex-col justify-center items-center text-red-500 relative overflow-hidden"
+        className="hero-section py-20 h-screen w-full flex  justify-center items-center text-red-500 relative overflow-hidden md:flex-wrap"
       >
         {/* Background Video */}
         <video
@@ -39,7 +39,7 @@ const Home = () => {
         </video>
 
         {/* Content Over the Video */}
-        <div className="hero-content home-content text-center z-10 flex justify-between  items-center  w-full">
+        <div className="hero-content home-content text-center z-10 flex justify-around  items-center  w-full xxxs:flex-col xxxs:items-center md:flex-row ">
           <div className="hero-title-wrap pl-10">
             <h2 className="hero-title text-8xl font-bold mb-4   rounded-lg p-1 ">
               <strong className="text-[#ff3006]">Tedx </strong>
@@ -58,7 +58,7 @@ const Home = () => {
             </button>
           </div>
           <motion.div
-            className="border border-white/20 rounded-lg bg-white/10 backdrop-blur-sm p-1 mb-4"
+            className="border border-white/20 rounded-lg bg-white/10 backdrop-blur-sm p-1 mb-4 mt-1"
             variants={sectionVariants}
           >
             <CountdownTimer />

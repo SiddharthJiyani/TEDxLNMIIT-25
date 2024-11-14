@@ -4,24 +4,56 @@ const About = () => {
   // Define animation variants
   const sectionVariants = {
     initial: { opacity: 0, y: 50 },
-    animate: { opacity: 1, y: 0, scale: 1.1, transition: { duration: 0.8 } },
+    animate: {
+      opacity: 1,
+      y: 0,
+      scale: 1.1,
+      rotate: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+        when: "beforeChildren",
+        staggerChildren: 0.3,
+      },
+    },
   };
 
+  // Card Variants with Different Directions and Delays
   const cardVariant1 = {
-    initial: { opacity: 0, scale: 0.5, x: 300 },
-    animate: { opacity: 1, scale: 1, x: 0, transition: { duration: 0.5 } },
+    initial: { opacity: 0, scale: 0.5, rotateY: 90 },
+    animate: {
+      opacity: 1,
+      scale: 1,
+      x: 0,
+      rotateY: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+        delay: 0.3,
+      },
+    },
   };
 
   const cardVariant2 = {
-    initial: { opacity: 0, scale: 0.5, x: -300 },
-    animate: { opacity: 1, scale: 1, x: 0, transition: { duration: 0.5 } },
+    initial: { opacity: 0, scale: 0.5, rotateY: 90 },
+    animate: {
+      opacity: 1,
+      scale: 1,
+      x: 0,
+      rotateY: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+        delay: 0.3,
+      },
+    },
   };
 
   return (
     <motion.section
       className="bg-black text-white py-10 px-8"
       initial="initial"
-      animate="animate"
+      whileInView="animate"
       variants={sectionVariants}
     >
       <div className="mt-14 container mx-auto">
@@ -29,7 +61,7 @@ const About = () => {
         <motion.h1
           className="text-5xl font-bold text-gray-200 mb-12 text-center"
           initial="initial"
-          animate="animate"
+          whileInView="animate"
           variants={sectionVariants}
         >
           About TEDx
@@ -39,7 +71,7 @@ const About = () => {
         <motion.div
           className="bg-customDark p-10 rounded-xl mb-8 shadow-lg border border-bordorColor max-w-4xl  mx-auto"
           initial="initial"
-          animate="animate"
+          whileInView="animate"
           variants={cardVariant1}
         >
           <motion.div className="flex items-center mb-4">
@@ -58,7 +90,7 @@ const About = () => {
           <motion.p
             className="text-white text-justify "
             initial="initial"
-            animate="animate"
+            whileInView="animate"
             variants={cardVariant1}
           >
             TEDx is a series of independently organized events under a license
@@ -79,11 +111,11 @@ const About = () => {
         <motion.div
           className="bg-customDark p-10 rounded-xl shadow-lg border border-bordorColor max-w-4xl mx-auto"
           initial="initial"
-          animate="animate"
+          whileInView="animate"
           variants={cardVariant2}
         >
           <div className="flex items-center mb-4">
-            <div className="w-8 h-8 bg-white rounded-full mr-4 flex items-center justify-center">
+            <div className="w-[35px] h-8 bg-white rounded-full mr-4 flex items-center justify-center">
               <span className="text-black font-bold text-lg">
                 <img
                   src="https://static.thenounproject.com/png/4411728-200.png"
@@ -92,7 +124,7 @@ const About = () => {
               </span>
             </div>
 
-            <h2 className="text-xl font-bold bg-gradient-to-r from-red-900 to-red-500 text-transparent bg-clip-text text-justify">
+            <h2 className="text-xl font-bold bg-gradient-to-r from-red-900 to-red-500 text-transparent bg-clip-text ">
               X = independently organized event
             </h2>
           </div>

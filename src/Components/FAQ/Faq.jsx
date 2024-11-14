@@ -33,7 +33,7 @@ function Faq() {
           Frequently Asked Questions
         </h2>
         <motion.ul
-          className="mt-10 faq-list space-y-6"
+          className="mt-10 faq-list space-y-6 "
           initial="initial"
           whileInView="animate"
           variants={variants}

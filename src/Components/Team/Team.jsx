@@ -5,18 +5,43 @@ import MemberCard from "./MemberCard";
 const Team = () => {
   // Animation variants
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0, scale: 0.8 },
     show: {
       opacity: 1,
+      scale: 1,
       transition: {
-        staggerChildren: 0.3,
+        staggerChildren: 0.4,
+        delayChildren: 0.3,
+        duration: 0.8,
+        ease: "easeInOut",
       },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+    hidden: { opacity: 0, y: 20, scale: 0.9, rotate: -10 },
+    show: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      rotate: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+        type: "spring",
+        stiffness: 100,
+      },
+    },
+    hover: {
+      scale: 1.1,
+      rotate: 5,
+      transition: { duration: 0.3, ease: "easeInOut" },
+    },
+    tap: {
+      scale: 0.95,
+      rotate: -5,
+      transition: { duration: 0.2, ease: "easeInOut" },
+    },
   };
 
   return (
@@ -28,7 +53,7 @@ const Team = () => {
     >
       {/* Team Section Title */}
       <motion.div variants={itemVariants} whileInView="show">
-        <Title text="Our Team" />
+        <h1 className="text-8xl bg-red-700 w-full">Our Team</h1>
       </motion.div>
 
       {/* Organizer */}
@@ -44,7 +69,7 @@ const Team = () => {
         whileInView="show"
         variants={containerVariants}
       >
-        <motion.div variants={itemVariants}>
+        <motion.div whileInView="show" variants={itemVariants}>
           <MemberCard
             name="Abhey Raheja"
             link="https://www.linkedin.com/in/abhey-raheja"
@@ -56,13 +81,13 @@ const Team = () => {
             link="https://www.linkedin.com/in/abhinav-singh"
           />
         </motion.div>
-        <motion.div variants={itemVariants}>
+        <motion.div whileInView="show" variants={itemVariants}>
           <MemberCard
             name="Krishna Rohira"
             link="https://www.linkedin.com/in/krishna-rohira"
           />
         </motion.div>
-        <motion.div variants={itemVariants}>
+        <motion.div whileInView="show" variants={itemVariants}>
           <MemberCard
             name="Suhani Gupta"
             link="https://www.linkedin.com/in/suhani-gupta"
@@ -75,6 +100,7 @@ const Team = () => {
         <div className="w-full md:w-1/3 px-4">
           <motion.h2
             variants={itemVariants}
+            whileInView="show"
             className="text-2xl font-semibold mt-10 mb-6"
           >
             Web Development Head
@@ -82,8 +108,9 @@ const Team = () => {
           <motion.div
             className="flex justify-center gap-6"
             variants={containerVariants}
+            whileInView="show"
           >
-            <motion.div variants={itemVariants}>
+            <motion.div whileInView="show" variants={itemVariants}>
               <MemberCard
                 name="Siddharth Jiyani"
                 link="https://www.linkedin.com/in/siddharth-jiyani"
