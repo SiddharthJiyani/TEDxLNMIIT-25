@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import img from "../../assets/pic1.jpg";
 import PrevBox from "../PrevSpeakers/PrevBox";
+import RedButton from "../utility/RedButton";
 
 const Gallery = () => {
   const fadeIn = {
@@ -9,7 +10,7 @@ const Gallery = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center bg-black backdrop-blur-md">
+    <div className="flex flex-col items-center justify-center bg-black backdrop-blur-md pb-10">
       <div className="mt-24 w-full top-20 backdrop-blur-md">
         {/* First Row */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-center">
@@ -67,6 +68,7 @@ const Gallery = () => {
           ))}
         </div>
       </div>
+      <RedButton>Click for More Photos</RedButton>
     </div>
   );
 };
