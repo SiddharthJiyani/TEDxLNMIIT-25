@@ -41,8 +41,8 @@ const Home = () => {
         {/* Content Over the Video */}
         <div className="hero-content home-content text-center z-10 flex justify-between  items-center  w-full">
           <div className="hero-title-wrap pl-10">
-            <h2 className="hero-title text-8xl font-bold mb-4  bg-white/10 backdrop-blur-lg rounded-lg p-1 ">
-              <strong>Tedx </strong>
+            <h2 className="hero-title text-8xl font-bold mb-4   rounded-lg p-1 ">
+              <strong className="text-[#ff3006]">Tedx </strong>
               <br></br>
               <strong className="text-white">Lnmiit</strong>
             </h2>
@@ -53,12 +53,12 @@ const Home = () => {
       <RedButton to="/contact-us">Contact Us</RedButton>
       <RedButton to="/buy-tickets">Buy Tickets</RedButton>
     </div> */}
-            <button className="mt-3 inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 shadow h-10 rounded-md px-8 bg-red-600 hover:bg-red-700 text-white py-2 transition-all duration-300 transform hover:scale-105">
+            <button className="mt-3 inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 shadow h-10 rounded-md px-8 bg-[#ff3006] hover:bg-red-700 text-white py-2 transition-all duration-300 transform hover:scale-105">
               Registrations Open Soon
             </button>
           </div>
           <motion.div
-            className="border border-white/20 rounded-lg bg-white/10 backdrop-blur-lg p-1 mb-4"
+            className="border border-white/20 rounded-lg bg-white/10 backdrop-blur-sm p-1 mb-4"
             variants={sectionVariants}
           >
             <CountdownTimer />
