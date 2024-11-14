@@ -39,32 +39,37 @@ const Home = () => {
         </video>
 
         {/* Content Over the Video */}
-        <div className="hero-content home-content text-center z-10">
-          <div className="hero-title-wrap">
-            <h2 className="hero-title text-7xl font-bold mb-4">
-              <strong>Tedx Lnmiit</strong>
+        <div className="hero-content home-content text-center z-10 flex justify-between  items-center  w-full">
+          <div className="hero-title-wrap pl-10">
+            <h2 className="hero-title text-8xl font-bold mb-4  bg-white/10 backdrop-blur-lg rounded-lg p-1 ">
+              <strong>Tedx </strong>
+              <br></br>
+              <strong className="text-white">Lnmiit</strong>
             </h2>
-            <p className="text-lg">Date: </p>
-            <p className="text-lg">Venue: </p>
+            {/* <p className="text-lg">Date: </p>
+    <p className="text-lg">Venue: </p> */}
 
-            <div className="hero-buttons mt-8 space-x-4">
-              <RedButton to="/contact-us">Contact Us</RedButton>
-              <RedButton to="/buy-tickets">Buy Tickets</RedButton>
-            </div>
+            {/* <div className="hero-buttons mt-8 space-x-4">
+      <RedButton to="/contact-us">Contact Us</RedButton>
+      <RedButton to="/buy-tickets">Buy Tickets</RedButton>
+    </div> */}
             <button className="mt-3 inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 shadow h-10 rounded-md px-8 bg-red-600 hover:bg-red-700 text-white py-2 transition-all duration-300 transform hover:scale-105">
               Registrations Open Soon
             </button>
           </div>
+          <motion.div
+            className="border border-white/20 rounded-lg bg-white/10 backdrop-blur-lg p-1 mb-4"
+            variants={sectionVariants}
+          >
+            <CountdownTimer />
+          </motion.div>
         </div>
-        <motion.div className="mt-6" variants={sectionVariants}>
-          <CountdownTimer />
-        </motion.div>
       </section>
 
       {/* Theme Section */}
       <motion.section
         id="theme"
-        className="theme-section py-20 h-screen w-full flex flex-col justify-center items-center bg-black text-red-500"
+        className="theme-section py-20 h-screen w-full flex flex-col justify-center items-center bg-black text-red-500 overflow-hidden"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -88,10 +93,10 @@ const Home = () => {
       {/* About Section */}
       <motion.section
         id="about"
-        className="about-section py-20 w-full flex flex-col justify-center items-center bg-black text-red-500"
+        className="about-section py-20 w-full flex flex-col justify-center items-center bg-black text-red-500 overflow-hidden"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true }}
+        viewport={{ once: true }} // Triggers only when the section is in view
         variants={sectionVariants}
       >
         <About />
@@ -122,7 +127,7 @@ const Home = () => {
       </motion.section>
       <motion.section
         id="faq"
-        className="faq-section py-20 w-full flex flex-col justify-center items-center bg-black text-red-500"
+        className="faq-section  w-full flex flex-col justify-center items-center bg-black text-red-500"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}

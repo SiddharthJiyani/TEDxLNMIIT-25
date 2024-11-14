@@ -5,6 +5,7 @@ import image2 from "../../assets/sponsors/EP.png";
 import image3 from "../../assets/sponsors/HP.png";
 import image4 from "../../assets/sponsors/PP.png";
 import image5 from "../../assets/sponsors/UB.png";
+import PartnerSmallBox from "./PartnerSmallBox";
 
 const Partner = () => {
   useEffect(() => {
@@ -48,12 +49,31 @@ const Partner = () => {
             href={partner.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="m-4"
+            className="m-4 "
           >
-            <PrevBox imgSrc={partner.imgSrc} name={partner.name} />
+            <PrevBox
+              imgSrc={partner.imgSrc}
+              name={partner.name}
+              className="h-[250px]"
+            />
           </a>
         ))}
       </div>
+      <h3 className="mt-5 text-7xl font-bold mb-5">Previous Partners</h3>
+      <div className="flex flex-wrap justify-center mb-10   w-full">
+        {partners.map((partner, index) => (
+          <a
+            key={index}
+            href={partner.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="m-4"
+          >
+            <PartnerSmallBox imgSrc={partner.imgSrc} name={partner.name} />
+          </a>
+        ))}
+      </div>
+
       <div className="text-center max-w-2xl px-4">
         <h3 className="text-7xl font-semibold mb-4">
           Interested in partnership?
