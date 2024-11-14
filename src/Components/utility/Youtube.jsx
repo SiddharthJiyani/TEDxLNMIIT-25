@@ -4,7 +4,7 @@ import { ContainerScroll } from "../ui/container-scroll-animation";
 import video from "../../assets/Video-926.mp4";
 export function Youtube() {
   return (
-    <div className="flex flex-col overflow-hidden">
+    <div className="flex flex-col overflow-hidden ">
       <ContainerScroll
         titleComponent={
           <>
