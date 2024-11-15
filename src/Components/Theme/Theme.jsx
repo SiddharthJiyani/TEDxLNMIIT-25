@@ -135,7 +135,7 @@ const Theme = () => {
           {/* About Theme Text */}
           <div className="w-full p-3 md:p-8 lg:p-10 flex items-center justify-center">
             <motion.div
-              className="text-white text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-medium max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px] text-justify"
+              className="text-white text-sm sm:text-base md:text-lg lg:text-lg leading-relaxed font-medium max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px] text-justify"
               initial="initial"
               whileInView="animate"
               variants={textPart}
@@ -156,5 +156,5 @@ const Theme = () => {
     </div>
   );
 };
- 
+
 export default Theme;

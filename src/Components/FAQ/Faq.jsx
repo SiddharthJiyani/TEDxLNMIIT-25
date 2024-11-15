@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { motion } from "framer-motion"; // Import motion from framer-motion
 import FaqBox from "./FaqBox"; // Adjust the path if needed
 
 function Faq() {
@@ -9,37 +8,15 @@ function Faq() {
     setActiveSection(index === activeSection ? null : index);
   };
 
-  const variants = {
-    initial: {
-      y: -100,
-      opacity: 0,
-      scale: 0.8,
-    },
-    animate: {
-      y: 10,
-      opacity: 1,
-      scale: 1.1,
-      transition: {
-        duration: 0.4,
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
   return (
     <div className="min-h-screen flex items-center justify-center bg-black text-white h-screen w-screen">
       <div className="mt-14 faq-container bg-black text-white py-10 px-6 md:px-12 max-w-xl mx-auto">
-        <h2 className="text-4xl font-bold mb-8 text-center text-gray-200 ">
+        <h2 className="text-4xl font-bold mb-8 text-center text-gray-200">
           Frequently Asked Questions
         </h2>
-        <motion.ul
-          className="mt-10 faq-list space-y-6 "
-          initial="initial"
-          whileInView="animate"
-          variants={variants}
-        >
+        <ul className="mt-10 faq-list space-y-6">
           {/* FAQ Item 1 */}
-          <motion.li variants={variants} key={0}>
+          <li>
             <FaqBox
               index={0}
               question="What is TEDx?"
@@ -47,10 +24,10 @@ function Faq() {
               isActive={activeSection === 0}
               handleClick={handleSectionClick}
             />
-          </motion.li>
+          </li>
 
           {/* FAQ Item 2 */}
-          <motion.li variants={variants} key={1}>
+          <li>
             <FaqBox
               index={1}
               question="How can I attend a TEDx event?"
@@ -58,10 +35,10 @@ function Faq() {
               isActive={activeSection === 1}
               handleClick={handleSectionClick}
             />
-          </motion.li>
+          </li>
 
           {/* FAQ Item 3 */}
-          <motion.li variants={variants} key={2}>
+          <li>
             <FaqBox
               index={2}
               question="Are TEDx talks available online?"
@@ -69,10 +46,10 @@ function Faq() {
               isActive={activeSection === 2}
               handleClick={handleSectionClick}
             />
-          </motion.li>
+          </li>
 
           {/* FAQ Item 4 */}
-          <motion.li variants={variants} key={3}>
+          <li>
             <FaqBox
               index={3}
               question="What makes a TEDx talk different from a TED talk?"
@@ -80,8 +57,8 @@ function Faq() {
               isActive={activeSection === 3}
               handleClick={handleSectionClick}
             />
-          </motion.li>
-        </motion.ul>
+          </li>
+        </ul>
       </div>
     </div>
   );
