@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import About from "../About/About";
 import Faq from "../FAQ/Faq";
-import Speakers from "../Speakers/Speakers";
+import Speakers from "../Speakers/SpeakerList";
 import PrevSpeakers from "../PrevSpeakers/PrevSpeakers";
 import RedButton from "../utility/RedButton";
 import Theme from "../Theme/Theme";
