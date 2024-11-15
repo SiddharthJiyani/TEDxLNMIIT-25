@@ -66,17 +66,17 @@ export default function Particle() {
             },
             particles: {
               number: {
-                value: 401,
+                value: 451,
                 density: {
                   enable: true,
                   value_area: 850,
                 },
               },
               color: {
-                value: "#f2aaaa",
+                value: "#fff",
               },
               shape: {
-                type: "edge",
+                type: "circle",
                 stroke: {
                   width: 0,
                   color: "#000000",
@@ -101,7 +101,7 @@ export default function Particle() {
                 },
               },
               size: {
-                value: 3,
+                value: 1.55,
                 random: true,
                 anim: {
                   enable: false,
