@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <section className=" flex justify-center pb-2 box-border">
+    <section className=" flex justify-center pb-2 box-border bg-black">
       <div className="w-full max-w-[1200px] box-border">
         <div className="box-border">
           <div
