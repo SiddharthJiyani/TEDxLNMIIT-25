@@ -12,7 +12,7 @@ import Footer from "./Components/Footer/Footer.jsx";
 import Particle from "./Particle.jsx";
 
 export default function App() {
-  return (
+  return ( 
     <Router>
       <div className="w-full overflow-y-auto font-generalSans  bg-customDark backdrop-blur-md relative ">
         <Navbar />
