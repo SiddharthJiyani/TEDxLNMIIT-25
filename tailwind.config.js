@@ -18,6 +18,8 @@ export default {
           "GeneralSans-Bold",
           "sans-serif",
         ],
+         amsterdam: ['"Amsterdam Four_ttf"', 'sans-serif'], // Add Amsterdam Four font here
+        bigshouldersdisplay: ['"Big Shoulders Display"', 'sans-serif'],
       },
       screens: {
         xs: "480px",
