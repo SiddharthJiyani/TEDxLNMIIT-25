@@ -10,7 +10,7 @@ import Speakers from "./Speakers.jsx";
 
 const SpeakerList = () => {
   return (
-    <div className="flex flex-col justify-around items-center bg-black text-[#7d7d7d] text-left w-full">
+    <div className="flex flex-col justify-around items-center relative top-10 bottom-10 text-[#7d7d7d] text-left w-full">
       <h1 className="text-3xl mb-4">SPEAKERS</h1>
       <div className="flex flex-wrap justify-center flex-grow">
         <div className="flex flex-wrap justify-center">
