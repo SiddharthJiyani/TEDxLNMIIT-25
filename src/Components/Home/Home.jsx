@@ -21,7 +21,7 @@ const sectionVariants = {
 
 const Home = () => {
   return (
-    <div className="custom-container bg-black">
+    <div className="custom-container bg-black overflow-hidden">
       {/* Hero Section */}
       <section
         id="hero"
@@ -81,7 +81,7 @@ const Home = () => {
       {/* Speakers Section */}
       <motion.section
         id="speakers"
-        className="speakers-section py-20 h-screen w-full flex flex-col justify-center items-center bg-black text-red-500"
+        className="speakers-section py-20 h-full w-full flex flex-col justify-center items-center bg-black text-red-500"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}

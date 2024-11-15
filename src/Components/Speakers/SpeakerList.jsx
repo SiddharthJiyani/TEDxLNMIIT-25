@@ -15,11 +15,15 @@ const SpeakerList = () => {
       <div className="flex flex-wrap justify-center flex-grow">
         <div className="flex flex-wrap justify-center">
           {/* First Speaker */}
-        
+
           <Speakers imgSrc={speaker1} altText="Speaker" name="Dr. Tanu Jain" />
 
           {/* Second Speaker */}
-          <Speakers imgSrc={speaker2} altText="Speaker" name="Krishnan Sunderarajan" />
+          <Speakers
+            imgSrc={speaker2}
+            altText="Speaker"
+            name="Krishnan Sunderarajan"
+          />
 
           {/* Third Speaker */}
           <Speakers imgSrc={speaker3} altText="Speaker" name="Palakh Khanna" />
@@ -38,7 +42,11 @@ const SpeakerList = () => {
           <Speakers imgSrc={speaker7} altText="Speaker" name="Gunjan Saini" />
 
           {/* Eighth Speaker */}
-          <Speakers imgSrc={speaker9} altText="Speaker" name="Sakshi Mandhyan" />
+          <Speakers
+            imgSrc={speaker9}
+            altText="Speaker"
+            name="Sakshi Mandhyan"
+          />
         </div>
       </div>
     </div>
