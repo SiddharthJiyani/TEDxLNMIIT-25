@@ -4,7 +4,7 @@ import Button from './Button';
 
 const Footer = () => {
   return (
-    <div className="bg-black p-10 text-white flex flex-col md:flex-row justify-between items-center z-10">
+<div className="relative z-10 bg-[#141414] p-10 text-white flex flex-col md:flex-row justify-between items-center">
       <div className="text-center md:text-left">
         <img src={tedxlnm} alt="TEDx LNMIIT logo" className="mb-4 mx-auto md:mx-0" />
         <p className="font-arimo md:text-[14px] md:leading-[18px] text-xs text-flatwhite-500">
