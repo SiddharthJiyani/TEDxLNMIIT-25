@@ -4,15 +4,15 @@ import PrevBox from "../PrevSpeakers/PrevBox";
 import RedButton from "../utility/RedButton";
 import { useEffect } from "react";
 
-useEffect(() => {
-  window.scrollTo(0, 0);
-}, []);
 
 const Gallery = () => {
   const fadeIn = {
     hidden: { opacity: 0, y: 20, scale: 0.7 },
     visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.3 } },
   };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="flex flex-col items-center justify-center bg-black backdrop-blur-md pb-10">

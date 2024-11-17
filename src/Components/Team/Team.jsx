@@ -3,11 +3,12 @@ import Title from "../utility/Title";
 import MemberCard from "./MemberCard";
 import { useEffect } from "react";
 
-useEffect(() => {
-  window.scrollTo(0, 0);
-}, []);
-
 const Team = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0, scale: 0.8 },
@@ -54,8 +55,7 @@ const Team = () => {
       className="bg-black py-20 text-center text-white"
       initial="hidden"
       whileInView="show"
-      variants={containerVariants}
-    >
+      variants={containerVariants}>
       {/* Team Section Title */}
       <motion.div variants={itemVariants} whileInView="show">
         <h1 className="text-8xl bg-red-700 w-full">Our Team</h1>
@@ -65,15 +65,13 @@ const Team = () => {
       <motion.h2
         whileInView="show"
         variants={itemVariants}
-        className="text-2xl font-semibold mt-10 mb-6"
-      >
+        className="text-2xl font-semibold mt-10 mb-6">
         Organizer
       </motion.h2>
       <motion.div
         className="flex flex-wrap justify-center gap-6"
         whileInView="show"
-        variants={containerVariants}
-      >
+        variants={containerVariants}>
         <motion.div whileInView="show" variants={itemVariants}>
           <MemberCard
             name="Abhey Raheja"
@@ -106,15 +104,13 @@ const Team = () => {
           <motion.h2
             variants={itemVariants}
             whileInView="show"
-            className="text-2xl font-semibold mt-10 mb-6"
-          >
+            className="text-2xl font-semibold mt-10 mb-6">
             Web Development Head
           </motion.h2>
           <motion.div
             className="flex justify-center gap-6"
             variants={containerVariants}
-            whileInView="show"
-          >
+            whileInView="show">
             <motion.div whileInView="show" variants={itemVariants}>
               <MemberCard
                 name="Siddharth Jiyani"
@@ -128,14 +124,12 @@ const Team = () => {
         <div className="w-full md:w-1/3 px-4">
           <motion.h2
             variants={itemVariants}
-            className="text-2xl font-semibold mt-10 mb-6"
-          >
+            className="text-2xl font-semibold mt-10 mb-6">
             Content Writing Head
           </motion.h2>
           <motion.div
             className="flex justify-center gap-6"
-            variants={containerVariants}
-          >
+            variants={containerVariants}>
             <motion.div variants={itemVariants}>
               <MemberCard
                 name="Sahil Gaur"
@@ -149,14 +143,12 @@ const Team = () => {
         <div className="w-full md:w-1/3 px-4">
           <motion.h2
             variants={itemVariants}
-            className="text-2xl font-semibold mt-10 mb-6"
-          >
+            className="text-2xl font-semibold mt-10 mb-6">
             Sponsorship Head
           </motion.h2>
           <motion.div
             className="flex justify-center gap-6"
-            variants={containerVariants}
-          >
+            variants={containerVariants}>
             <motion.div variants={itemVariants}>
               <MemberCard
                 name="Shreyansh Badoni"
@@ -172,14 +164,12 @@ const Team = () => {
         <div className="w-full md:w-1/2 px-4">
           <motion.h2
             variants={itemVariants}
-            className="text-2xl font-semibold mt-10 mb-6"
-          >
+            className="text-2xl font-semibold mt-10 mb-6">
             Creative Head
           </motion.h2>
           <motion.div
             className="flex flex-wrap justify-center gap-6"
-            variants={containerVariants}
-          >
+            variants={containerVariants}>
             <motion.div variants={itemVariants}>
               <MemberCard
                 name="KrishnaManchanda"
@@ -199,14 +189,12 @@ const Team = () => {
         <div className="w-full md:w-1/2 px-4">
           <motion.h2
             variants={itemVariants}
-            className="text-2xl font-semibold mt-10 mb-6"
-          >
+            className="text-2xl font-semibold mt-10 mb-6">
             Event Management Head
           </motion.h2>
           <motion.div
             className="flex flex-wrap justify-center gap-6"
-            variants={containerVariants}
-          >
+            variants={containerVariants}>
             <motion.div variants={itemVariants}>
               <MemberCard
                 name="Nemil Kamdar"

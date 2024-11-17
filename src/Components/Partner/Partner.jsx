@@ -8,9 +8,7 @@ import image5 from "../../assets/sponsors/UB.png";
 import PartnerSmallBox from "./PartnerSmallBox";
 import { motion } from "framer-motion";
 
-useEffect(() => {
-  window.scrollTo(0, 0);
-}, []);
+
 const Partner = () => {
   useEffect(() => {
     window.scrollTo(0, 0); // Scroll to the top of the page
