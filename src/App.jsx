@@ -10,6 +10,7 @@ import Gallery from "./Components/Gallery/Gallery.jsx";
 import Faq from "./Components/FAQ/Faq.jsx";
 import Footer from "./Components/Footer/Footer.jsx";
 import Particle from "./Particle.jsx";
+import TicketsPage from "./Components/TicketsPage/TicketsPage.jsx";
 
 export default function App() {
   return ( 
@@ -24,6 +25,7 @@ export default function App() {
           <Route path="/team" element={<Team />} />
           <Route path="/partner" element={<Partner />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="booktickets" element={<TicketsPage />} />
 
           {/* <Route path="/faq" element={<Faq />} /> */}
         </Routes>

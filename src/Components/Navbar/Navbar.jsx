@@ -135,18 +135,18 @@ const Navbar = () => {
                 className="nav-try-icon ml-1 h-9 w-9"
               />
             </div>
+
             {/* Hamburger Menu for Mobile */}
-            <div className="md:hidden" onClick={toggleMenu}>
-              <Hamburger close={isMenuOpen} />
+            <div className="md:hidden">
+              <Hamburger close={isMenuOpen} toggleMenu={toggleMenu} />
             </div>
           </div>
         </div>
       </nav>
+
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div
-          className={`sticky  left-0 top-10 z-60 flex h-screen w-full flex-col items-center justify-center gap-12 bg-customDark duration-700 ease-in-out lg:hidden`}
-        >
+        <div className="sticky left-0 top-10 z-60 flex h-screen w-full flex-col items-center justify-center gap-12 bg-customDark duration-700 ease-in-out lg:hidden">
           <Link
             to="/"
             className="mt-20 text-white hover:text-gray-300"

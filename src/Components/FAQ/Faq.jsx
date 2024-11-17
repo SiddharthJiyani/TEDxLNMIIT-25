@@ -1,5 +1,5 @@
 import { useState } from "react";
-import FaqBox from "./FaqBox"; // Adjust the path if needed
+import FaqBox from "./FaqBox"; // Adjust the path if necessary
 
 function Faq() {
   const [activeSection, setActiveSection] = useState(null);
@@ -15,7 +15,7 @@ function Faq() {
           Frequently Asked Questions
         </h2>
         <ul className="mt-10 faq-list space-y-6">
-          {/* FAQ Item 1 */}
+          {/* FAQ Items */}
           <li>
             <FaqBox
               index={0}
@@ -25,8 +25,6 @@ function Faq() {
               handleClick={handleSectionClick}
             />
           </li>
-
-          {/* FAQ Item 2 */}
           <li>
             <FaqBox
               index={1}
@@ -36,8 +34,6 @@ function Faq() {
               handleClick={handleSectionClick}
             />
           </li>
-
-          {/* FAQ Item 3 */}
           <li>
             <FaqBox
               index={2}
@@ -47,8 +43,6 @@ function Faq() {
               handleClick={handleSectionClick}
             />
           </li>
-
-          {/* FAQ Item 4 */}
           <li>
             <FaqBox
               index={3}
