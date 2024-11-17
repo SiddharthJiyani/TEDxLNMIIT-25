@@ -1,6 +1,11 @@
 import { motion } from "framer-motion";
 import Title from "../utility/Title";
 import MemberCard from "./MemberCard";
+import { useEffect } from "react";
+
+useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
 
 const Team = () => {
   // Animation variants

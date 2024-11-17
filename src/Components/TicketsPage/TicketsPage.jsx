@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function TicketBookingPage() {
   const [loading, setLoading] = useState(false);
@@ -20,6 +20,11 @@ export default function TicketBookingPage() {
       e.currentTarget.reset();
     }
   };
+
+  // when the we come to this url page should scroll to top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-gray-100">

@@ -2,6 +2,11 @@ import { motion } from "framer-motion";
 import img from "../../assets/pic1.jpg";
 import PrevBox from "../PrevSpeakers/PrevBox";
 import RedButton from "../utility/RedButton";
+import { useEffect } from "react";
+
+useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
 
 const Gallery = () => {
   const fadeIn = {
