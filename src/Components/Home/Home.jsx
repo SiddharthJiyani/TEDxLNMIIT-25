@@ -32,9 +32,9 @@ const Home = () => {
           autoPlay
           loop
           muted
-          className="absolute top-0 left-0 w-full h-full object-cover z-0 brightness-75"
+          className="absolute top-0 left-0 w-full h-full object-cover z-0 "
         >
-          <source src={video} type="video/mp4" />
+          <source src="https://res.cloudinary.com/djodcayme/video/upload/v1732190366/TEDxLNMIIT%2725/Ted_Web_Back_Black_White_compressed_o1lz1l.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 

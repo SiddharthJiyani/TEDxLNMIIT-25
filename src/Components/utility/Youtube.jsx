@@ -17,10 +17,9 @@ export function Youtube() {
           </>
         }
       >
-        <video autoPlay loop muted className="h-full w-full">
-          <source src={video} type="video/mp4" className="w-full" />
-          Your browser does not support the video tag.
-        </video>
+        
+        <iframe width="843" height="474" src="https://www.youtube.com/embed/Jl_M3DCtTHI" title="TEDxLNMIIT&#39;24 | After Movie" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </ContainerScroll>
     </div>
   );
