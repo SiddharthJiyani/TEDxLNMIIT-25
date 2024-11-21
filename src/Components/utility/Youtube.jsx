@@ -9,10 +9,10 @@ export function Youtube() {
         titleComponent={
           <>
             <h1 className="text-4xl font-semibold text-black dark:text-white">
-              <br />
-              <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
+              <span className="text-4xl md:text-[6rem] mb-14 font-bold mt-1 leading-none">
                 After Movie
               </span>
+              <br />
             </h1>
           </>
         }

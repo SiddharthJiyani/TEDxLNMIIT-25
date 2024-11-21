@@ -23,9 +23,9 @@ export const ContainerScroll = ({ titleComponent, children }) => {
   const scaleDimensions = () => {
     return isMobile ? [0.7, 0.9] : [1.05, 1];
   };
-  const rotate = useTransform(scrollYProgress, [0, 0.25, 0.5], [40, 25, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0.9, 0.8]);
-  const translate = useTransform(scrollYProgress, [0, 0.75, 1], [0, -50, -100]);
+  const rotate = useTransform(scrollYProgress, [0, 0.5], [40, 0]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
+  const translate = useTransform(scrollYProgress, [0, 1], [0, -100]);
 
   return (
     <div
@@ -53,7 +53,7 @@ export const Header = ({ translate, titleComponent }) => {
       style={{
         translateY: translate,
       }}
-      className="div max-w-5xl mx-auto text-center "
+      className="div max-w-5xl mb-10 mx-auto text-center "
     >
       {titleComponent}
     </motion.div>
@@ -64,16 +64,15 @@ export const Card = ({ rotate, scale, children }) => {
   return (
     <motion.div
       style={{
-        rotateX: rotate,
-        scale,
         boxShadow: `
-          0 0 10px rgba(255, 0, 0, 0.5),   /* inner glow */
-          0 0 20px rgba(255, 0, 0, 0.4),   /* outer glow */
+          0 0 10px rgba(255, 0, 0, 0.3),   /* inner glow */
+          0 0 20px rgba(255, 0, 0, 0.3),   /* outer glow */
           0 0 40px rgba(255, 0, 0, 0.3),   /* larger spread */
-          0 0 80px rgba(255, 0, 0, 0.2)    /* subtle extended spread */
+          0 0 80px rgba(255, 0, 0, 0.3)    /* subtle extended spread */
         `,
+
       }}
-      className="max-w-5xl -mt-12 mx-auto h-[40rem] md:h-[40rem] w-full border-2 border-[#6C6C6C] p-2 md:p-6 rounded-[30px] shadow-2xl bg-red-600"
+      className="max-w-5xl -mt-12 mx-auto h-[20rem] md:h-[540px] w-full border-2 border-[#6C6C6C] p-2 md:p-4 rounded-[30px] shadow-2xl bg-red-600"
     >
       <div className="h-full w-full overflow-hidden rounded-2xl bg-gray-100 dark:bg-zinc-900 md:rounded-2xl md:p-4">
         {children}
@@ -81,3 +80,6 @@ export const Card = ({ rotate, scale, children }) => {
     </motion.div>
   );
 };
+
+
+
