@@ -25,44 +25,109 @@ const Home = () => {
       {/* Hero Section */}
       <section
         id="hero"
-        className="hero-section py-20 h-screen w-full flex  justify-center items-center text-red-500 relative overflow-hidden md:flex-wrap"
-      >
+        className="hero-section py-20 h-screen w-full flex  justify-center items-center text-red-500 relative overflow-hidden md:flex-wrap">
         {/* Background Video */}
         <video
           autoPlay
           loop
           muted
-          className="absolute top-0 left-0 w-full h-full object-cover z-0 "
-        >
-          <source src="https://res.cloudinary.com/djodcayme/video/upload/v1732190366/TEDxLNMIIT%2725/Ted_Web_Back_Black_White_compressed_o1lz1l.mp4" type="video/mp4" />
+          className="absolute top-0 left-0 w-full h-full object-cover z-0 brightness-75">
+          <source
+            src="https://res.cloudinary.com/djodcayme/video/upload/v1732190366/TEDxLNMIIT%2725/Ted_Web_Back_Black_White_compressed_o1lz1l.mp4"
+            type="video/mp4"
+          />
           Your browser does not support the video tag.
         </video>
 
         {/* Content Over the Video */}
-        <div className="hero-content home-content text-center z-10 flex justify-around  items-center  w-full xxxs:flex-col xxxs:items-center md:flex-row ">
-          <div className="hero-title-wrap pl-10">
-            <h2 className="hero-title text-8xl font-bold mb-4   rounded-lg p-1 ">
-              <strong className="text-[#ff3006]">Tedx </strong>
-              <br></br>
-              <strong className="text-white">Lnmiit</strong>
-            </h2>
-            {/* <p className="text-lg">Date: </p>
-    <p className="text-lg">Venue: </p> */}
+        <div className="hero-content home-content text-center z-10 justify-around items-center w-full xxxs:flex-col xxxs:items-center md:flex-row">
+          <div className="flex text-center z-10 justify-around items-center w-full xxxs:flex-col xxxs:items-center md:flex-row">
+            {/* Title and Button */}
+            <div className="hero-title-wrap xxxs:pl-4 sm:pl-7 xxxs:mr-0 md:mr-56 mb-6 md:mb-0">
+              <div>
+                <h2 className="hero-title text-4xl sm:text-5xl md:text-6xl xl:text-7xl mb-4 font-Audrey rounded-lg p-1">
+                  <strong className="text-[#ff3006]">TEDx</strong>
+                  <span className="text-white font-extralight">Lnmiit</span>
+                </h2>
+                <div className="hero-buttons mt-8 space-x-4 font-generalSans">
+                  <RedButton to="/buy-tickets">
+                    Registrations Open Soon
+                  </RedButton>
+                </div>
+              </div>
+            </div>
 
-            {/* <div className="hero-buttons mt-8 space-x-4">
-      <RedButton to="/contact-us">Contact Us</RedButton>
-      <RedButton to="/buy-tickets">Buy Tickets</RedButton>
-    </div> */}
-            <button className="mt-3 inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 shadow h-10 rounded-md px-8 bg-[#ff3006] hover:bg-red-700 text-white py-2 transition-all duration-300 transform hover:scale-105">
-              Registrations Open Soon
-            </button>
+            {/* Timer */}
+            <motion.div
+              className="border border-white/20 rounded-lg bg-white/10 backdrop-blur-sm p-1 mb-4 mt-1"
+              variants={sectionVariants}>
+              <CountdownTimer />
+            </motion.div>
           </div>
-          <motion.div
-            className="border border-white/20 rounded-lg bg-white/10 backdrop-blur-sm p-1 mb-4 mt-1"
-            variants={sectionVariants}
-          >
-            <CountdownTimer />
-          </motion.div>
+
+          {/* Theme heading */}
+          <div className="w-full mt-16 sm:mt-20 -mb-36 bg-transparent font-generalSans">
+            <div className="container mx-auto px-4">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="relative">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-center tracking-tight leading-none">
+                  <span className="inline-block py-5 px-4 bg-clip-text text-transparent animate-flowing-metallic relative">
+                    Navigating the New
+                    <span className="absolute inset-0 bg-clip-text text-transparent animate-flowing-shine"></span>
+                  </span>
+                </h2>
+                <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-16 sm:w-24 md:w-32 h-1 bg-gradient-to-r from-gray-400 via-gray-300 to-white"></div>
+              </motion.div>
+            </div>
+            <style jsx>{`
+              @keyframes flowing-metallic {
+                0% {
+                  background-position: 0% 50%;
+                }
+                50% {
+                  background-position: 100% 50%;
+                }
+                100% {
+                  background-position: 0% 50%;
+                }
+              }
+              @keyframes flowing-shine {
+                0% {
+                  transform: translateX(-100%);
+                }
+                100% {
+                  transform: translateX(100%);
+                }
+              }
+              .animate-flowing-metallic {
+                background-image: linear-gradient(
+                  90deg,
+                  #4a4a4a 0%,
+                  #8e8e8e 20%,
+                  #c0c0c0 40%,
+                  #ffffff 50%,
+                  #c0c0c0 60%,
+                  #8e8e8e 80%,
+                  #4a4a4a 100%
+                );
+                background-size: 200% auto;
+                animation: flowing-metallic 8s linear infinite;
+              }
+              .animate-flowing-shine {
+                background-image: linear-gradient(
+                  90deg,
+                  transparent 0%,
+                  rgba(255, 255, 255, 0.4) 50%,
+                  transparent 100%
+                );
+                background-size: 200% auto;
+                animation: flowing-shine 3s linear infinite;
+              }
+            `}</style>
+          </div>
         </div>
       </section>
 
@@ -73,8 +138,7 @@ const Home = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        variants={sectionVariants}
-      >
+        variants={sectionVariants}>
         <Theme />
       </motion.section>
 
@@ -85,8 +149,7 @@ const Home = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        variants={sectionVariants}
-      >
+        variants={sectionVariants}>
         <Speakers />
       </motion.section>
 
@@ -97,8 +160,7 @@ const Home = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }} // Triggers only when the section is in view
-        variants={sectionVariants}
-      >
+        variants={sectionVariants}>
         <About />
       </motion.section>
 
@@ -109,8 +171,7 @@ const Home = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        variants={sectionVariants}
-      >
+        variants={sectionVariants}>
         <PrevSpeakers />
       </motion.section>
 
@@ -121,8 +182,7 @@ const Home = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        variants={sectionVariants}
-      >
+        variants={sectionVariants}>
         <Faq />
       </motion.section>
       <motion.section
@@ -131,8 +191,7 @@ const Home = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        variants={sectionVariants}
-      >
+        variants={sectionVariants}>
         <Youtube />
       </motion.section>
     </div>

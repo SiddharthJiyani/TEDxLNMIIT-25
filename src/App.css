@@ -202,6 +202,20 @@
   font-display: swap;
   font-style: normal;
 }
+
+@font-face{
+  font-family: "Audrey-Bold";
+  src: url("../public/Audrey/Audrey-Bold.otf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+
+  font-family: "Audrey-Normal";
+  src: url("../public/Audrey/Audrey-Normal.otf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
 /**
 * This is a variable font
 * You can control variable axes as shown below:

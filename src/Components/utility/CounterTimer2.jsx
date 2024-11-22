@@ -47,9 +47,9 @@ const CountdownTimer = () => {
 
   return (
     <div className="bg-black p-4 rounded-lg shadow-lg max-w-md mx-auto">
-      {/* <h2 className="text-2xl font-bold text-center mb-1 text-white">
+      <h2 className="text-2xl font-bold text-center mb-1 text-white">
         TEDxLNMIIT Starts In
-      </h2> */}
+      </h2>
       <div className="flex justify-between items-center">
         {timeUnits.map((unit, index) => (
           <div key={unit.label} className="flex flex-col items-center">
