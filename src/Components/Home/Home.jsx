@@ -74,16 +74,35 @@ const Home = () => {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="relative">
                 <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-center tracking-tight leading-none">
-                  <span className="inline-block py-5 px-4 bg-clip-text text-transparent animate-flowing-metallic relative">
-                    Navigating the New
+                  <span className="inline-block py-5 px-4 bg-clip-text text-transparent animate-red-gradient relative">
+                    Navigating
+                    <span className="absolute inset-0 bg-clip-text text-transparent animate-flowing-shine"></span>
+                  </span>
+                  <span className="inline-block py-5 px-4 bg-clip-text text-transparent animate-white-gradient relative">
+                    the
+                    <span className="absolute inset-0 bg-clip-text text-transparent animate-flowing-shine"></span>
+                  </span>
+                  <span className="inline-block py-5 px-4 bg-clip-text text-transparent animate-red-gradient relative">
+                    New
                     <span className="absolute inset-0 bg-clip-text text-transparent animate-flowing-shine"></span>
                   </span>
                 </h2>
-                <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-16 sm:w-24 md:w-32 h-1 bg-gradient-to-r from-gray-400 via-gray-300 to-white"></div>
+                <div className="absolute -bottom-4 left-1/2 text-[#ce2200d4] transform -translate-x-1/2 w-16 sm:w-24 md:w-32 h-1 bg-gradient-to-r from-gray-400 via-gray-300 to-white"></div>
               </motion.div>
             </div>
             <style jsx>{`
-              @keyframes flowing-metallic {
+              @keyframes red-gradient {
+                0% {
+                  background-position: 0% 50%;
+                }
+                50% {
+                  background-position: 100% 50%;
+                }
+                100% {
+                  background-position: 0% 50%;
+                }
+              }
+              @keyframes white-gradient {
                 0% {
                   background-position: 0% 50%;
                 }
@@ -102,7 +121,27 @@ const Home = () => {
                   transform: translateX(100%);
                 }
               }
-              .animate-flowing-metallic {
+
+              .animate-red-gradient {
+                background-image: linear-gradient(
+                  90deg,
+                  #ff2c05 0%,
+                  #ff3306 10%,
+                  #f22c04 20%,
+                  #e02603 30%,
+                  #ce2200 40%,
+                  #ff2c05 50%,
+                  #ce2200 60%,
+                  #e02603 70%,
+                  #f22c04 80%,
+                  #ff3306 90%,
+                  #ff2c05 100%
+                );
+                background-size: 200% auto;
+                animation: red-gradient 8s linear infinite;
+              }
+
+              .animate-white-gradient {
                 background-image: linear-gradient(
                   90deg,
                   #4a4a4a 0%,
@@ -114,8 +153,9 @@ const Home = () => {
                   #4a4a4a 100%
                 );
                 background-size: 200% auto;
-                animation: flowing-metallic 8s linear infinite;
+                animation: white-gradient 8s linear infinite;
               }
+
               .animate-flowing-shine {
                 background-image: linear-gradient(
                   90deg,

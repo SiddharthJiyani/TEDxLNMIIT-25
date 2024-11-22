@@ -1,3 +1,7 @@
+"use client"
+
+import React from 'react';
+import { motion } from 'framer-motion';
 import speaker1 from "../../assets/PastSpeakers/speaker1.png";
 import speaker2 from "../../assets/PastSpeakers/speaker2.png";
 import speaker3 from "../../assets/PastSpeakers/speaker3.png";
@@ -6,50 +10,59 @@ import speaker5 from "../../assets/PastSpeakers/speaker5.png";
 import speaker6 from "../../assets/PastSpeakers/speaker6.png";
 import speaker7 from "../../assets/PastSpeakers/speaker7.png";
 import speaker9 from "../../assets/PastSpeakers/speaker9.png";
-import Speakers from "./Speakers.jsx";
+import Speakers from "./Speakers";
+import Title from '../utility/Title';
 
 const SpeakerList = () => {
+  const speakers = [
+    { imgSrc: speaker1, name: "Dr. Tanu Jain" },
+    { imgSrc: speaker2, name: "Krishnan Sunderarajan" },
+    { imgSrc: speaker3, name: "Palakh Khanna" },
+    { imgSrc: speaker4, name: "Chinmay Gaur" },
+    { imgSrc: speaker5, name: "Deepak Pareek" },
+    { imgSrc: speaker6, name: "Tejas Patil" },
+    { imgSrc: speaker7, name: "Gunjan Saini" },
+    { imgSrc: speaker9, name: "Sakshi Mandhyan" },
+  ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
   return (
-    <div className="flex flex-col justify-around items-center relative top-10 bottom-10 text-[#7d7d7d] text-left w-full">
-      <h1 className="text-3xl mb-4">SPEAKERS</h1>
-      <div className="flex flex-wrap justify-center flex-grow">
-        <div className="flex flex-wrap justify-center">
-          {/* First Speaker */}
-
-          <Speakers imgSrc={speaker1} altText="Speaker" name="Dr. Tanu Jain" />
-
-          {/* Second Speaker */}
-          <Speakers
-            imgSrc={speaker2}
-            altText="Speaker"
-            name="Krishnan Sunderarajan"
-          />
-
-          {/* Third Speaker */}
-          <Speakers imgSrc={speaker3} altText="Speaker" name="Palakh Khanna" />
-
-          {/* Fourth Speaker */}
-          <Speakers imgSrc={speaker4} altText="Speaker" name="Chinmay Gaur" />
-        </div>
-        <div className="flex flex-wrap justify-center">
-          {/* Fifth Speaker */}
-          <Speakers imgSrc={speaker5} altText="Speaker" name="Deepak Pareek" />
-
-          {/* Sixth Speaker */}
-          <Speakers imgSrc={speaker6} altText="Speaker" name="Tejas Patil" />
-
-          {/* Seventh Speaker */}
-          <Speakers imgSrc={speaker7} altText="Speaker" name="Gunjan Saini" />
-
-          {/* Eighth Speaker */}
-          <Speakers
-            imgSrc={speaker9}
-            altText="Speaker"
-            name="Sakshi Mandhyan"
-          />
-        </div>
+    <section className="py-16 text-white">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl ">
+        <motion.h1 
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Title text="Speakers" />
+        </motion.h1>
+        <motion.div 
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center mr-16 md:mr-0"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          {speakers.map((speaker, index) => (
+            <Speakers
+              key={index}
+              imgSrc={speaker.imgSrc}
+              altText={`Speaker ${index + 1}`}
+              name={speaker.name}
+            />
+          ))}
+        </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -54,7 +54,7 @@ const CountdownTimer = () => {
         {timeUnits.map((unit, index) => (
           <div key={unit.label} className="flex flex-col items-center">
             <motion.div
-              className="bg-red-600 m-2 w-16 h-16 rounded-full flex items-center justify-center mb-2 overflow-hidden"
+              className="bg-zinc-800 m-2 w-16 h-16 rounded-full flex items-center justify-center mb-2 overflow-hidden"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -77,7 +77,7 @@ const CountdownTimer = () => {
         ))}
       </div>
       <motion.div
-        className="h-1 bg-red-500 rounded-full mt-3"
+        className="h-1 bg-[#ff3006db] rounded-full mt-3"
         initial={{ scaleX: 0 }}
         animate={{ scaleX: 1 }}
         transition={{ duration: 1, ease: "easeInOut" }}

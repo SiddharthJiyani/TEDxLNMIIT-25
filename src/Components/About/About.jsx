@@ -1,10 +1,12 @@
+import Title from "../utility/Title";
+
 const About = () => {
   return (
     <section className="bg-black text-white py-10 px-8">
       <div className="mt-14 container mx-auto">
         {/* About TEDx Heading */}
         <h1 className="text-5xl font-bold text-gray-200 mb-12 text-center">
-          About TEDx
+          <Title text={"About"} red={"TEDx"}/>
         </h1>
 
         {/* First Card */}

@@ -216,6 +216,12 @@
   font-display: swap;
   font-style: normal;
 }
+
+@font-face{
+    font-family: "Amsterdam";
+    src: url("../public/Amsterdam.ttf") format("truetype");
+
+}
 /**
 * This is a variable font
 * You can control variable axes as shown below:

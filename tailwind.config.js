@@ -28,7 +28,13 @@ export default {
           "Audrey-Bold",
           "sans-serif",
         ]
+      },
 
+      fontFamily: {
+        amsterdam: [
+          "Amsterdam",
+          "sans-serif",
+        ],
       },
       screens: {
         xs: "480px",

@@ -2,6 +2,7 @@
 import React from "react";
 import { ContainerScroll } from "../ui/container-scroll-animation";
 import video from "../../assets/Video-926.mp4";
+import Title from "./Title";
 export function Youtube() {
   return (
     <div className="flex flex-col overflow-hidden ">
@@ -9,8 +10,9 @@ export function Youtube() {
         titleComponent={
           <>
             <h1 className="text-4xl font-semibold text-black dark:text-white">
-              <span className="text-4xl md:text-[6rem] mb-14 font-bold mt-1 leading-none">
-                After Movie
+              <span className="text-4xl md:text-[6rem] font-bold mt-1 mb-14 leading-none flex gap-2 flex-col">
+                <Title text="After" red="Movie" className="text-2xl md:text-[6rem] -mb-16 font-bold mt-1 leading-none" />
+                <Title text="TEDxLNMIIT" red="'24" className="text-4xl md:text-[6rem] -mb-16 font-bold mt-1 leading-none" />
               </span>
               <br />
             </h1>
