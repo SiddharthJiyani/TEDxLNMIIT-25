@@ -24,17 +24,11 @@ const About = () => {
             </h2>
           </div>
           <p className="text-white text-justify">
-            TEDx is a series of independently organized events under a license
-            from TED, the globally recognized platform dedicated to sharing
-            ideas that matter. While TED is renowned for its flagship annual
-            conferences, where influential voices from all fields come together,
-            TEDx allows local communities to create their own events inspired by
-            TED's mission of "Ideas Worth Spreading." These events unite
-            individuals to ignite discussions, foster creativity, and promote a
-            culture of curiosity and openness. TEDx showcases live speakers,
-            performances, and pre-recorded TED Talks, providing a platform for
-            passionate thinkers to present their insights and innovations to a
-            wider audience.
+            Inspired by the spirit of “Ideas worth Spreading”, TED created a program called TEDx. TEDx is a
+            series of locally organized events that bring people together to share a TED-like experience.
+            Our event is called TEDxLNMIIT, where "x" signifies an independently organized TED event. At TEDxLNMIIT, 
+            TED Talk videos and live speakers come together to ignite meaningful discussions and foster connections within an intimate setting.
+           
           </p>
         </div>
 
@@ -53,13 +47,12 @@ const About = () => {
             </h2>
           </div>
           <p className="text-white text-justify">
-            TEDxLnmiit stands for the mission of TED - to propagate ideas potent
-            enough to change mindsets, inspire youth at large, and equip them to
-            crave a better living, beneficial for themselves and the society
-            they dwell in. TEDxLnmiit features engaging talks inspiring people
-            ranging from veteran performers and social reformers to young
-            innovators. It serves as a stage for promoting fresh thoughts and
-            inspiring innovation.
+            TEDxLNMIIT embodies TED’s mission to spread powerful ideas that can transform perspectives, 
+            inspire young minds, and drive a collective vision for a better future for individuals and society.
+            TEDxLNMIIT features inspiring talks from a diverse lineup of thought leaders, from seasoned professionals 
+            and social change-makers to emerging innovators. It provides a platform for bold ideas, sparking new ways 
+            of thinking and encouraging creativity and positive change.
+
           </p>
         </div>
       </div>
