@@ -115,11 +115,10 @@ const Partner = () => {
           Interested in partnership?
         </h3>
         <p className="text-base md:text-lg lg:text-xl mb-4">
-          Collaborating with TED×Lnmiit offers a rare chance to expand your
-          organization&apos;s global network within the TED and TEDx community.
-          Harness ideas, technology, and local investments to empower education,
-          innovation, and the transformative power of ideas for a brighter
-          future.
+          Collaborating with TEDxLNMIIT provides a unique opportunity to enhance your organization’s
+          global network within the TED and TEDx community. Leverage innovative ideas, technology,
+          and local investments to empower education and foster innovation,
+          harnessing the transformative potential of ideas for a brighter future.
         </p>
         <p>
           <a href="#" className="text-blue-400 underline">
