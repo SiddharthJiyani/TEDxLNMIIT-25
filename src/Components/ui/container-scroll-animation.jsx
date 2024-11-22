@@ -72,7 +72,7 @@ export const Card = ({ rotate, scale, children }) => {
         `,
 
       }}
-      className="max-w-5xl -mt-12 mx-auto h-[20rem] md:h-[540px] w-full border-2 border-[#6C6C6C] p-2 md:p-4 rounded-[30px] shadow-2xl bg-red-600"
+      className="max-w-5xl  -mt-12 mx-auto h-[20rem] md:h-[500px] w-full border-2 border-[#6C6C6C] p-2 md:p-4 rounded-[30px] shadow-2xl bg-red-600"
     >
       <div className="h-full w-full overflow-hidden rounded-2xl bg-gray-100 dark:bg-zinc-900 md:rounded-2xl md:p-4">
         {children}

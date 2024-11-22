@@ -11,7 +11,7 @@ const Speakers = ({ imgSrc, altText, name, className }) => {
       </div>
       
       {/* Speaker Name */}
-      <h2 className="text-[25px] font-light tracking-[-0.5px] leading-[45px] text-center text-white font-amsterdam ">
+      <h2 className="text-[25px] ml-12 md:ml-0 font-light tracking-[-0.5px] leading-[45px] text-center text-white font-amsterdam ">
         {name}
       </h2>
     </div>

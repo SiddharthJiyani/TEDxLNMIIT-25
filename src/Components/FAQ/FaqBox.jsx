@@ -13,14 +13,14 @@ const FaqBox = ({ index, question, answer, isActive, handleClick }) => {
       opacity: 1,
       height: "auto",
       transition: {
-        duration: 0.5,
+        duration: 0.2,
       },
     },
   };
 
   return (
     <li
-      className="border border-gray-700 p-6 bg-gray-900 rounded-lg w-full"
+      className="border border-zinc-700 p-6 bg-neutral-900 rounded-lg w-full"
     >
       <h3
         className="text-xl font-semibold cursor-pointer flex justify-between items-center"

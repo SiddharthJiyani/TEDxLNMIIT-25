@@ -45,9 +45,9 @@ const Home = () => {
             {/* Title and Button */}
             <div className="hero-title-wrap xxxs:pl-4 sm:pl-7 xxxs:mr-0 md:mr-56 mb-6 md:mb-0">
               <div>
-                <h2 className="hero-title text-4xl sm:text-5xl md:text-6xl xl:text-7xl mb-4 font-Audrey rounded-lg p-1">
+                <h2 className="hero-title text-6xl sm:text-5xl md:text-6xl xl:text-7xl mb-9 font-Audrey rounded-lg p-1">
                   <strong className="text-[#ff3006]">TEDx</strong>
-                  <span className="text-white font-extralight">Lnmiit</span>
+                  <span className="text-white md:font-light font-normal">Lnmiit</span>
                 </h2>
                 <div className="hero-buttons mt-8 space-x-4 font-generalSans">
                   <RedButton to="/buy-tickets">
@@ -59,21 +59,21 @@ const Home = () => {
 
             {/* Timer */}
             <motion.div
-              className="border border-white/20 rounded-lg bg-white/10 backdrop-blur-sm p-1 mb-4 mt-1"
+              className="border border-white/20 rounded-lg bg-white/10 backdrop-blur-sm p-1 mb-4 md:mt-1 mt-12"
               variants={sectionVariants}>
               <CountdownTimer />
             </motion.div>
           </div>
 
           {/* Theme heading */}
-          <div className="w-full mt-16 sm:mt-20 -mb-36 bg-transparent font-generalSans">
+          <div className="w-full mt-10  -mb-36 bg-transparent font-generalSans">
             <div className="container mx-auto px-4">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="relative">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-center tracking-tight leading-none">
+                <h2 className="text-5xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-center tracking-tight leading-none">
                   <span className="inline-block py-5 px-4 bg-clip-text text-transparent animate-red-gradient relative">
                     Navigating
                     <span className="absolute inset-0 bg-clip-text text-transparent animate-flowing-shine"></span>
@@ -82,12 +82,12 @@ const Home = () => {
                     the
                     <span className="absolute inset-0 bg-clip-text text-transparent animate-flowing-shine"></span>
                   </span>
-                  <span className="inline-block py-5 px-4 bg-clip-text text-transparent animate-red-gradient relative">
+                  <span className="inline-block py-5 px-0 md:px-4 bg-clip-text text-transparent animate-red-gradient relative">
                     New
                     <span className="absolute inset-0 bg-clip-text text-transparent animate-flowing-shine"></span>
                   </span>
                 </h2>
-                <div className="absolute -bottom-4 left-1/2 text-[#ce2200d4] transform -translate-x-1/2 w-16 sm:w-24 md:w-32 h-1 bg-gradient-to-r from-gray-400 via-gray-300 to-white"></div>
+                <div className="absolute -bottom-2 left-1/2 text-[#ce2200d4] transform -translate-x-1/2 w-16 sm:w-24 md:w-32 h-1 bg-gradient-to-r from-gray-400 via-gray-300 to-white"></div>
               </motion.div>
             </div>
             <style jsx>{`

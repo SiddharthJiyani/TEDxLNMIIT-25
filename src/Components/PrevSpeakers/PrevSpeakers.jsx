@@ -12,7 +12,7 @@ import PrevBox from "./PrevBox.jsx";
 const PrevSpeakers = () => {
   return (
     <div className="flex flex-col justify-around items-center bg-black text-[#7d7d7d] text-left w-full">
-      <h1 className="text-3xl mb-4"><Title text={"PREVIOUS"} red={"SPEAKERS"}/></h1>
+      <h1 className="text-3xl mb-4 text-center"><Title text={"PREVIOUS"} red={"SPEAKERS"}/></h1>
       <div className="flex flex-wrap justify-center flex-grow">
         <div className="flex flex-wrap justify-center">
           {/* First Speaker */}
