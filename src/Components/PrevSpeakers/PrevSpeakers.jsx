@@ -6,13 +6,12 @@ import speaker5 from "../../assets/PastSpeakers/speaker5.png";
 import speaker6 from "../../assets/PastSpeakers/speaker6.png";
 import speaker7 from "../../assets/PastSpeakers/speaker7.png";
 import speaker9 from "../../assets/PastSpeakers/speaker9.png";
-import Title from "../utility/Title.jsx";
 import PrevBox from "./PrevBox.jsx";
 
 const PrevSpeakers = () => {
   return (
     <div className="flex flex-col justify-around items-center bg-black text-[#7d7d7d] text-left w-full">
-      <h1 className="text-3xl mb-4 text-center"><Title text={"PREVIOUS"} red={"SPEAKERS"}/></h1>
+      <h1 className="text-3xl mb-4">PREVIOUS SPEAKERS</h1>
       <div className="flex flex-wrap justify-center flex-grow">
         <div className="flex flex-wrap justify-center">
           {/* First Speaker */}
@@ -21,7 +20,7 @@ const PrevSpeakers = () => {
             altText="Speaker"
             className=" xxxs:ml-8 xxs:ml-10   xs:ml-14 sm:gap-1 "
             name="Dr. Tanu Jain"
-            description="Dr. Tanu is currently posted as Assistant Director in the Ministry of Defence. Dr. Tanu has authored two books for UPSC preparation. She is Passionate to help, guiding, and motivating young minds esp."
+            description="Former IAS officer and DRDO Assistant Director, Dr. Jain advocates for education and UPSC reforms. Her multifaceted career exemplifies her dedication to creating impact beyond conventional roles."
             url="https://www.youtube.com"
           />
 
@@ -31,7 +30,7 @@ const PrevSpeakers = () => {
             altText="Speaker"
             className=" xxxs:ml-8 xxs:ml-10   xs:ml-14 sm:gap-1 "
             name="Krishnan Sunderarajan"
-            description="Krishnan Sunderarajan is the visionary mind behind India's First Metaverse App, LOKA, as showcased on Shark Tank. A seasoned entrepreneur, reshaping the landscape of technology and gaming."
+            description="Founder of LOKA, India’s first Metaverse app, Krishnan bridges technology and human experience. His Shark Tank success highlights his forward-thinking insights into the future of digital interaction."
             url="https://www.youtube.com"
           />
 
@@ -41,7 +40,7 @@ const PrevSpeakers = () => {
             altText="Speaker"
             className=" xxxs:ml-8 xxs:ml-10   xs:ml-14 sm:gap-1 "
             name="Palakh Khanna"
-            description="Palakh Khanna, a trailblazing entrepreneur and esteemed speaker, is a beacon of innovation and inspiration. Recognized as one of Asia's 100 Women Power Leaders in 2023, her journey with Break."
+            description="Founder of Break.The.Ice and recognized as one of Asia's 100 Women Power Leaders, Palakh is a trailblazer in entrepreneurship. She inspires others by breaking barriers in leadership."
             url="https://www.youtube.com"
           />
 
@@ -51,7 +50,7 @@ const PrevSpeakers = () => {
             altText="Speaker"
             className=" xxxs:ml-8 xxs:ml-10   xs:ml-14 sm:gap-1 "
             name="Chinmay Gaur"
-            description="Chinmay Gaur skillfully wields the flute to enrapture audiences with his enchanting melodies and charismatic presence. As an Indian Classical flutist, esteemed music composer, creating a captivating musical narrative."
+            description="Indian Classical flutist and composer, blending tradition and modernity. His TEDx talk focuses on the transcendental power of music, showing how it bridges cultural and emotional divides."
             url="https://www.youtube.com/watch?v=KyLREMG86r0"
           />
         </div>
@@ -62,7 +61,7 @@ const PrevSpeakers = () => {
             altText="Speaker"
             className=" xxxs:ml-8 xxs:ml-10   xs:ml-14 sm:gap-1 "
             name="Deepak Pareek"
-            description="Deepak Pareekh is a renowned seven-time TEDx speaker and co-founder of Iceberg Creations. Deepak is a renowned content creator who was featured in IMPACT's 30 Under 30."
+            description="Co-founder of Iceberg Creations and IMPACT 30 Under 30 honoree, he’s a dynamic content creator. Deepak’s work spans multiple platforms, driving innovative, engaging content across industries"
             url="https://www.youtube.com"
           />
 
@@ -72,7 +71,7 @@ const PrevSpeakers = () => {
             className=" xxxs:ml-8 xxs:ml-10   xs:ml-14 sm:gap-1 "
             altText="Speaker"
             name="Tejas Patil"
-            description="Tejas Patil is a prominent figure in the tech world, celebrated for his insightful content creation and social media strategy. With hands-on expertise in PCs and smartphones, his authentic reviews are highly respected."
+            description="Tech content creator decoding the complexities of the digital world. His work in his videos highlights the limitless potential of technology and innovation in shaping the future"
             url="https://www.youtube.com"
           />
 
@@ -82,7 +81,8 @@ const PrevSpeakers = () => {
             className=" xxxs:ml-8 xxs:ml-10   xs:ml-14 sm:gap-1 "
             altText="Speaker"
             name="Gunjan Saini"
-            description="Gunjan Saini is a multifaceted Indian poet and author. Beyond her literary prowess, Gunjan's talents span across various domains as an actor, dancer, journalist, licensed practical nurse, and Filtercopy's Casting Associate."
+            description="Poet, writer, and founder of @officialletstalk, she fosters emotional well-being through shared stories. Gunjan’s creative force helps bridge emotional gaps, making a significant impact in mental health.
+"
             url="https://www.youtube.com/watch?v=7Qsg9A-mjgk"
           />
 
@@ -92,7 +92,7 @@ const PrevSpeakers = () => {
             className=" xxxs:ml-8 xxs:ml-10   xs:ml-14 sm:gap-1 "
             altText="Speaker"
             name="Sakshi Mandhyan"
-            description="Sakshi Mandhyan, an accomplished professional, is an established Psychologist, Happiness Coach, and Wellness Expert with 15+ years of Fortune 500 experience."
+            description="Founder of Mandhyan Care, Sakshi is a mental well-being advocate. Her work reshapes how mental health challenges are understood, fostering a transformative approach to emotional well-being."
             url="https://www.youtube.com"
           />
         </div>
