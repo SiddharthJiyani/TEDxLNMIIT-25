@@ -21,7 +21,7 @@ function Faq() {
             <FaqBox
               index={0}
               question="What is TEDx?"
-              answer="TEDx is a series of independently organized events that bring people together to share ideas worth spreading."
+              answer="TEDx is a locally organized event that is licensed by TED, allowing communities to host live speakers who share their ideas, experiences, and viewpoints."
               isActive={activeSection === 0}
               handleClick={handleSectionClick}
             />
@@ -30,7 +30,7 @@ function Faq() {
             <FaqBox
               index={1}
               question="How can I attend a TEDx event?"
-              answer="You can find upcoming TEDx events in your area by visiting the TEDx website or searching online."
+              answer="To attend a TEDx event, visit the official TEDx website or the page dedicated to the specific event for information on registration, dates, and ticket availability."
               isActive={activeSection === 1}
               handleClick={handleSectionClick}
             />
@@ -39,7 +39,7 @@ function Faq() {
             <FaqBox
               index={2}
               question="Are TEDx talks available online?"
-              answer="Many TEDx talks are available to watch online on the TEDx YouTube channel."
+              answer="Yes, the majority of TEDx talks are recorded and published on the TEDx YouTube channel and the TEDx website, enabling a worldwide audience to access this inspiring content."
               isActive={activeSection === 2}
               handleClick={handleSectionClick}
             />
@@ -47,8 +47,8 @@ function Faq() {
           <li>
             <FaqBox
               index={3}
-              question="What makes a TEDx talk different from a TED talk?"
-              answer="TEDx talks are independently organized, while TED talks are curated by the TED team. Both formats aim to share ideas worth spreading."
+              question="What makes TEDx talks different from TED talks?"
+              answer="TEDx talks are organized and managed at the local level, whereas TED talks are curated by the main TED organization. While both platforms aim to share ideas, they function on different scales and have distinct structures."
               isActive={activeSection === 3}
               handleClick={handleSectionClick}
             />
