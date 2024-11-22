@@ -140,15 +140,13 @@ const Theme = () => {
               whileInView="animate"
               variants={textPart}
             >
-              TEDxLNMIIT 2025 Theme: Navigating the New. In a world constantly
-              evolving, "Navigating the New" represents the journey of embracing
-              change, exploring uncharted territories, and seeking growth
-              through uncertainty. This theme captures the essence of venturing
-              into unknown landscapes—whether in technology, society, or
-              personal development—and calls for innovative thinking,
-              resilience, and open-mindedness. It invites us to transform
-              challenges into opportunities, turning disruption into progress
-              and helping us forge new pathways in an ever-changing world.
+              TEDxLNMIIT 2025 Theme: Navigating the New.In a world where change accelerates daily, we gather to explore
+              the evolving frontiers of innovation, resilience, and discovery. TEDxLNMIIT brings together forward-thinking
+              individuals and curious minds, creating a space where meaningful connections and transformative conversations unfold. 
+              Through powerful storytelling and profound engagement, we celebrate those who dare to reimagine the future, embrace 
+              adaptability, and pursue bold ideas. Here, we foster a community driven by the courage to redefine what’s possible, 
+              inspiring each other to navigate the challenges and opportunities of our ever-shifting world.
+
             </motion.div>
           </div>
         </div>
