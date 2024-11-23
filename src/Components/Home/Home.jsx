@@ -9,6 +9,7 @@ import Theme from "../Theme/Theme";
 import video from "../../assets/video.mp4";
 import CountdownTimer from "../utility/CounterDown";
 import { Youtube } from "../utility/Youtube";
+import Navbar from "../Navbar/Navbar";
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -21,17 +22,19 @@ const sectionVariants = {
 
 const Home = () => {
   return (
-    <div className="custom-container bg-black overflow-hidden">
+    <div className="relative custom-container bg-black overflow-hidden">
       {/* Hero Section */}
       <section
         id="hero"
-        className="hero-section py-20 h-screen w-full flex  justify-center items-center text-red-500 relative overflow-hidden md:flex-wrap">
+        className="hero-section py-20 min-h-screen h-full w-full flex  justify-center items-center text-red-500 relative overflow-hidden md:flex-wrap"
+      >
         {/* Background Video */}
         <video
           autoPlay
           loop
           muted
-          className="absolute top-0 left-0 w-full h-full object-cover z-0 brightness-75">
+          className="absolute top-0 left-0 w-full h-full object-cover z-0 brightness-75"
+        >
           <source
             src="https://res.cloudinary.com/djodcayme/video/upload/v1732190366/TEDxLNMIIT%2725/Ted_Web_Back_Black_White_compressed_o1lz1l.mp4"
             type="video/mp4"
@@ -47,7 +50,9 @@ const Home = () => {
               <div>
                 <h2 className="hero-title text-6xl sm:text-5xl md:text-6xl xl:text-7xl mb-9 font-Audrey rounded-lg p-1">
                   <strong className="text-[#ff3006]">TEDx</strong>
-                  <span className="text-white md:font-light font-normal">Lnmiit</span>
+                  <span className="text-white md:font-light font-normal">
+                    Lnmiit
+                  </span>
                 </h2>
                 <div className="hero-buttons mt-8 space-x-4 font-generalSans">
                   <RedButton to="/buy-tickets">
@@ -60,7 +65,8 @@ const Home = () => {
             {/* Timer */}
             <motion.div
               className="border border-white/20 rounded-lg bg-white/10 backdrop-blur-sm p-1 mb-4 md:mt-1 mt-12"
-              variants={sectionVariants}>
+              variants={sectionVariants}
+            >
               <CountdownTimer />
             </motion.div>
           </div>
@@ -72,7 +78,8 @@ const Home = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="relative">
+                className="relative"
+              >
                 <h2 className="text-5xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-center tracking-tight leading-none">
                   <span className="inline-block py-5 px-4 bg-clip-text text-transparent animate-red-gradient relative">
                     Navigating
@@ -178,7 +185,8 @@ const Home = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        variants={sectionVariants}>
+        variants={sectionVariants}
+      >
         <Theme />
       </motion.section>
 
@@ -189,7 +197,8 @@ const Home = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        variants={sectionVariants}>
+        variants={sectionVariants}
+      >
         <Speakers />
       </motion.section>
 
@@ -200,7 +209,8 @@ const Home = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }} // Triggers only when the section is in view
-        variants={sectionVariants}>
+        variants={sectionVariants}
+      >
         <About />
       </motion.section>
 
@@ -211,7 +221,8 @@ const Home = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        variants={sectionVariants}>
+        variants={sectionVariants}
+      >
         <PrevSpeakers />
       </motion.section>
 
@@ -222,7 +233,8 @@ const Home = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        variants={sectionVariants}>
+        variants={sectionVariants}
+      >
         <Faq />
       </motion.section>
       <motion.section
@@ -231,7 +243,8 @@ const Home = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        variants={sectionVariants}>
+        variants={sectionVariants}
+      >
         <Youtube />
       </motion.section>
     </div>

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 export default function Hamburger({ close, toggleMenu }) {
   return (
     <div
-      className="flex h-[30px] w-[30px] cursor-pointer flex-col justify-around"
+      className="fixed sticky-top flex h-[30px] w-[30px] cursor-pointer flex-col justify-around"
       onClick={toggleMenu}
     >
       <span
