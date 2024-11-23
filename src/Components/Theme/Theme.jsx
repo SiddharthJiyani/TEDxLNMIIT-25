@@ -17,7 +17,7 @@ const Theme = () => {
       scale: 1,
       transition: {
         repeat: Infinity,
-        duration: 6,
+        duration: 3,
         ease: "linear",
       },
     },
@@ -25,7 +25,7 @@ const Theme = () => {
       opacity: 0,
       scale: 0.5,
       transition: {
-        duration: 0.5,
+        duration: 0.2,
         ease: "easeInOut",
       },
     },
@@ -41,7 +41,7 @@ const Theme = () => {
       scale: 1.1,
       y: 30,
       transition: {
-        duration: 0.5,
+        duration: 0.3,
       },
     },
   };
@@ -140,13 +140,17 @@ const Theme = () => {
               whileInView="animate"
               variants={textPart}
             >
-              TEDxLNMIIT 2025 Theme: Navigating the New.In a world where change accelerates daily, we gather to explore
-              the evolving frontiers of innovation, resilience, and discovery. TEDxLNMIIT brings together forward-thinking
-              individuals and curious minds, creating a space where meaningful connections and transformative conversations unfold. 
-              Through powerful storytelling and profound engagement, we celebrate those who dare to reimagine the future, embrace 
-              adaptability, and pursue bold ideas. Here, we foster a community driven by the courage to redefine what’s possible, 
-              inspiring each other to navigate the challenges and opportunities of our ever-shifting world.
-
+              TEDxLNMIIT 2025 Theme: Navigating the New.In a world where change
+              accelerates daily, we gather to explore the evolving frontiers of
+              innovation, resilience, and discovery. TEDxLNMIIT brings together
+              forward-thinking individuals and curious minds, creating a space
+              where meaningful connections and transformative conversations
+              unfold. Through powerful storytelling and profound engagement, we
+              celebrate those who dare to reimagine the future, embrace
+              adaptability, and pursue bold ideas. Here, we foster a community
+              driven by the courage to redefine what’s possible, inspiring each
+              other to navigate the challenges and opportunities of our
+              ever-shifting world.
             </motion.div>
           </div>
         </div>
