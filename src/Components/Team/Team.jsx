@@ -4,6 +4,7 @@ import MemberCard from "./MemberCard";
 import { useEffect } from "react";
 
 import Manav from "../../assets/team/manav.jpg";
+import Sid from "../../assets/team/Siddharth.jpg"; 
 import Abhey from "../../assets/team/Abhey.jpg";
 // import Abhinav from "../../assets/team/abhinav.jpg";
 import Krishna from "../../assets/team/Krishna.jpg";
@@ -145,7 +146,7 @@ const Team = () => {
             whileInView="show"
             className="text-2xl font-semibold mt-10 mb-6"
           >
-            Web Development Head
+            Development Head
           </motion.h2>
           <motion.div
             className="flex justify-center gap-6"
@@ -156,7 +157,7 @@ const Team = () => {
               <MemberCard
                 name="Siddharth Jiyani"
                 link="https://www.linkedin.com/in/siddharth-jiyani"
-                // imgSrc={Siddharth}
+                imgSrc={Sid}
               />
             </motion.div>
           </motion.div>
