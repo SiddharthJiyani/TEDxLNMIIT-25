@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <div className="  sticky top-2 z-50">
-      <nav className="bg-[rgba(20,20,20,0.5)]  sticky top-2   backdrop-blur-md border border-white/20 p-2 sm:p-3 md:p-4 lg:p-2 left-0 right-0 mx-auto mt-6 max-w-[90%] min-h-[48px] flex items-center justify-between gap-4 rounded-[60px] shadow-lg z-50">
+      <nav className="bg-[rgba(20,20,20,0.5)]  absolute -top-3 backdrop-blur-md border border-white/20 p-2 sm:p-3 md:p-4 lg:p-2 left-0 right-0 mx-auto mt-6 max-w-[90%] min-h-[48px] flex items-center justify-between gap-4 rounded-[60px] shadow-lg z-50">
         <div className="container mx-auto flex justify-between items-center">
           <div className="text-white text-xl font-bold flex items-center">
             <Link smooth to="/" className="text-xl text-white">
