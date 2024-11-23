@@ -10,6 +10,7 @@ import video from "../../assets/video.mp4";
 import CountdownTimer from "../utility/CounterDown";
 import { Youtube } from "../utility/Youtube";
 import Navbar from "../Navbar/Navbar";
+import Ticket from "../utility/Ticket";
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -72,8 +73,8 @@ const Home = () => {
           </div>
 
           {/* Theme heading */}
-          <div className="w-full mt-10  -mb-36 bg-transparent font-generalSans">
-            <div className="container mx-auto px-4">
+          <div className="w-full mt-10 h-full -mb-36 bg-transparent font-generalSans">
+            <div className="h-full *:container mx-auto px-4">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -94,7 +95,7 @@ const Home = () => {
                     <span className="absolute inset-0 bg-clip-text text-transparent animate-flowing-shine"></span>
                   </span>
                 </h2>
-                <div className="absolute -bottom-2 left-1/2 text-[#ce2200d4] transform -translate-x-1/2 w-16 sm:w-24 md:w-32 h-1 bg-gradient-to-r from-gray-400 via-gray-300 to-white"></div>
+                {/* <div className="absolute -bottom-2 left-1/2 text-[#ce2200d4] transform -translate-x-1/2 w-16 sm:w-24 md:w-32 h-1 bg-gradient-to-r from-gray-400 via-gray-300 to-white"></div> */}
               </motion.div>
             </div>
             <style jsx>{`
@@ -177,7 +178,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-
+      <Ticket />
       {/* Theme Section */}
       <motion.section
         id="theme"
