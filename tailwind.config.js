@@ -20,19 +20,18 @@ export default {
         ],
         amsterdam: ['"Amsterdam Four_ttf"', "sans-serif"], // Add Amsterdam Four font here
         bigshouldersdisplay: ['"Big Shoulders Display"', "sans-serif"],
-      },
-
-      fontFamily: {
         Audrey: ["Audrey-Regular", "Audrey-Bold", "sans-serif"],
+        // amsterdam: ["Amsterdam", "sans-serif"],
+        kaushan: ["Kaushan Script", "cursive"],
       },
 
-      fontFamily: {
-        amsterdam: ["Amsterdam", "sans-serif"],
-      },
+      // fontFamily: {},
 
-      fontFamily: {
-        kaushan: ["Kaushan Script", "cursive"], // Add this line
-      },
+      // fontFamily: {},
+
+      // fontFamily: {
+      //   // Add this line
+      // },
       screens: {
         xs: "480px",
         xxs: "360px",

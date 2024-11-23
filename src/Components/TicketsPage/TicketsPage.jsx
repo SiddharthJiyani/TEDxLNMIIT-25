@@ -1,7 +1,7 @@
-'use client';
+"use client";
 import React, { useRef, useEffect, useState } from "react";
 import Typewriter from "typewriter-effect/dist/core";
-import './Footer.css'
+import "./Footer.css";
 import EventCard from "./Event";
 
 import qrcode from "../../assets/qrcode.png";
@@ -9,9 +9,9 @@ export default function TicketBookingPage() {
   const [loading, setLoading] = useState(false);
   const typewriterRef = useRef(null);
   // Scroll to top when the page loads
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -42,38 +42,38 @@ export default function TicketBookingPage() {
       onComplete: () => {
         // Optional: You can do something here when typing completes, if needed
         console.log("Typing effect completed.");
-      }
+      },
     });
 
     return () => typewriter.stop();
   }, []);
 
-
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-gray-100 p-32">
+    <div className="min-h-screen h-full text-gray-100 p-32 bg-black">
       {/* Hero Section */}
-      <div className="relative  flex">
-   
-<div class="p-5  w-80 h-80 flex justify-center items-center  group duration-500 -translate-y-24 scale-125 hover:origin-top-left hover:scale-100 -rotate-12 hover:-rotate-0 hover:skew-x-1 skew-x-0 hover:translate-x-6  hover:translate-y-12">
-<div class="p-5 group-hover:duration-400 relative rounded-2xl w-64 h-36 bg-[radial-gradient(circle_at_50.4%_50.5%,_rgb(251,32,86)_0%,_rgb(135,2,35)_90%)] text-gray-50 flex flex-col justify-center items-center gap-1 before:-skew-x-12 before:rounded-2xl before:absolute before:content[''] before:bg-neutral-700 before:right-3 before:top-0 before:w-64 before:h-32 before:-z-10">
-    <span class="text-4xl font-amsterdam">Reserve your seat</span>
-    <p class="text-amber-300 font-thin">- For TedxLnmiit.-</p>
-  </div>
-</div>
+      <div className="relative  flex ">
+        <div className="p-5  w-80 h-80 flex justify-center items-center  group duration-500 -translate-y-24 scale-125 hover:origin-top-left hover:scale-100 -rotate-12 hover:-rotate-0 hover:skew-x-1 skew-x-0 hover:translate-x-6  hover:translate-y-12">
+          <div className="p-5 group-hover:duration-400 relative rounded-2xl w-64 h-36 bg-[radial-gradient(circle_at_50.4%_50.5%,_rgb(251,32,86)_0%,_rgb(135,2,35)_90%)] text-gray-50 flex flex-col justify-center items-center gap-1 before:-skew-x-12 before:rounded-2xl before:absolute before:content[''] before:bg-neutral-700 before:right-3 before:top-0 before:w-64 before:h-32 before:-z-10">
+            <span className="text-4xl font-amsterdam">Reserve your seat</span>
+            <p className="text-amber-300 font-thin">- For TedxLnmiit.-</p>
+          </div>
+        </div>
 
-        <div className="container h-80 overflow-hidden mx-auto px-4 pt-20 pb-32 relative z-10 text-center">
+        <div className="container h-80 overflow-hidden mx-auto px-4 pt-20 pb-32 relative  text-center">
           <h1
             ref={typewriterRef}
-            className="text-4xl md:text-6xl font-bold mb-4 text-transparent bg-clip-text bg-[radial-gradient(circle_at_50.4%_50.5%,_rgb(251,32,86)_0%,_rgb(135,2,35)_90%)]"
+            className="text-4xl md:text-6xl font-kaushan font-bold mb-4 text-transparent bg-clip-text bg-[radial-gradient(circle_at_50.4%_50.5%,_rgb(251,32,86)_0%,_rgb(135,2,35)_90%)]"
           ></h1>
         </div>
       </div>
 
       {/* Main Section */}
       <div className="container mx-auto px-4 py-16">
-     {/* Event Details */}
-     <section className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8 text-red-500">Event Details</h2>
+        {/* Event Details */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-center mb-8 text-red-500">
+            Event Details
+          </h2>
 
           <div className="flex justify-around">
             <EventCard
@@ -81,21 +81,21 @@ export default function TicketBookingPage() {
               price="₹600"
               discount="25% discount applied"
             />
-            <EventCard
-              title="General Admission"
-              price="₹800"
-              discount={null}
-            />
+            <EventCard title="General Admission" price="₹800" discount={null} />
           </div>
         </section>
 
         {/* Steps to Book */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8 text-red-500">Steps to Reserve Your Exclusive Seat</h2>
+          <h2 className="text-3xl font-bold text-center mb-8 text-red-500">
+            Steps to Reserve Your Exclusive Seat
+          </h2>
           <div className="space-y-12">
             {/* Step 1 */}
             <div className="bg-gray-800 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4 text-red-400">Step 1: Make the Payment</h3>
+              <h3 className="text-xl font-semibold mb-4 text-red-400">
+                Step 1: Make the Payment
+              </h3>
               <p className="mb-4 text-gray-300">
                 Scan the appropriate QR code to pay the booking amount:
               </p>
@@ -115,7 +115,9 @@ export default function TicketBookingPage() {
 
             {/* Step 2 */}
             <div className="bg-gray-800 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4 text-red-400">Step 2: Fill the Booking Form</h3>
+              <h3 className="text-xl font-semibold mb-4 text-red-400">
+                Step 2: Fill the Booking Form
+              </h3>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid md:grid-cols-2 gap-4">
                   {[
@@ -158,12 +160,15 @@ export default function TicketBookingPage() {
                 </button>
               </form>
             </div>
-                  
+
             {/* Step 3 */}
             <div className="bg-gray-800 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4 text-red-400">Step 3: Confirmation</h3>
+              <h3 className="text-xl font-semibold mb-4 text-red-400">
+                Step 3: Confirmation
+              </h3>
               <p className="text-gray-300">
-                Sit back and relax! Our team will get in touch with you shortly to confirm your seat reservation.
+                Sit back and relax! Our team will get in touch with you shortly
+                to confirm your seat reservation.
               </p>
             </div>
           </div>
@@ -172,14 +177,14 @@ export default function TicketBookingPage() {
 
       {/* Footer */}
       <footer className="">
-        <div class="wrapper-1">
-          <div class="wrapper-2">
+        <div className="wrapper-1">
+          <div className="wrapper-2">
             <h1 className=".h1">Thank you !</h1>
             <p>Thank you for being a part of TedxLnmiit! </p>
             <p>you should receive a confirmation email soon </p>
-            <button class="go-home">go home</button>
+            <button className="go-home">go home</button>
           </div>
-          <div class="footer-like">
+          <div className="footer-like">
             <p>
               Email not received?
               <a href="#">Click here to send again</a>
