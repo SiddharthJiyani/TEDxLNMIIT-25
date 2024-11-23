@@ -6,12 +6,15 @@ import speaker5 from "../../assets/PastSpeakers/speaker5.png";
 import speaker6 from "../../assets/PastSpeakers/speaker6.png";
 import speaker7 from "../../assets/PastSpeakers/speaker7.png";
 import speaker9 from "../../assets/PastSpeakers/speaker9.png";
+import Title from "../utility/Title.jsx";
 import PrevBox from "./PrevBox.jsx";
 
 const PrevSpeakers = () => {
   return (
     <div className="flex flex-col justify-around items-center bg-black text-[#7d7d7d] text-left w-full">
-      <h1 className="text-3xl mb-4">PREVIOUS SPEAKERS</h1>
+      <h1 className="text-3xl mb-4">
+        <Title text="Previous" red={"Speakers"} />
+      </h1>
       <div className="flex flex-wrap justify-center flex-grow">
         <div className="flex flex-wrap justify-center">
           {/* First Speaker */}

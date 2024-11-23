@@ -1,4 +1,4 @@
-import React from "react";
+import {React , useEffect} from "react";
 import { motion } from "framer-motion";
 import About from "../About/About";
 import Faq from "../FAQ/Faq";
@@ -22,6 +22,11 @@ const sectionVariants = {
 };
 
 const Home = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  });
+
   return (
     <div className=" custom-container  overflow-hidden">
       {/* Hero Section */}
