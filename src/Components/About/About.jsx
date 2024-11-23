@@ -2,11 +2,11 @@ import Title from "../utility/Title";
 
 const About = () => {
   return (
-    <section className="bg-black text-white py-10 px-8">
+    <section className=" text-white py-10 px-8">
       <div className="mt-14 container mx-auto">
         {/* About TEDx Heading */}
         <h1 className="text-5xl font-bold text-gray-200 mb-12 text-center">
-          <Title text={"About"} red={"TEDx"}/>
+          <Title text={"About"} red={"TEDx"} />
         </h1>
 
         {/* First Card */}
@@ -24,11 +24,13 @@ const About = () => {
             </h2>
           </div>
           <p className="text-white text-justify">
-            Inspired by the spirit of “Ideas worth Spreading”, TED created a program called TEDx. TEDx is a
-            series of locally organized events that bring people together to share a TED-like experience.
-            Our event is called TEDxLNMIIT, where "x" signifies an independently organized TED event. At TEDxLNMIIT, 
-            TED Talk videos and live speakers come together to ignite meaningful discussions and foster connections within an intimate setting.
-           
+            Inspired by the spirit of “Ideas worth Spreading”, TED created a
+            program called TEDx. TEDx is a series of locally organized events
+            that bring people together to share a TED-like experience. Our event
+            is called TEDxLNMIIT, where "x" signifies an independently organized
+            TED event. At TEDxLNMIIT, TED Talk videos and live speakers come
+            together to ignite meaningful discussions and foster connections
+            within an intimate setting.
           </p>
         </div>
 
@@ -47,12 +49,13 @@ const About = () => {
             </h2>
           </div>
           <p className="text-white text-justify">
-            TEDxLNMIIT embodies TED’s mission to spread powerful ideas that can transform perspectives, 
-            inspire young minds, and drive a collective vision for a better future for individuals and society.
-            TEDxLNMIIT features inspiring talks from a diverse lineup of thought leaders, from seasoned professionals 
-            and social change-makers to emerging innovators. It provides a platform for bold ideas, sparking new ways 
+            TEDxLNMIIT embodies TED’s mission to spread powerful ideas that can
+            transform perspectives, inspire young minds, and drive a collective
+            vision for a better future for individuals and society. TEDxLNMIIT
+            features inspiring talks from a diverse lineup of thought leaders,
+            from seasoned professionals and social change-makers to emerging
+            innovators. It provides a platform for bold ideas, sparking new ways
             of thinking and encouraging creativity and positive change.
-
           </p>
         </div>
       </div>

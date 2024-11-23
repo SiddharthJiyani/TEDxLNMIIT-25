@@ -22,7 +22,7 @@ const sectionVariants = {
 
 const Home = () => {
   return (
-    <div className="relative custom-container bg-black overflow-hidden">
+    <div className=" custom-container  overflow-hidden">
       {/* Hero Section */}
       <section
         id="hero"
