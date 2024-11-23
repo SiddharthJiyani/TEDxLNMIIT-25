@@ -18,23 +18,20 @@ export default {
           "GeneralSans-Bold",
           "sans-serif",
         ],
-         amsterdam: ['"Amsterdam Four_ttf"', 'sans-serif'], // Add Amsterdam Four font here
-        bigshouldersdisplay: ['"Big Shoulders Display"', 'sans-serif'],
+        amsterdam: ['"Amsterdam Four_ttf"', "sans-serif"], // Add Amsterdam Four font here
+        bigshouldersdisplay: ['"Big Shoulders Display"', "sans-serif"],
       },
 
       fontFamily: {
-        Audrey: [
-          "Audrey-Regular",
-          "Audrey-Bold",
-          "sans-serif",
-        ]
+        Audrey: ["Audrey-Regular", "Audrey-Bold", "sans-serif"],
       },
 
       fontFamily: {
-        amsterdam: [
-          "Amsterdam",
-          "sans-serif",
-        ],
+        amsterdam: ["Amsterdam", "sans-serif"],
+      },
+
+      fontFamily: {
+        kaushan: ["Kaushan Script", "cursive"], // Add this line
       },
       screens: {
         xs: "480px",
@@ -43,6 +40,15 @@ export default {
       },
       backgroundImage: {
         "heading-gradient": "linear-gradient(90deg, white, #e6e6e6)",
+      },
+      animation: {
+        floating: "floating 2.6s infinite linear",
+      },
+      keyframes: {
+        floating: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(10px)" },
+        },
       },
     },
   },

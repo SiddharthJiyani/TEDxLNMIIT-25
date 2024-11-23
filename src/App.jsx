@@ -13,9 +13,9 @@ import Particle from "./Particle.jsx";
 import TicketsPage from "./Components/TicketsPage/TicketsPage.jsx";
 
 export default function App() {
-  return ( 
+  return (
     <Router>
-      <div className="w-full overflow-y-auto font-generalSans  bg-customDark backdrop-blur-md relative ">
+      <div className="w-full h-full font-generalSans  bg-customDark pt-1 backdrop-blur-md  ">
         <Navbar />
         <Particle />
         <Routes>

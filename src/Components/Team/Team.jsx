@@ -3,12 +3,44 @@ import Title from "../utility/Title";
 import MemberCard from "./MemberCard";
 import { useEffect } from "react";
 
-const Team = () => {
+import Manav from "../../assets/team/manav.jpg";
+import Abhey from "../../assets/team/Abhey.jpg";
+// import Abhinav from "../../assets/team/abhinav.jpg";
+import Krishna from "../../assets/team/krishna.jpg";
+// import Suhani from "../../assets/team/suhani.jpg";
+// import Siddharth from "../../assets/team/siddharth.jpg";
+// import Sahil from "../../assets/team/sahil.jpg";
+// import Shreyansh from "../../assets/team/shreyansh.jpg";
+// import Krishnamanchanda from "../../assets/team/krishnamanchanda.jpg";
+import Divay from "../../assets/team/Divay.jpg";
+// import Nemil from "../../assets/team/nemil.jpg";
+import Saanvi from "../../assets/team/Saanvi.jpg";
+// import Aryanjadhav from "../../assets/team/aryanjadhav.jpg";
+// import Alisha from "../../assets/team/alisha.jpg";
+// import Abdul from "../../assets/team/abdul.jpg";
+import Anshika from "../../assets/team/Anshika.jpg";
+import Sakash from "../../assets/team/Sakash.jpg";
+import Priyal from "../../assets/team/Priyal.jpg";
+// import Sanskriti from "../../assets/team/sanskriti.jpg";
+// import Akshat from "../../assets/team/akshat.jpg";
+// import Hussain from "../../assets/team/hussain.jpg";
+import Nancy from "../../assets/team/Nancy.jpg";
+// import Rahul from "../../assets/team/rahul.jpg";
+// import Naman from "../../assets/team/naman.jpg";
+// import Anmol from "../../assets/team/anmol.jpg";
+import Vihaan from "../../assets/team/Vihaan.jpg";
+// import Parv from "../../assets/team/parv.jpg";
+// import Pratham from "../../assets/team/pratham.jpg";
+import Nirmal from "../../assets/team/Nirmal.jpg";
+// import Kanishq from "../../assets/team/kanishq.jpg";
+// import Kunal from "../../assets/team/kunal.jpg";
+// import Chirag from "../../assets/team/chirag.jpg";
 
+const Team = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
+
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0, scale: 0.8 },
@@ -52,10 +84,11 @@ const Team = () => {
 
   return (
     <motion.div
-      className="bg-black py-20 text-center text-white"
+      className="bg-black py-20 text-center text-white overflow-hidden"
       initial="hidden"
       whileInView="show"
-      variants={containerVariants}>
+      variants={containerVariants}
+    >
       {/* Team Section Title */}
       <motion.div variants={itemVariants} whileInView="show">
         <h1 className="text-8xl bg-red-700 w-full">Our Team</h1>
@@ -65,35 +98,41 @@ const Team = () => {
       <motion.h2
         whileInView="show"
         variants={itemVariants}
-        className="text-2xl font-semibold mt-10 mb-6">
+        className="text-2xl font-semibold mt-10 mb-6"
+      >
         Organizer
       </motion.h2>
       <motion.div
         className="flex flex-wrap justify-center gap-6"
         whileInView="show"
-        variants={containerVariants}>
+        variants={containerVariants}
+      >
         <motion.div whileInView="show" variants={itemVariants}>
           <MemberCard
             name="Abhey Raheja"
             link="https://www.linkedin.com/in/abhey-raheja"
+            imgSrc={Abhey}
           />
         </motion.div>
         <motion.div whileInView="show" variants={itemVariants}>
           <MemberCard
             name="Abhinav Singh"
             link="https://www.linkedin.com/in/abhinav-singh"
+            // imgSrc={Abhinav}
           />
         </motion.div>
         <motion.div whileInView="show" variants={itemVariants}>
           <MemberCard
             name="Krishna Rohira"
             link="https://www.linkedin.com/in/krishna-rohira"
+            imgSrc={Krishna}
           />
         </motion.div>
         <motion.div whileInView="show" variants={itemVariants}>
           <MemberCard
             name="Suhani Gupta"
             link="https://www.linkedin.com/in/suhani-gupta"
+            // imgSrc={Suhani}
           />
         </motion.div>
       </motion.div>
@@ -104,17 +143,20 @@ const Team = () => {
           <motion.h2
             variants={itemVariants}
             whileInView="show"
-            className="text-2xl font-semibold mt-10 mb-6">
+            className="text-2xl font-semibold mt-10 mb-6"
+          >
             Web Development Head
           </motion.h2>
           <motion.div
             className="flex justify-center gap-6"
             variants={containerVariants}
-            whileInView="show">
+            whileInView="show"
+          >
             <motion.div whileInView="show" variants={itemVariants}>
               <MemberCard
                 name="Siddharth Jiyani"
                 link="https://www.linkedin.com/in/siddharth-jiyani"
+                // imgSrc={Siddharth}
               />
             </motion.div>
           </motion.div>
@@ -124,16 +166,19 @@ const Team = () => {
         <div className="w-full md:w-1/3 px-4">
           <motion.h2
             variants={itemVariants}
-            className="text-2xl font-semibold mt-10 mb-6">
+            className="text-2xl font-semibold mt-10 mb-6"
+          >
             Content Writing Head
           </motion.h2>
           <motion.div
             className="flex justify-center gap-6"
-            variants={containerVariants}>
+            variants={containerVariants}
+          >
             <motion.div variants={itemVariants}>
               <MemberCard
                 name="Sahil Gaur"
                 link="https://www.linkedin.com/in/sahil-gaur"
+                // imgSrc={Sahil}
               />
             </motion.div>
           </motion.div>
@@ -143,12 +188,14 @@ const Team = () => {
         <div className="w-full md:w-1/3 px-4">
           <motion.h2
             variants={itemVariants}
-            className="text-2xl font-semibold mt-10 mb-6">
+            className="text-2xl font-semibold mt-10 mb-6"
+          >
             Sponsorship Head
           </motion.h2>
           <motion.div
             className="flex justify-center gap-6"
-            variants={containerVariants}>
+            variants={containerVariants}
+          >
             <motion.div variants={itemVariants}>
               <MemberCard
                 name="Shreyansh Badoni"
@@ -164,22 +211,26 @@ const Team = () => {
         <div className="w-full md:w-1/2 px-4">
           <motion.h2
             variants={itemVariants}
-            className="text-2xl font-semibold mt-10 mb-6">
+            className="text-2xl font-semibold mt-10 mb-6"
+          >
             Creative Head
           </motion.h2>
           <motion.div
             className="flex flex-wrap justify-center gap-6"
-            variants={containerVariants}>
+            variants={containerVariants}
+          >
             <motion.div variants={itemVariants}>
               <MemberCard
                 name="KrishnaManchanda"
                 link="https://www.linkedin.com/in/krishna-manchanda"
+                // imgSrc={KrishnaManchanda}
               />
             </motion.div>
             <motion.div variants={itemVariants}>
               <MemberCard
                 name="Divay Yadav"
                 link="https://www.linkedin.com/in/divay-yadav"
+                imgSrc={Divay}
               />
             </motion.div>
           </motion.div>
@@ -189,106 +240,121 @@ const Team = () => {
         <div className="w-full md:w-1/2 px-4">
           <motion.h2
             variants={itemVariants}
-            className="text-2xl font-semibold mt-10 mb-6">
+            className="text-2xl font-semibold mt-10 mb-6"
+          >
             Event Management Head
           </motion.h2>
           <motion.div
             className="flex flex-wrap justify-center gap-6"
-            variants={containerVariants}>
+            variants={containerVariants}
+          >
             <motion.div variants={itemVariants}>
               <MemberCard
                 name="Nemil Kamdar"
                 link="https://www.linkedin.com/in/nemil-kamdar"
+                // imgSrc={Nemil}
               />
             </motion.div>
           </motion.div>
         </div>
       </div>
+      <hr className="m-5 mx-5"></hr>
 
-      <div className="flex flex-wrap justify-between">
-        {/* Web Development */}
-        <div className="w-full md:w-1/2 px-4">
-          <h2 className="text-2xl font-semibold mt-10 mb-6">Web Development</h2>
-          <div className="flex flex-wrap justify-center gap-6">
-            <MemberCard
-              name="Saanvi Chabaque"
-              link="https://www.linkedin.com/in/saanvi-chabaque"
-            />
-            <MemberCard
-              name="Manav Desai"
-              link="https://www.linkedin.com/in/manav-desai"
-            />
-          </div>
+      {/* Web Development */}
+      <div className="w-full md:w-screen px-4">
+        <h2 className="text-2xl font-semibold mt-10 mb-6">Web Development</h2>
+        <div className="flex flex-wrap justify-center gap-6">
+          <MemberCard
+            name="Saanvi Chabaque"
+            link="https://www.linkedin.com/in/saanvi-chabaque"
+            imgSrc={Saanvi}
+          />
+          <MemberCard
+            name="Manav Desai"
+            link="https://www.linkedin.com/in/manav-desai"
+            imgSrc={Manav}
+          />
         </div>
+      </div>
+      <hr className="m-5 mx-5"></hr>
+      {/* Content Writing */}
+      <div className="w-full md:w-screen px-4">
+        <h2 className="text-2xl font-semibold mt-10 mb-6">Content Writing</h2>
+        <div className="flex flex-wrap justify-center gap-6">
+          <MemberCard
+            name="Aryan Jadhav"
+            link="https://www.linkedin.com/in/aryan-jadhav"
+            // imgSrc={Aryan}
+          />
+          <MemberCard
+            name="Alisha Malhotra"
+            link="https://www.linkedin.com/in/alisha-malhotra"
+            // imgSrc={Alisha}
+          />
+          <MemberCard
+            name="Abdul Hadi"
+            link="https://www.linkedin.com/in/abdul-hadi"
+            // imgSrc={Abdul}
+          />
+        </div>
+      </div>
+      <hr className="m-4 mx-5"></hr>
 
-        {/* Content Writing */}
-        <div className="w-full md:w-1/2 px-4">
-          <h2 className="text-2xl font-semibold mt-10 mb-6">Content Writing</h2>
-          <div className="flex flex-wrap justify-center gap-6">
-            <MemberCard
-              name="Aryan Jadhav"
-              link="https://www.linkedin.com/in/aryan-jadhav"
-            />
-            <MemberCard
-              name="Alisha Malhotra"
-              link="https://www.linkedin.com/in/alisha-malhotra"
-            />
-            <MemberCard
-              name="Abdul Hadi"
-              link="https://www.linkedin.com/in/abdul-hadi"
-            />
-          </div>
+      {/* Speaker Outreach */}
+      <div className="w-full md:w-screenpx-4 mb-10">
+        <h2 className="text-2xl font-semibold mb-4 text-center">
+          Speaker Outreach
+        </h2>
+        <div className="flex flex-wrap justify-center gap-6">
+          <MemberCard
+            name="Anshika Agrawal"
+            link="https://www.linkedin.com/in/anshika-agrawal"
+            imgSrc={Anshika}
+          />
+          <MemberCard
+            name="Sakash Srivastava"
+            link="https://www.linkedin.com/in/sakash-srivastava"
+            imgSrc={Sakash}
+          />
+          <MemberCard
+            name="Priyal Maheshwari"
+            link="https://www.linkedin.com/in/priyal-maheshwari"
+            imgSrc={Priyal}
+          />
         </div>
       </div>
 
-      <div className="flex flex-wrap justify-between p-6">
-        {/* Speaker Outreach */}
-        <div className="w-full md:w-1/2 px-4 mb-10">
-          <h2 className="text-2xl font-semibold mb-4 text-center">
-            Speaker Outreach
-          </h2>
-          <div className="flex flex-wrap justify-center gap-6">
-            <MemberCard
-              name="Anshika Agrawal"
-              link="https://www.linkedin.com/in/anshika-agrawal"
-            />
-            <MemberCard
-              name="Sakash Srivastava"
-              link="https://www.linkedin.com/in/sakash-srivastava"
-            />
-            <MemberCard
-              name="Priyal Maheshwari"
-              link="https://www.linkedin.com/in/priyal-maheshwari"
-            />
-          </div>
-        </div>
-
-        {/* Graphic Designing */}
-        <div className="w-full md:w-1/2 px-4 mb-10">
-          <h2 className="text-2xl font-semibold mb-4 text-center">
-            Graphic Designing
-          </h2>
-          <div className="flex flex-wrap justify-center gap-6">
-            <MemberCard
-              name="Sanskriti Arora"
-              link="https://www.linkedin.com/in/sanskriti-arora"
-            />
-            <MemberCard
-              name="Akshat Gupta"
-              link="https://www.linkedin.com/in/akshat-gupta"
-            />
-            <MemberCard
-              name="Hussain Haidary"
-              link="https://www.linkedin.com/in/hussain-haidary"
-            />
-          </div>
+      <hr className="m-5 mx-5"></hr>
+      {/* Graphic Designing */}
+      <div className="w-full md:w-screen px-4 mb-10">
+        <h2 className="text-2xl font-semibold mb-4 text-center">
+          Graphic Designing
+        </h2>
+        <div className="flex flex-wrap justify-center gap-6">
+          <MemberCard
+            name="Sanskriti Arora"
+            link="https://www.linkedin.com/in/sanskriti-arora"
+            // imgSrc={Sanskriti}
+          />
+          <MemberCard
+            name="Akshat Gupta"
+            link="https://www.linkedin.com/in/akshat-gupta"
+          />
+          <MemberCard
+            name="Hussain Haidary"
+            link="https://www.linkedin.com/in/hussain-haidary"
+          />
         </div>
       </div>
-
+      <hr className="m-5 mx-5"></hr>
       {/* Event Management */}
       <h2 className="text-2xl font-semibold mt-10 mb-6">Event Management</h2>
       <div className="flex flex-wrap justify-center gap-6">
-        <MemberCard name="Nancy" link="https://www.linkedin.com/in/nancy" />
+        <MemberCard
+          name="Nancy"
+          link="https://www.linkedin.com/in/nancy"
+          imgSrc={Nancy}
+        />
         <MemberCard
           name="Rahul Sharma"
           link="https://www.linkedin.com/in/rahul-sharma"
@@ -302,13 +368,14 @@ const Team = () => {
           link="https://www.linkedin.com/in/anmol-adwani"
         />
       </div>
-
+      <hr className="m-5 mx-5"></hr>
       {/* Sponsorship */}
       <h2 className="text-2xl font-semibold mt-10 mb-6">Sponsorship</h2>
       <div className="flex flex-wrap justify-center gap-6">
         <MemberCard
           name="Vihaan Malik"
           link="https://www.linkedin.com/in/vihaan-malik"
+          imgSrc={Vihaan}
         />
         <MemberCard
           name="Parv Khandelwal"
@@ -321,38 +388,37 @@ const Team = () => {
         <MemberCard
           name="Nirmal Patel"
           link="https://www.linkedin.com/in/nirmal-patel"
+          imgSrc={Nirmal}
         />
       </div>
-
-      <div className="flex flex-wrap justify-between p-6">
-        {/* Social Media */}
-        <div className="w-full md:w-1/2 lg:w-1/3 px-4 mb-10">
-          <h2 className="text-2xl font-semibold mb-4 text-center">
-            Social Media
-          </h2>
-          <div className="flex justify-center gap-6">
-            <MemberCard
-              name="Kanishq Malhotra"
-              link="https://www.linkedin.com/in/kanishq-malhotra"
-            />
-          </div>
+      <hr className="m-5 mx-5"></hr>
+      {/* Social Media */}
+      <div className="w-full md:w-screen px-4">
+        <h2 className="text-2xl font-semibold mb-4 text-center">
+          Social Media
+        </h2>
+        <div className="flex justify-center gap-6">
+          <MemberCard
+            name="Kanishq Malhotra"
+            link="https://www.linkedin.com/in/kanishq-malhotra"
+          />
         </div>
-
-        {/* Video Editing */}
-        <div className="w-full md:w-1/2 lg:w-2/3 px-4 mb-10">
-          <h2 className="text-2xl font-semibold mb-4 text-center">
-            Video Editing
-          </h2>
-          <div className="flex flex-wrap justify-center gap-6">
-            <MemberCard
-              name="Kunal Sharma"
-              link="https://www.linkedin.com/in/kunal-sharma"
-            />
-            <MemberCard
-              name="Chirag Mehta"
-              link="https://www.linkedin.com/in/chirag-mehta"
-            />
-          </div>
+      </div>
+      <hr className="m-5 mx-5"></hr>
+      {/* Video Editing */}
+      <div className="w-full md:w-screen px-4">
+        <h2 className="text-2xl font-semibold mb-4 text-center">
+          Video Editing
+        </h2>
+        <div className="flex flex-wrap justify-center gap-6">
+          <MemberCard
+            name="Kunal Sharma"
+            link="https://www.linkedin.com/in/kunal-sharma"
+          />
+          <MemberCard
+            name="Chirag Mehta"
+            link="https://www.linkedin.com/in/chirag-mehta"
+          />
         </div>
       </div>
     </motion.div>

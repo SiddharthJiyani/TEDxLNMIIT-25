@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import Hamburger from "./HamBurger.jsx";
 import logo from "../../assets/tednewlogo.png";
+import Button from "../Footer/Button.jsx";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,8 +22,8 @@ const Navbar = () => {
   const isActiveLink = (path) => location.pathname === path;
 
   return (
-    <div>
-      <nav className="bg-[rgba(20,20,20,0.5)] absolute backdrop-blur-md border border-white/20 p-2 sm:p-3 md:p-4 lg:p-2 left-0 right-0 mx-auto mt-6 max-w-[90%] min-h-[48px] flex items-center justify-between gap-4 rounded-[60px] shadow-lg z-50">
+    <div className="  sticky top-2 z-50">
+      <nav className="bg-[rgba(20,20,20,0.5)]  sticky top-2   backdrop-blur-md border border-white/20 p-2 sm:p-3 md:p-4 lg:p-2 left-0 right-0 mx-auto mt-6 max-w-[90%] min-h-[48px] flex items-center justify-between gap-4 rounded-[60px] shadow-lg z-50">
         <div className="container mx-auto flex justify-between items-center">
           <div className="text-white text-xl font-bold flex items-center">
             <Link smooth to="/" className="text-xl text-white">
@@ -121,19 +122,9 @@ const Navbar = () => {
             </a>
 
             <div className="flex items-center justify-center border border-gray-600 rounded-[60px] p-1 hover:opacity-65 transition-all duration-500 hidden lg:flex">
-              <Link
-                to="/contact"
-                className="text-white font-semibold px-4 py-1 rounded-full"
-                onClick={closeMenu}
-              >
-                Contact Now
+              <Link to="/booktickets">
+                <Button buttonLabel=" Book Tickets Now! " />
               </Link>
-              <img
-                src="https://assets.website-files.com/64b4320d9bd69e8f6cf59f6e/64b67612c66e41b4809bfba2_Group%20427319613.svg"
-                loading="lazy"
-                alt="Nav Try Icon"
-                className="nav-try-icon ml-1 h-9 w-9"
-              />
             </div>
 
             {/* Hamburger Menu for Mobile */}
@@ -214,12 +205,8 @@ const Navbar = () => {
                 className="text-gray-300 h-7 w-7"
               />
             </a>
-            <Link
-              to="/contact"
-              className="text-white font-semibold px-4 py-1 rounded-full hover:bg-gray-700 transition-all duration-500"
-              onClick={closeMenu}
-            >
-              Contact Now
+            <Link to="/booktickets">
+              <Button buttonLabel=" Book Tickets Now! " />
             </Link>
           </div>
         </div>

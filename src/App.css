@@ -203,7 +203,7 @@
   font-style: normal;
 }
 
-@font-face{
+@font-face {
   font-family: "Audrey-Bold";
   src: url("../public/Audrey/Audrey-Bold.otf") format("truetype");
   font-weight: 700;
@@ -217,10 +217,9 @@
   font-style: normal;
 }
 
-@font-face{
-    font-family: "Amsterdam";
-    src: url("../public/Amsterdam.ttf") format("truetype");
-
+@font-face {
+  font-family: "Amsterdam";
+  src: url("../public/Amsterdam.ttf") format("truetype");
 }
 /**
 * This is a variable font
@@ -260,4 +259,9 @@ html {
 
 section {
   scroll-snap-align: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }

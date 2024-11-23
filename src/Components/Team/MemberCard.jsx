@@ -1,12 +1,11 @@
-import manav from "../../assets/team/manav.jpg";
 import { FaLinkedin } from "react-icons/fa"; // Importing the LinkedIn icon from react-icons.
 
-const MemberCard = ({ name, position, link }) => {
+const MemberCard = ({ name, position, link, imgSrc }) => {
   return (
     <div className="relative group flex flex-col items-center bg-black p-4 rounded-lg hover:opacity-90">
       {/* Image section */}
       <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-gray-800">
-        <img src={manav} alt={name} className="w-full h-full object-cover" />
+        <img src={imgSrc} alt={name} className="w-full h-full object-cover" />
       </div>
 
       {/* Name section */}
@@ -16,7 +15,7 @@ const MemberCard = ({ name, position, link }) => {
       <p className="text-lg italic text-gray-400">{position}</p>
 
       {/* Hovered Component */}
-      <div className="absolute mt-4  ml-4 w-40 h-40 inset-0 rounded-full flex flex-col items-center justify-center  bg-gradient-to-b from-[#DA0400] to-[#890300]  opacity-0 transition-all duration-300 group-hover:opacity-100 ">
+      <div className="absolute mt-4  ml-4 w-40 h-40 inset-0 rounded-full flex flex-col items-center justify-center bg-gradient-to-b from-[#DA0400] to-[#890300]  opacity-0 transition-all duration-300 group-hover:opacity-100 ">
         <h3 className="select-none  text-center text-sm/[110%] capitalize leading-none text-white md:text-lg/[110%] md:leading-tight word-break mb-2 ">
           {name}
         </h3>
