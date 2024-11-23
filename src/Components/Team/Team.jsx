@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import Manav from "../../assets/team/manav.jpg";
 import Abhey from "../../assets/team/Abhey.jpg";
 // import Abhinav from "../../assets/team/abhinav.jpg";
-import Krishna from "../../assets/team/krishna.jpg";
+import Krishna from "../../assets/team/Krishna.jpg";
 // import Suhani from "../../assets/team/suhani.jpg";
 // import Siddharth from "../../assets/team/siddharth.jpg";
 // import Sahil from "../../assets/team/sahil.jpg";
