@@ -6,7 +6,6 @@ import Speakers from "../Speakers/SpeakerList";
 import PrevSpeakers from "../PrevSpeakers/PrevSpeakers";
 import RedButton from "../utility/RedButton";
 import Theme from "../Theme/Theme";
-import video from "../../assets/video.mp4";
 import CountdownTimer from "../utility/CounterDown";
 import { Youtube } from "../utility/Youtube";
 import Navbar from "../Navbar/Navbar";
@@ -183,7 +182,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <Ticket />
+      {/* <Ticket /> */}
       {/* Theme Section */}
       <motion.section
         id="theme"

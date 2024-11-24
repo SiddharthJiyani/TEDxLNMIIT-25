@@ -1,160 +1,179 @@
-import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
+'use client';
+
+import React, { useEffect, useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import birdSvg from "../../assets/Bird.svg";
+import Title from "../utility/Title";
+// import bg from "../../assets/background.svg";
+
 
 const Theme = () => {
-  const variants = {
-    initial: {
-      x: "100vw",
-      y: "100vh",
-      opacity: 0.9,
-      scale: 0.9,
-    },
-    animate: {
-      x: "-100%",
-      y: "-60%",
-      opacity: 1,
-      scale: 1,
-      transition: {
-        repeat: Infinity,
-        duration: 3,
-        ease: "linear",
-      },
-    },
-    exit: {
-      opacity: 0,
-      scale: 0.5,
-      transition: {
-        duration: 0.2,
-        ease: "easeInOut",
-      },
-    },
-  };
+  const containerRef = useRef(null);
+  const animationFrameRef = useRef(null);
 
-  const textPart = {
-    initial: {
-      opacity: 0,
-      scale: 0.9,
-    },
-    animate: {
-      opacity: 1,
-      scale: 1.1,
-      y: 30,
-      transition: {
-        duration: 0.3,
-      },
-    },
-  };
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start -0.1", "end 0.5"],
+  });
+
+  const backgroundOpacity = useTransform(scrollYProgress, [0, 1], [0, 0.5]);
+  const backgroundScale = useTransform(scrollYProgress, [0, 1], [0.8, 1.2]);
+
+  useEffect(() => {
+    const canvas = document.getElementById("gridCanvas");
+    const ctx = canvas.getContext("2d");
+    let startTime = null;
+
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
+
+    // Customizable parameters
+    const cellSize = 100; // Size of each grid cell
+    const frequency = 0.7; // Wave frequency
+    const amplitude = 0.6; // Wave amplitude
+    const phaseSpeed = -0.004; // Negative value to reverse direction
+
+    // Calculate rows and columns based on canvas size
+    const rows = Math.ceil(canvas.height / cellSize);
+    const columns = Math.ceil(canvas.width / cellSize);
+
+    const drawGrid = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const elapsed = timestamp - startTime;
+
+      // Clear the canvas
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      for (let row = 0; row < rows; row++) {
+        for (let col = 0; col < columns; col++) {
+          const x = col * cellSize;
+          const y = row * cellSize;
+
+          // Create smooth wave effect
+          const phase = elapsed * phaseSpeed;
+          const yPos = row / rows;
+          const wave = Math.sin(yPos * Math.PI * frequency * 2 + phase) * amplitude;
+          const normalizedWave = (wave + 1) / 2; // Normalize to 0-1 range
+
+          // Calculate color intensity based on wave position
+          const red = Math.floor(255 * normalizedWave);
+          const alpha = 0.3 + (normalizedWave * 0.7); // Varying opacity for better effect
+
+          ctx.strokeStyle = `rgba(${red}, 0, 0, ${alpha})`;
+          ctx.lineWidth = 1.5;
+          ctx.beginPath();
+          ctx.strokeRect(x, y, cellSize, cellSize);
+        }
+      }
+
+      // Request next frame
+      animationFrameRef.current = requestAnimationFrame(drawGrid);
+    };
+
+    // Start animation
+    animationFrameRef.current = requestAnimationFrame(drawGrid);
+
+    // Cleanup
+    return () => {
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+      }
+      window.removeEventListener("resize", resizeCanvas);
+    };
+  }, []);
 
   return (
-    <div className="relative w-full flex justify-center items-center p-2 ">
-      {/* Wrap the animation inside AnimatePresence */}
-      <AnimatePresence>
+    <div ref={containerRef} className="relative min-h-screen w-full overflow-hidden">
+      {/* Grid Background Animation */}
+      <canvas
+        id="gridCanvas"
+        className="absolute inset-0 z-0 w-[170%] md:w-full h-[210%] md:h-full"
+        style={{ backgroundColor: "black" }}
+      ></canvas>
+
+      {/* Background Animation */}
+      <motion.div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          opacity: backgroundOpacity,
+          scale: backgroundScale,
+        }}
+      >
+        <svg viewBox="0 0 100 100" className="w-full h-full">
+          <motion.path
+            d="M10 10 Q 50 20, 90 10 T 90 50 T 10 90 T 10 10"
+            stroke="white"
+            strokeWidth="0.5"
+            fill="none"
+            initial={{ pathLength: 0 }}
+            animate={{ pathLength: 1 }}
+            transition={{ duration: 2, repeat: Infinity }}
+          />
+        </svg>
+      </motion.div>
+
+      <div className="container mx-auto px-4 py-16 flex flex-col md:flex-row items-center justify-between relative z-10 min-h-screen">
+        {/* Left side image */}
         <motion.div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat h-[300px] md:h-[500px] w-full md:w-[500px] xs:h-[250px] xs:w-[200px] sm:h-[300px] sm:w-[300px]"
-          initial="initial"
-          animate="animate"
-          exit="exit"
-          variants={variants}
-          style={{
-            backgroundImage: `url(${birdSvg})`, // Corrected template literal syntax
-          }}
-        />
-      </AnimatePresence>
-      {/* Main Content */}
-      <div className="relative z-10 w-full max-w-7xl flex flex-col items-center p-4 ">
-        <motion.h1
-          className="text-6xl sm:text-7xl md:text-7xl lg:text-8xl font-bold text-center bg-gradient-to-r from-red-800  to-red-300 bg-clip-text text-transparent"
-          initial="initial"
-          whileInView="animate"
-          exit="exit"
-          variants={textPart}
+          className="w-full md:w-1/2 mb-8 md:mb-0"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
         >
-          Our Theme
-        </motion.h1>
+          <img
+            src={birdSvg}
+            alt="Navigating the New"
+            className="rounded-lg shadow-2xl w-full h-auto"
+          />
+        </motion.div>
 
-        <div className="w-full flex flex-col sm:flex-row justify-center items-center mt-4 sm:mt-8">
-          {/* SVG Illustration */}
-          <motion.div
-            className="flex z-30 justify-center items-center h-full max-w-[250px] sm:max-w-[300px]  sm:max-h-[100px] xs:h-[300px] xxs:h-[300px] xxxs:h-[300px] md:max-w-[400px] lg:max-w-[500px] "
-            animate={{ rotate: 360 }}
-            transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
-          >
-            <svg
-              width="496"
-              height="497"
-              viewBox="0 0 496 497"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M193.026 278.537L247.092 184.473L301.159 278.537H193.026Z"
-                stroke="#EB0028"
-                strokeOpacity="0.81"
-                strokeWidth="3"
-              />
-              <path
-                d="M361.437 182.671L247.676 380.567L133.916 182.671L361.437 182.671Z"
-                stroke="#EB0028"
-                strokeOpacity="0.68"
-                strokeWidth="3"
-              />
-              <path
-                d="M362.529 315.244L247.676 381.843L132.823 315.244L132.823 182.035L247.676 115.437L362.529 182.035L362.529 315.244Z"
-                stroke="#950B0B"
-                strokeWidth="3"
-              />
-              <path
-                d="M170.187 382.386L92.5741 248.5L170.187 114.614L325.425 114.614L403.038 248.5L325.425 382.386L170.187 382.386Z"
-                stroke="#950B0B"
-                strokeWidth="3"
-              />
-              <path
-                d="M92.2872 337.919L91.9717 158.529L247.486 69.107L403.325 159.081L403.641 338.471L248.126 427.893L92.2872 337.919Z"
-                stroke="#630000"
-                strokeWidth="3"
-              />
-              <path
-                d="M67.8672 248.179L91.8154 158.439L157.559 92.8288L247.485 68.9285L337.5 93.1456L403.48 158.992L427.745 248.821L403.797 338.561L338.054 404.171L248.127 428.072L158.112 403.855L92.1322 338.008L67.8672 248.179Z"
-                stroke="#630000"
-                strokeWidth="3"
-              />
-              <path
-                d="M65.4076 297.026L65.3087 199.6L114.107 115.276L198.731 66.6469L296.508 66.7459L381.234 115.548L430.206 199.974L430.305 297.4L381.507 381.724L296.882 430.353L199.106 430.254L114.38 381.452L65.4076 297.026Z"
-                stroke="#4E0404"
-                strokeWidth="3"
-              />
-              <path
-                d="M55.971 248.303L62.457 198.835L81.5735 152.753L112.018 113.194L151.717 82.8557L197.965 63.8052L247.61 57.3416L297.269 63.9058L343.557 83.0506L383.319 113.471L413.846 153.093L433.057 199.216L439.643 248.697L433.157 298.164L414.041 344.247L383.596 383.806L343.897 414.144L297.65 433.195L248.004 439.658L198.345 433.094L152.057 413.949L112.295 383.529L81.7685 343.907L62.5576 297.784L55.971 248.303Z"
-                stroke="#4E0404"
-                strokeWidth="3"
-              />
-            </svg>
-          </motion.div>
-
-          {/* About Theme Text */}
-          <div className="w-full p-3 md:p-8 lg:p-10 flex items-center justify-center">
-            <motion.div
-              className="text-white text-sm sm:text-base md:text-lg lg:text-lg leading-relaxed font-medium max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px] text-justify"
-              initial="initial"
-              whileInView="animate"
-              variants={textPart}
-            >
-              TEDxLNMIIT 2025 Theme: Navigating the New.In a world where change
-              accelerates daily, we gather to explore the evolving frontiers of
-              innovation, resilience, and discovery. TEDxLNMIIT brings together
-              forward-thinking individuals and curious minds, creating a space
-              where meaningful connections and transformative conversations
-              unfold. Through powerful storytelling and profound engagement, we
-              celebrate those who dare to reimagine the future, embrace
-              adaptability, and pursue bold ideas. Here, we foster a community
-              driven by the courage to redefine what’s possible, inspiring each
-              other to navigate the challenges and opportunities of our
-              ever-shifting world.
-            </motion.div>
+        {/* Right side content */}
+        <motion.div
+          className="w-full md:w-1/2 md:pl-8"
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <Title text="Our" red="Theme" />
+          </h1>
+          <div className="bg-white/10 backdrop-blur-sm border-none p-6 rounded-lg">
+            <h2 className="text-2xl font-semibold text-white mb-4">
+              Navigating the New
+            </h2>
+            <p className="text-lg text-red-100 mb-6">
+              TEDxLNMIIT 2025 invites you to explore the frontiers of innovation,
+              resilience, and discovery. Join us in navigating the new landscapes
+              of ideas that shape our future.
+            </p>
+            <ul className="list-disc list-inside text-red-100">
+              <li>Embracing change and uncertainty</li>
+              <li>Pioneering solutions for global challenges</li>
+              <li>Fostering creativity and adaptability</li>
+              <li>Building bridges between diverse perspectives</li>
+            </ul>
           </div>
-        </div>
+        </motion.div>
       </div>
+
+      {/* Phoenix SVG */}
+      <motion.div
+        className="absolute bottom-0 right-0 w-64 h-64 opacity-20"
+        initial={{ y: 100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1, delay: 0.5 }}
+      >
+        <img
+          src={birdSvg}
+          alt="Phoenix"
+          className="w-full h-full object-contain"
+        />
+      </motion.div>
     </div>
   );
 };

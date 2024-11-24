@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { ContainerScroll } from "../ui/container-scroll-animation";
-import video from "../../assets/Video-926.mp4";
 import Title from "./Title";
 export function Youtube() {
   return (

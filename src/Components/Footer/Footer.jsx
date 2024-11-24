@@ -1,5 +1,5 @@
 import React from "react";
-import tedxlnm from "../../assets/tedxlnm.webp";
+import tedxlnm from "../../assets/logo.png";
 import Button from "./Button";
 import { Link } from "react-router-dom";
 
