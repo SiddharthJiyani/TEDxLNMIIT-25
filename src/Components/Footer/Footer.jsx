@@ -9,6 +9,8 @@ const Footer = () => {
       <div className="text-center md:text-left">
         <img
           src={tedxlnm}
+          width={320}
+          height={320}
           alt="TEDx LNMIIT logo"
           className="mb-4 mx-auto md:mx-0"
         />

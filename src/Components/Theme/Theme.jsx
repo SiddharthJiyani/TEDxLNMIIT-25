@@ -16,8 +16,8 @@ const Theme = () => {
     offset: ["start -0.1", "end 0.5"],
   });
 
-  const backgroundOpacity = useTransform(scrollYProgress, [0, 1], [0, 0.5]);
-  const backgroundScale = useTransform(scrollYProgress, [0, 1], [0.8, 1.2]);
+  const backgroundOpacity = useTransform(scrollYProgress, [0, 1], [0, 1.5]);
+  const backgroundScale = useTransform(scrollYProgress, [0, 1], [0.8, 5.2]);
 
   useEffect(() => {
     const canvas = document.getElementById("gridCanvas");
@@ -162,7 +162,7 @@ const Theme = () => {
       </div>
 
       {/* Phoenix SVG */}
-      <motion.div
+      {/* <motion.div
         className="absolute bottom-0 right-0 w-64 h-64 opacity-20"
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -173,7 +173,7 @@ const Theme = () => {
           alt="Phoenix"
           className="w-full h-full object-contain"
         />
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 };

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const CountdownTimer = () => {
-  const targetDate = new Date("2024-12-09T00:00:00"); // Set your target event date here
+  const targetDate = new Date("2025-01-11T00:00:00"); // Set your target event date here
 
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -59,7 +59,7 @@ const CountdownTimer = () => {
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <AnimatePresence mode="wait">
+              <AnimatePresence mode="">
                 <motion.span
                   key={unit.value}
                   initial={{ y: 20, opacity: 0 }}
@@ -68,7 +68,9 @@ const CountdownTimer = () => {
                   transition={{ duration: 0.3 }}
                   className="text-2xl font-bold text-white absolute"
                 >
+                  {/* <div className="text-2xl font-bold text-white absolute"> */}
                   {unit.value.toString().padStart(2, "0")}
+                  {/* </div > */}
                 </motion.span>
               </AnimatePresence>
             </motion.div>
