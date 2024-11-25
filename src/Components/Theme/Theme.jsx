@@ -92,7 +92,7 @@ const Theme = () => {
       {/* Grid Background Animation */}
       <canvas
         id="gridCanvas"
-        className="absolute inset-0 z-0 w-[170%] md:w-full h-[210%] md:h-full"
+        className="absolute inset-0 z-0 w-[100%] md:w-full h-[100%] md:h-full"
         style={{ backgroundColor: "black" }}
       ></canvas>
 
