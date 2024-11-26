@@ -1,15 +1,12 @@
-import {React , useEffect} from "react";
-import { motion } from "framer-motion";
+import React, { useEffect, useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import About from "../About/About";
 import Faq from "../FAQ/Faq";
 import Speakers from "../Speakers/SpeakerList";
 import PrevSpeakers from "../PrevSpeakers/PrevSpeakers";
 import RedButton from "../utility/RedButton";
-import Theme from "../Theme/Theme";
 import CountdownTimer from "../utility/CounterDown";
-import { Youtube } from "../utility/Youtube";
-import Navbar from "../Navbar/Navbar";
-import Ticket from "../utility/Ticket";
+import birdSvg from "../../assets/Bird.svg";
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -21,31 +18,106 @@ const sectionVariants = {
 };
 
 const Home = () => {
+  const containerRef = useRef(null);
+  const animationFrameRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start -0.1", "end 0.5"],
+  });
+
+  const backgroundOpacity = useTransform(scrollYProgress, [0, 1], [0, 1.5]);
+  const backgroundScale = useTransform(scrollYProgress, [0, 1], [0.8, 5.2]);
 
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to the top of the page
+    const canvas = document.getElementById("gridCanvas");
+    const ctx = canvas.getContext("2d");
+    let startTime = null;
+
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
+
+    const cellSize = 100; // Size of each grid cell
+    const frequency = 0.7; // Wave frequency
+    const amplitude = 0.6; // Wave amplitude
+    const phaseSpeed = -0.003;
+
+    const rows = Math.ceil(canvas.height / cellSize);
+    const columns = Math.ceil(canvas.width / cellSize);
+
+    const drawGrid = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const elapsed = timestamp - startTime;
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      for (let row = 0; row < rows; row++) {
+        for (let col = 0; col < columns; col++) {
+          const x = col * cellSize;
+          const y = row * cellSize;
+          const phase = elapsed * phaseSpeed;
+          const yPos = row / rows;
+          const wave =
+            Math.sin(yPos * Math.PI * frequency * 2 + phase) * amplitude;
+          const normalizedWave = (wave + 1) / 2;
+
+          const red = Math.floor(255 * normalizedWave);
+          const alpha = 0.3 + normalizedWave * 0.7;
+
+          ctx.strokeStyle = `rgba(${red}, 0, 0, ${alpha})`;
+          ctx.lineWidth = 1.5;
+          ctx.beginPath();
+          ctx.strokeRect(x, y, cellSize, cellSize);
+        }
+      }
+
+      animationFrameRef.current = requestAnimationFrame(drawGrid);
+    };
+
+    animationFrameRef.current = requestAnimationFrame(drawGrid);
+
+    return () => {
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+      }
+      window.removeEventListener("resize", resizeCanvas);
+    };
+  }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
   });
 
   return (
-    <div className=" custom-container  overflow-hidden">
+    <div className="custom-container overflow-hidden relative">
       {/* Hero Section */}
       <section
         id="hero"
-        className="hero-section py-20 min-h-screen h-full w-full flex  justify-center items-center text-red-500 relative overflow-hidden md:flex-wrap"
-      >
+        className="hero-section py-20 min-h-screen h-full w-full flex  justify-center items-center text-red-500 relative overflow-hidden md:flex-wrap">
         {/* Background Video */}
         <video
           autoPlay
           loop
           muted
-          className="absolute top-0 left-0 w-full h-full object-cover z-0 brightness-75"
-        >
+          className="absolute top-0 left-0 w-full h-full object-cover z-0 brightness-75">
           <source
             src="https://res.cloudinary.com/djodcayme/video/upload/v1732190366/TEDxLNMIIT%2725/Ted_Web_Back_Black_White_compressed_o1lz1l.mp4"
             type="video/mp4"
           />
           Your browser does not support the video tag.
         </video>
+
+        {/* Gradient Overlay */}
+        <div
+          className="absolute bottom-0 left-0 w-full h-48 z-10"
+          style={{
+            background: "linear-gradient(to bottom, transparent, #000000)",
+          }}></div>
 
         {/* Content Over the Video */}
         <div className="hero-content home-content text-center z-10 justify-around items-center w-full xxxs:flex-col xxxs:items-center md:flex-row">
@@ -70,8 +142,7 @@ const Home = () => {
             {/* Timer */}
             <motion.div
               className="border border-white/20 rounded-lg bg-white/10 backdrop-blur-sm p-1 mb-4 md:mt-1 mt-12"
-              variants={sectionVariants}
-            >
+              variants={sectionVariants}>
               <CountdownTimer />
             </motion.div>
           </div>
@@ -83,8 +154,7 @@ const Home = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="relative"
-              >
+                className="relative">
                 <h2 className="text-5xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-center tracking-tight leading-none">
                   <span className="inline-block py-5 px-4 bg-clip-text text-transparent animate-red-gradient relative">
                     Navigating
@@ -180,84 +250,81 @@ const Home = () => {
               }
             `}</style>
           </div>
-
-          
         </div>
       </section>
-      {/* Hero Section ends */}
 
-      {/* <Ticket /> */}
-      {/* Theme Section */}
-      
-      <motion.section
+      <section
         id="theme"
-        className="theme-section py-20 h-screen w-full flex flex-col justify-center items-center bg-black text-red-500 overflow-hidden
-        bg-gradient-to-b from-black to-[#1a1a1a] z-30
-        "
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={sectionVariants}
-      >
-        <Theme />
-      </motion.section>
+        className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-black to-[#1a1a1a]"
+        ref={containerRef}>
+        {/* Gradient Overlay */}
+        <div
+          className="absolute top-0 left-0 w-full h-48 z-10"
+          style={{
+            background: "linear-gradient(to top, transparent, #000000)",
+          }}></div>
 
-      {/* Speakers Section */}
-      <motion.section
-        id="speakers"
-        className="speakers-section py-20 h-full w-full flex flex-col justify-center items-center bg-black text-red-500"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={sectionVariants}
-      >
+        <canvas
+          id="gridCanvas"
+          className="absolute inset-0 w-full h-full z-0"
+          style={{ backgroundColor: "black" }}></canvas>
+
+        <motion.div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            opacity: backgroundOpacity,
+            scale: backgroundScale,
+          }}></motion.div>
+        <div className="container mx-auto px-4 py-16 flex flex-col md:flex-row items-center relative z-10">
+          <motion.img
+            src={birdSvg}
+            alt="Navigating the New"
+            className="w-full md:w-1/2 mb-8 md:mb-0 rounded-lg shadow-2xl"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+          />
+          <motion.div
+            className="w-full md:w-1/2 md:pl-8"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Navigating the <span className="text-[#ff3006]">New</span>
+            </h1>
+            <p className="text-lg text-red-100 mb-6">
+              TEDxLNMIIT 2025 invites you to explore the frontiers of
+              innovation, resilience, and discovery.
+            </p>
+            <ul className="list-disc list-inside text-red-100">
+              <li>Embracing change and uncertainty</li>
+              <li>Pioneering solutions for global challenges</li>
+              <li>Fostering creativity and adaptability</li>
+              <li>Building bridges between diverse perspectives</li>
+            </ul>
+          </motion.div>
+          
+        </div>
+          {/* Gradient Overlay at the Bottom */}
+  <div
+    className="absolute bottom-0 left-0 w-full h-48 z-10"
+    style={{
+      background: "linear-gradient(to bottom, transparent, #000000)",
+    }}></div>
+      </section>
+
+      {/* Other Sections */}
+      <motion.section id="speakers" className="py-20 bg-black">\
         <Speakers />
       </motion.section>
-
-      {/* About Section */}
-      <motion.section
-        id="about"
-        className="about-section py-20 w-full flex flex-col justify-center items-center bg-black text-red-500 overflow-hidden"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }} // Triggers only when the section is in view
-        variants={sectionVariants}
-      >
+      <motion.section id="about" className="py-20 bg-black">
         <About />
       </motion.section>
-
-      {/* Previous Speakers Section */}
-      <motion.section
-        id="previous-speakers"
-        className="prev-speakers-section py-20 w-full flex flex-col justify-center items-center bg-black text-red-500"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={sectionVariants}
-      >
+      <motion.section id="previous-speakers" className="py-20 bg-black">
         <PrevSpeakers />
       </motion.section>
-
-      {/* FAQ Section */}
-      <motion.section
-        id="faq"
-        className="faq-section py-20 w-full flex flex-col justify-center items-center bg-black text-red-500"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={sectionVariants}
-      >
+      <motion.section id="faq" className="py-20 bg-black">
         <Faq />
-      </motion.section>
-      <motion.section
-        id="faq"
-        className="faq-section  w-full flex flex-col justify-center items-center bg-black text-red-500"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={sectionVariants}
-      >
-        <Youtube />
       </motion.section>
     </div>
   );
