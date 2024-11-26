@@ -180,13 +180,20 @@ const Home = () => {
               }
             `}</style>
           </div>
+
+          
         </div>
       </section>
+      {/* Hero Section ends */}
+
       {/* <Ticket /> */}
       {/* Theme Section */}
+      
       <motion.section
         id="theme"
-        className="theme-section py-20 h-screen w-full flex flex-col justify-center items-center bg-black text-red-500 overflow-hidden"
+        className="theme-section py-20 h-screen w-full flex flex-col justify-center items-center bg-black text-red-500 overflow-hidden
+        bg-gradient-to-b from-black to-[#1a1a1a] z-30
+        "
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}

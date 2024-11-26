@@ -36,7 +36,7 @@ const Theme = () => {
     const cellSize = 100; // Size of each grid cell
     const frequency = 0.7; // Wave frequency
     const amplitude = 0.6; // Wave amplitude
-    const phaseSpeed = -0.004; // Negative value to reverse direction
+    const phaseSpeed = -0.003; // Negative value to reverse direction
 
     // Calculate rows and columns based on canvas size
     const rows = Math.ceil(canvas.height / cellSize);
@@ -88,23 +88,23 @@ const Theme = () => {
   }, []);
 
   return (
-    <div ref={containerRef} className="relative min-h-screen w-full overflow-hidden">
+    <div ref={containerRef} className="relative min-h-screen w-full overflow-hidden ">
       {/* Grid Background Animation */}
       <canvas
         id="gridCanvas"
-        className="absolute inset-0 z-0 w-[100%] md:w-full h-[100%] md:h-full"
+        className="absolute inset-0 z-0 w-[100%] md:w-full h-[100%] md:h-full  hidden md:block"
         style={{ backgroundColor: "black" }}
       ></canvas>
 
       {/* Background Animation */}
       <motion.div
-        className="absolute inset-0 pointer-events-none"
+        className="absolute inset-0 pointer-events-none "
         style={{
           opacity: backgroundOpacity,
           scale: backgroundScale,
         }}
       >
-        <svg viewBox="0 0 100 100" className="w-full h-full">
+        {/* <svg viewBox="0 0 100 100" className="w-full h-full">
           <motion.path
             d="M10 10 Q 50 20, 90 10 T 90 50 T 10 90 T 10 10"
             stroke="white"
@@ -114,7 +114,7 @@ const Theme = () => {
             animate={{ pathLength: 1 }}
             transition={{ duration: 2, repeat: Infinity }}
           />
-        </svg>
+        </svg> */}
       </motion.div>
 
       <div className="container mx-auto px-4 py-16 flex flex-col md:flex-row items-center justify-between relative z-10 min-h-screen">

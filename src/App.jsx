@@ -17,7 +17,7 @@ export default function App() {
     <Router>
       <div className="w-full h-full font-generalSans  bg-black pt-1 backdrop-blur-md  ">
         <Navbar />
-        <Particle />
+        {/* <Particle /> */}
         <Routes>
           <Route path="/" element={<Home />} />
           {/* <Route path="/about" element={<About />} /> */}
