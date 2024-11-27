@@ -46,11 +46,15 @@ const SpeakerList = () => {
         >
           <Title text="Speakers" />
         </motion.h1>
-        <div className="flex items-center justify-center h-screen bg-black">
+        <div className="flex items-center justify-center  bg-black">
           <div className="text-center">
             <h1 className="text-white text-6xl md:text-8xl font-bold uppercase">
               {/* Revealing <span className="text-red-600">Soon</span> */}
-              <Title text="Revealing" red={"Soon!"} className="text-6xl md:text-8xl font-extrabold"/>
+              <Title
+                text="Revealing"
+                red={"Soon!"}
+                className="text-6xl md:text-8xl font-extrabold"
+              />
             </h1>
             <p className="text-gray-500 text-lg md:text-2xl mt-4">
               Stay tuned for something exciting!
