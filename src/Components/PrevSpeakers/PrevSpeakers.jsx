@@ -24,7 +24,7 @@ const PrevSpeakers = () => {
             className=" xxxs:ml-8 xxs:ml-10   xs:ml-14 sm:gap-1 "
             name="Dr. Tanu Jain"
             description="Former IAS officer and DRDO Assistant Director, Dr. Jain advocates for education and UPSC reforms. Her multifaceted career exemplifies her dedication to creating impact beyond conventional roles."
-            url="https://drive.google.com/file/d/1b2JeXhUiIs2a75v09skoxKswxAoPksSP/view?usp=drive_link"
+            url="https://drive.google.com/file/d/1b2JeXhUiIs2a75v09skoxKswxAoPksSP/view"
           />
 
           {/* Second Speaker */}
@@ -84,8 +84,7 @@ const PrevSpeakers = () => {
             className=" xxxs:ml-8 xxs:ml-10   xs:ml-14 sm:gap-1 "
             altText="Speaker"
             name="Gunjan Saini"
-            description="Poet, writer, and founder of @officialletstalk, she fosters emotional well-being through shared stories. Gunjan’s creative force helps bridge emotional gaps, making a significant impact in mental health.
-"
+            description="Poet, writer, and founder of @officialletstalk, she fosters emotional well-being through shared stories. Gunjan’s creative force helps bridge emotional gaps, making a significant impact in mental health."
             url="https://www.youtube.com/watch?v=7Qsg9A-mjgk"
           />
 
