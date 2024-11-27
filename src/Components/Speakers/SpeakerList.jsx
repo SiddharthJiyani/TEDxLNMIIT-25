@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import speaker1 from "../../assets/PastSpeakers/speaker1.png";
 import speaker2 from "../../assets/PastSpeakers/speaker2.png";
 import speaker3 from "../../assets/PastSpeakers/speaker3.png";
@@ -11,7 +11,7 @@ import speaker6 from "../../assets/PastSpeakers/speaker6.png";
 import speaker7 from "../../assets/PastSpeakers/speaker7.png";
 import speaker9 from "../../assets/PastSpeakers/speaker9.png";
 import Speakers from "./Speakers";
-import Title from '../utility/Title';
+import Title from "../utility/Title";
 
 const SpeakerList = () => {
   const speakers = [
@@ -30,15 +30,15 @@ const SpeakerList = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
-      }
-    }
+        staggerChildren: 0.1,
+      },
+    },
   };
 
   return (
     <section className="py-16 text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl ">
-        <motion.h1 
+        <motion.h1
           className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -46,7 +46,17 @@ const SpeakerList = () => {
         >
           <Title text="Speakers" />
         </motion.h1>
-        <motion.div 
+        <div className="flex items-center justify-center h-screen bg-black">
+          <div className="text-center">
+            <h1 className="text-white text-6xl md:text-8xl font-bold uppercase">
+              Revealing <span className="text-red-600">Soon</span>
+            </h1>
+            <p className="text-white text-lg md:text-2xl mt-4">
+              Stay tuned for something exciting!
+            </p>
+          </div>
+        </div>
+        <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center mr-16 md:mr-0"
           variants={containerVariants}
           initial="hidden"

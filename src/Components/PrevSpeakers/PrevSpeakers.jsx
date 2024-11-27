@@ -24,7 +24,7 @@ const PrevSpeakers = () => {
             className=" xxxs:ml-8 xxs:ml-10   xs:ml-14 sm:gap-1 "
             name="Dr. Tanu Jain"
             description="Former IAS officer and DRDO Assistant Director, Dr. Jain advocates for education and UPSC reforms. Her multifaceted career exemplifies her dedication to creating impact beyond conventional roles."
-            url="https://www.youtube.com"
+            url="https://drive.google.com/file/d/1b2JeXhUiIs2a75v09skoxKswxAoPksSP/view?usp=drive_link"
           />
 
           {/* Second Speaker */}
@@ -34,7 +34,7 @@ const PrevSpeakers = () => {
             className=" xxxs:ml-8 xxs:ml-10   xs:ml-14 sm:gap-1 "
             name="Krishnan Sunderarajan"
             description="Founder of LOKA, India’s first Metaverse app, Krishnan bridges technology and human experience. His Shark Tank success highlights his forward-thinking insights into the future of digital interaction."
-            url="https://www.youtube.com"
+            url="https://www.youtube.com/watch?v=Z9zx3kWLP6c"
           />
 
           {/* Third Speaker */}
@@ -44,7 +44,7 @@ const PrevSpeakers = () => {
             className=" xxxs:ml-8 xxs:ml-10   xs:ml-14 sm:gap-1 "
             name="Palakh Khanna"
             description="Founder of Break.The.Ice and recognized as one of Asia's 100 Women Power Leaders, Palakh is a trailblazer in entrepreneurship. She inspires others by breaking barriers in leadership."
-            url="https://www.youtube.com"
+            url="https://www.youtube.com/watch?v=FunoeJDbLhs&t=19s"
           />
 
           {/* Fourth Speaker */}
@@ -65,7 +65,7 @@ const PrevSpeakers = () => {
             className=" xxxs:ml-8 xxs:ml-10   xs:ml-14 sm:gap-1 "
             name="Deepak Pareek"
             description="Co-founder of Iceberg Creations and IMPACT 30 Under 30 honoree, he’s a dynamic content creator. Deepak’s work spans multiple platforms, driving innovative, engaging content across industries"
-            url="https://www.youtube.com"
+            url="https://www.youtube.com/watch?v=vkIZJ0-hkQY"
           />
 
           {/* Sixth Speaker */}
@@ -75,7 +75,7 @@ const PrevSpeakers = () => {
             altText="Speaker"
             name="Tejas Patil"
             description="Tech content creator decoding the complexities of the digital world. His work in his videos highlights the limitless potential of technology and innovation in shaping the future"
-            url="https://www.youtube.com"
+            url="https://www.youtube.com/watch?v=YJPAISrsU6w&t=269s"
           />
 
           {/* Seventh Speaker */}
@@ -96,7 +96,7 @@ const PrevSpeakers = () => {
             altText="Speaker"
             name="Sakshi Mandhyan"
             description="Founder of Mandhyan Care, Sakshi is a mental well-being advocate. Her work reshapes how mental health challenges are understood, fostering a transformative approach to emotional well-being."
-            url="https://www.youtube.com"
+            url="https://www.youtube.com/watch?v=QmHOBNJVP24"
           />
         </div>
       </div>
