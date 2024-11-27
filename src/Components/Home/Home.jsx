@@ -339,6 +339,8 @@ const Home = () => {
         <PrevSpeakers />
       </motion.section>
 
+          <Ticket/>
+
       {/* FAQ Section */}
       <motion.section
         id="faq"
