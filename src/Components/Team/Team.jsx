@@ -4,7 +4,7 @@ import MemberCard from "./MemberCard";
 import { useEffect } from "react";
 
 import Manav from "../../assets/team/manav.jpg";
-import Sid from "../../assets/team/Siddharth.jpg"; 
+import Sid from "../../assets/team/Siddharth.jpg";
 import Abhey from "../../assets/team/Abhey.jpg";
 // import Abhinav from "../../assets/team/abhinav.jpg";
 import Krishna from "../../assets/team/Krishna.jpg";
@@ -92,7 +92,7 @@ const Team = () => {
     >
       {/* Team Section Title */}
       <motion.div variants={itemVariants} whileInView="show">
-        <h1 className="text-8xl bg-red-700 w-full">Our Team</h1>
+        <h1 className="text-8xl  w-full">Our Team</h1>
       </motion.div>
 
       {/* Organizer */}

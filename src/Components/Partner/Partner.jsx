@@ -7,8 +7,7 @@ import image4 from "../../assets/sponsors/PP.png";
 import image5 from "../../assets/sponsors/UB.png";
 import PartnerSmallBox from "./PartnerSmallBox";
 import { motion } from "framer-motion";
-
-
+import Marquee from "react-fast-marquee";
 const Partner = () => {
   useEffect(() => {
     window.scrollTo(0, 0); // Scroll to the top of the page
@@ -66,7 +65,7 @@ const Partner = () => {
       <h3 className="mt-5 text-7xl font-bold mb-5 text-center">
         Previous Partners
       </h3>
-      <motion.div
+      {/* <motion.div
         className="flex justify-center mb-10 w-full overflow-x-hidden"
         animate={{ x: ["0%", "-10%"] }}
         transition={{
@@ -87,7 +86,7 @@ const Partner = () => {
           </a>
         ))}
         {/* Repeat the partners list to create a seamless looping effect */}
-        {partners.map((partner, index) => (
+      {/* {partners.map((partner, index) => (
           <a
             key={`${index}-copy`}
             href={partner.link}
@@ -108,17 +107,29 @@ const Partner = () => {
             <PartnerSmallBox imgSrc={partner.imgSrc} name={partner.name} />
           </a>
         ))}
-      </motion.div>
-
+      </motion.div> */}
+      <Marquee autoFill="true">
+        {partners.map((partner, index) => (
+          <a
+            key={`${index}-copy`}
+            href={partner.link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <PartnerSmallBox imgSrc={partner.imgSrc} name={partner.name} />
+          </a>
+        ))}
+      </Marquee>
       <div className="text-center max-w-2xl px-4 md:px-6 lg:px-8">
         <h3 className="text-4xl md:text-5xl lg:text-7xl font-semibold mb-4">
           Interested in partnership?
         </h3>
         <p className="text-base md:text-lg lg:text-xl mb-4">
-          Collaborating with TEDxLNMIIT provides a unique opportunity to enhance your organization’s
-          global network within the TED and TEDx community. Leverage innovative ideas, technology,
-          and local investments to empower education and foster innovation,
-          harnessing the transformative potential of ideas for a brighter future.
+          Collaborating with TEDxLNMIIT provides a unique opportunity to enhance
+          your organization’s global network within the TED and TEDx community.
+          Leverage innovative ideas, technology, and local investments to
+          empower education and foster innovation, harnessing the transformative
+          potential of ideas for a brighter future.
         </p>
         <p>
           <a href="#" className="text-blue-400 underline">
