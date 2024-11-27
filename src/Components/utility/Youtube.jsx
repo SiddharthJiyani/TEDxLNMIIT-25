@@ -2,7 +2,7 @@
 import React from "react";
 import { ContainerScroll } from "../ui/container-scroll-animation";
 import Title from "./Title";
-export function Youtube() {
+export default function Youtube() {
   return (
     <div className="flex flex-col overflow-hidden ">
       <ContainerScroll

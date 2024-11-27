@@ -49,14 +49,15 @@ const SpeakerList = () => {
         <div className="flex items-center justify-center h-screen bg-black">
           <div className="text-center">
             <h1 className="text-white text-6xl md:text-8xl font-bold uppercase">
-              Revealing <span className="text-red-600">Soon</span>
+              {/* Revealing <span className="text-red-600">Soon</span> */}
+              <Title text="Revealing" red={"Soon!"} className="text-6xl md:text-8xl font-extrabold"/>
             </h1>
-            <p className="text-white text-lg md:text-2xl mt-4">
+            <p className="text-gray-500 text-lg md:text-2xl mt-4">
               Stay tuned for something exciting!
             </p>
           </div>
         </div>
-        <motion.div
+        {/* <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center mr-16 md:mr-0"
           variants={containerVariants}
           initial="hidden"
@@ -70,7 +71,7 @@ const SpeakerList = () => {
               name={speaker.name}
             />
           ))}
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
