@@ -100,13 +100,15 @@ const Home = () => {
       {/* Hero Section */}
       <section
         id="hero"
-        className="hero-section py-20 min-h-screen h-full w-full flex  justify-center items-center text-red-500 relative overflow-hidden md:flex-wrap">
+        className="hero-section py-20 min-h-screen h-full w-full flex  justify-center items-center text-red-500 relative overflow-hidden md:flex-wrap"
+      >
         {/* Background Video */}
         <video
           autoPlay
           loop
           muted
-          className="absolute top-0 left-0 w-full h-full object-cover z-0 brightness-75">
+          className="absolute top-0 left-0 w-full h-full object-cover z-0 brightness-75"
+        >
           <source
             src="https://res.cloudinary.com/djodcayme/video/upload/v1732190366/TEDxLNMIIT%2725/Ted_Web_Back_Black_White_compressed_o1lz1l.mp4"
             type="video/mp4"
@@ -119,7 +121,8 @@ const Home = () => {
           className="absolute bottom-0 left-0 w-full h-48 z-10"
           style={{
             background: "linear-gradient(to bottom, transparent, #000000)",
-          }}></div>
+          }}
+        ></div>
 
         {/* Content Over the Video */}
         <div className="hero-content home-content text-center z-10 justify-around items-center w-full xxxs:flex-col xxxs:items-center md:flex-row">
@@ -144,19 +147,21 @@ const Home = () => {
             {/* Timer */}
             <motion.div
               className="border border-white/20 rounded-lg bg-white/10 backdrop-blur-sm p-1 mb-4 md:mt-1 mt-12"
-              variants={sectionVariants}>
+              variants={sectionVariants}
+            >
               <CountdownTimer />
             </motion.div>
           </div>
 
           {/* Theme heading */}
-          <div className="w-full mt-10 h-full -mb-36 bg-transparent font-generalSans">
+          <div className="w-full mt-10 h-full -mb-36 bg-transparent font-generalSans mb-10">
             <div className="h-full *:container mx-auto px-4">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="relative">
+                className="relative"
+              >
                 <h2 className="text-5xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-center tracking-tight leading-none">
                   <span className="inline-block py-5 px-4 bg-clip-text text-transparent animate-red-gradient relative">
                     Navigating
@@ -257,26 +262,30 @@ const Home = () => {
 
       <section
         id="theme"
-        className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-black to-[#1a1a1a]"
-        ref={containerRef}>
+        className=" relative min-h-screen flex items-center justify-center bg-gradient-to-b from-black to-[#1a1a1a]"
+        ref={containerRef}
+      >
         {/* Gradient Overlay */}
         <div
           className="absolute top-0 left-0 w-full h-48 z-10"
           style={{
             background: "linear-gradient(to top, transparent, #000000)",
-          }}></div>
+          }}
+        ></div>
 
         <canvas
           id="gridCanvas"
           className="absolute inset-0 w-full h-full z-0"
-          style={{ backgroundColor: "black" }}></canvas>
+          style={{ backgroundColor: "black" }}
+        ></canvas>
 
         <motion.div
           className="absolute inset-0 pointer-events-none"
           style={{
             opacity: backgroundOpacity,
             scale: backgroundScale,
-          }}></motion.div>
+          }}
+        ></motion.div>
         <div className="container mx-auto px-4 py-16 flex flex-col md:flex-row items-center relative z-10">
           <motion.img
             src={birdSvg}
@@ -290,7 +299,8 @@ const Home = () => {
             className="w-full md:w-1/2 md:pl-8"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}>
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Navigating the <span className="text-[#ff3006]">New</span>
             </h1>
@@ -311,7 +321,8 @@ const Home = () => {
           className="absolute bottom-0 left-0 w-full h-48 z-10"
           style={{
             background: "linear-gradient(to bottom, transparent, #000000)",
-          }}></div>
+          }}
+        ></div>
       </section>
 
       {/* Other Sections */}
@@ -324,7 +335,8 @@ const Home = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }} // Triggers only when the section is in view
-        variants={sectionVariants}>
+        variants={sectionVariants}
+      >
         <About />
       </motion.section>
 
@@ -335,11 +347,12 @@ const Home = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        variants={sectionVariants}>
+        variants={sectionVariants}
+      >
         <PrevSpeakers />
       </motion.section>
 
-          <Ticket/> 
+      <Ticket />
 
       {/* FAQ Section */}
       <motion.section
@@ -348,7 +361,8 @@ const Home = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        variants={sectionVariants}>
+        variants={sectionVariants}
+      >
         <Faq />
       </motion.section>
       <motion.section
@@ -357,7 +371,8 @@ const Home = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        variants={sectionVariants}>
+        variants={sectionVariants}
+      >
         <Youtube />
       </motion.section>
     </div>
