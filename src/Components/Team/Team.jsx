@@ -108,7 +108,7 @@ const Team = () => {
       {/* Team Section Title */}
       <motion.div variants={itemVariants} whileInView="show">
         {/* <h1 className="text-8xl  w-full"> */}
-        <Title text="Our" red={"Team"} className=" !text-6xl md:!text-8xl"/>
+        <Title text="Our" red={"Team"} className=" !text-6xl md:!text-8xl" />
         {/* </h1> */}
       </motion.div>
 

@@ -154,7 +154,7 @@ const Home = () => {
           </div>
 
           {/* Theme heading */}
-          <div className="w-full mt-10 h-full -mb-36 bg-transparent font-generalSans mb-10">
+          <div className="w-full mt-10 h-full  bg-transparent font-generalSans mb-10 sm:-mb-36">
             <div className="h-full *:container mx-auto px-4">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
