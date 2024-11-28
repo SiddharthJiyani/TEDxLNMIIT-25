@@ -1,64 +1,45 @@
-import React from "react";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import ticketimage from "../../assets/Tickets.png";
 import Marquee from "react-fast-marquee";
-
+import Ticketsvg from "../../assets/Ticket.svg";
+import Title from "../utility/Title";
+import RedButton from "./RedButton";
+import { Link } from "react-router-dom";
 const Ticket = () => {
   return (
-    <div className="w-full h-[400px] overflow-hidden p-5 relative">
-      {/* First marquee, rotated to skew */}
-      <Marquee
-        autoFill="true"
-        pauseOnHover="true"
-        speed="100"
-        style={{
-          position: "absolute",
-          top: -100,
-          left: 50,
-          transform: "rotate(25deg)",
-          transformOrigin: "top left",
-        }}
-      >
-        <Link to="/booktickets">
-          <img
-            src={ticketimage}
-            alt="carousel"
-            style={{
-              width: "100%",
-              height: "150px",
-              objectFit: "cover",
-              transition: "transform 0.5s",
-            }}
-          />
-        </Link>
+    <div
+      className="relative w-full h-full overflow-hidden p-5"
+      style={{
+        background: "radial-gradient(circle,red,darkred,black)",
+      }}
+    >
+      <Title text="Tickets" className="text-center" />
+      <Marquee autoFill="true" speed="150" direction="right">
+        <img
+          src={Ticketsvg}
+          alt="carousel"
+          className="w-full h-[150px] object-cover transform transition-transform duration-500   "
+        />
       </Marquee>
-
-      {/* Second marquee, rotated in opposite direction */}
-      <Marquee
-        autoFill="true"
-        pauseOnHover="true"
-        speed="100"
-        direction="right"
-        style={{
-          position: "absolute",
-          top: -140,
-          right: 10,
-          transform: "rotate(-25deg)",
-          transformOrigin: "bottom right",
-        }}
-      >
-        <Link to="/booktickets">
-          <img
-            src={ticketimage}
-            alt="carousel"
-            style={{
-              width: "100%",
-              height: "150px",
-              objectFit: "cover",
-              transition: "transform 0.5s",
-            }}
-          />
+      <div className="inline-flex justify-around items-center w-full">
+        <img
+          src={Ticketsvg}
+          alt="carousel"
+          className="object-cover transform transition-transform duration-500 ml-10"
+        />
+        <Link
+          to="/booktickets"
+          className="px-6 py-2 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-75 transition"
+        >
+          Buy Ticket
         </Link>
+      </div>
+
+      <Marquee autoFill="true" speed="150">
+        <img
+          src={Ticketsvg}
+          alt="carousel"
+          className="w-full h-[150px] object-cover transform transition-transform duration-500   "
+        />
       </Marquee>
     </div>
   );

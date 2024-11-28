@@ -39,6 +39,8 @@ export default {
       },
       backgroundImage: {
         "heading-gradient": "linear-gradient(90deg, white, #e6e6e6)",
+        "radial-black-darkred-red":
+          "radial-gradient(circle, black, darkred, red)",
       },
       animation: {
         floating: "floating 2.6s infinite linear",
