@@ -29,7 +29,7 @@ import Diksha from "../../assets/team/Diksha.jpg";
 import Sanskriti from "../../assets/team/Sanskriti.jpg";
 import Akshat from "../../assets/team/Akshat.jpg"; 
 import Hussain from "../../assets/team/Hussain.jpg";
-import Vedha from "../../assets/team/VedhaSinkar.JPG";
+// import Vedha from "../../assets/team/VedhaSinkar.JPG";
 import Aditya from "../../assets/team/AdityaNarula.jpg";
 import Tanay from "../../assets/team/Tanaysinghvi.JPG";
 import Nancy from "../../assets/team/Nancy.jpg";
@@ -398,7 +398,7 @@ const Team = () => {
           <MemberCard
             name="Vedha Sinkar"
             link="https://www.linkedin.com/in/vedha-sinkar"
-            imgSrc={Vedha}
+            // imgSrc={Vedha}
           />
         </div>
       </div>
