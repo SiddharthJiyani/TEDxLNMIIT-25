@@ -13,7 +13,7 @@ import Suhani from "../../assets/team/Suhani.jpg";
 // import Shreyansh from "../../assets/team/shreyansh.jpg";
 import Krishnamanchanda from "../../assets/team/KrishnaManchanda.jpg";
 import Divay from "../../assets/team/Divay.jpg";
-// import Nemil from "../../assets/team/nemil.jpg";
+import Nemil from "../../assets/team/Nemil Kamdar.jpg";
 import Saanvi from "../../assets/team/Saanvi.jpg";
 import Aryanjadhav from "../../assets/team/Aryan Jadhav y23.jpg";
 import Alisha from "../../assets/team/AlishaMalhotra.jpg";
@@ -43,7 +43,7 @@ import Vihaan from "../../assets/team/Vihaan.jpg";
 // import Parv from "../../assets/team/parv.jpg";
 import Pratham from "../../assets/team/Pratham_Y23.jpg";
 import Nirmal from "../../assets/team/Nirmal.jpg";
-// import Kanishq from "../../assets/team/kanishq.jpg";
+import Kanishq from "../../assets/team/kanishqMalhotraY23.jpg";
 // import Kunal from "../../assets/team/kunal.jpg";
 // import Chirag from "../../assets/team/chirag.jpg";
 
@@ -129,28 +129,28 @@ const Team = () => {
         <motion.div whileInView="show" variants={itemVariants}>
           <MemberCard
             name="Abhey Raheja"
-            link="https://www.linkedin.com/in/abhey-raheja"
+            link="https://www.linkedin.com/in/abhey-raheja-19a7b525b/"
             imgSrc={Abhey}
           />
         </motion.div>
         <motion.div whileInView="show" variants={itemVariants}>
           <MemberCard
             name="Abhinav Singh"
-            link="https://www.linkedin.com/in/abhinav-singh"
+            link="https://www.linkedin.com/in/abhinav-singh-1b8384250/"
             imgSrc={Abhinav}
           />
         </motion.div>
         <motion.div whileInView="show" variants={itemVariants}>
           <MemberCard
             name="Krishna Rohira"
-            link="https://www.linkedin.com/in/krishna-rohira"
+            link="https://www.linkedin.com/in/krishna-rohira-537a4524b/"
             imgSrc={Krishna}
           />
         </motion.div>
         <motion.div whileInView="show" variants={itemVariants}>
           <MemberCard
             name="Suhani Gupta"
-            link="https://www.linkedin.com/in/suhani-gupta"
+            link="https://www.linkedin.com/in/suhani-gupta-2bb1a2272/"
             imgSrc={Suhani}
           />
         </motion.div>
@@ -174,7 +174,7 @@ const Team = () => {
             <motion.div whileInView="show" variants={itemVariants}>
               <MemberCard
                 name="Siddharth Jiyani"
-                link="https://www.linkedin.com/in/siddharth-jiyani"
+                link="https://www.linkedin.com/in/siddharth-jiyani-7584a1266/"
                 imgSrc={Sid}
               />
             </motion.div>
@@ -271,7 +271,7 @@ const Team = () => {
               <MemberCard
                 name="Nemil Kamdar"
                 link="https://www.linkedin.com/in/nemil-kamdar"
-                // imgSrc={Nemil}
+                imgSrc={Nemil}
               />
             </motion.div>
           </motion.div>
@@ -481,7 +481,7 @@ const Team = () => {
           <MemberCard
             name="Kanishq Malhotra"
             link="https://www.linkedin.com/in/kanishq-malhotra"
-            // imgSrc={Kanishq}
+            imgSrc={Kanishq}
           />
         </div>
       </div>
