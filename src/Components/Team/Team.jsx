@@ -27,7 +27,7 @@ import Priyal from "../../assets/team/Priyal.jpg";
 import AdityaJ from "../../assets/team/Aditya Jain.jpg";
 import Diksha from "../../assets/team/Diksha.jpg";
 import Sanskriti from "../../assets/team/Sanskriti.jpg";
-import Akshat from "../../assets/team/Akshat.jpg";
+import Akshat from "../../assets/team/Akshat.jpg"; 
 import Hussain from "../../assets/team/Hussain.jpg";
 import Vedha from "../../assets/team/VedhaSinkar.JPG";
 import Aditya from "../../assets/team/AdityaNarula.jpg";
