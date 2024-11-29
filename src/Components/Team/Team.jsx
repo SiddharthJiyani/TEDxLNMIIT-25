@@ -9,7 +9,6 @@ import Abhey from "../../assets/team/Abhey.jpg";
 // import Abhinav from "../../assets/team/abhinav.jpg";
 import Krishna from "../../assets/team/Krishna.jpg";
 import Suhani from "../../assets/team/Suhani.jpg";
-// import Siddharth from "../../assets/team/siddharth.jpg";
 // import Sahil from "../../assets/team/sahil.jpg";
 // import Shreyansh from "../../assets/team/shreyansh.jpg";
 import Krishnamanchanda from "../../assets/team/KrishnaManchanda.jpg";
@@ -31,7 +30,7 @@ import Akshat from "../../assets/team/Akshat.jpg";
 import Hussain from "../../assets/team/Hussain.jpg";
 // import Vedha from "../../assets/team/VedhaSinkar.JPG";
 import Aditya from "../../assets/team/AdityaNarula.jpg";
-import Tanay from "../../assets/team/Tanaysinghvi.JPG";
+// import Tanay from "../../assets/team/Tanaysinghvi.JPG";
 import Nancy from "../../assets/team/Nancy.jpg";
 import Rahul from "../../assets/team/Rahul.jpg";
 // import Manan from "../../assets/team/Manan.jpg";
@@ -393,7 +392,7 @@ const Team = () => {
           <MemberCard
             name="Tanay Singhvi"
             link="https://www.linkedin.com/in/tanay-singhvi"
-            imgSrc={Tanay}
+            // imgSrc={Tanay}
           />
           <MemberCard
             name="Vedha Sinkar"
