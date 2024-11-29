@@ -17,10 +17,10 @@ import Divay from "../../assets/team/Divay.jpg";
 // import Nemil from "../../assets/team/nemil.jpg";
 import Saanvi from "../../assets/team/Saanvi.jpg";
 import Aryanjadhav from "../../assets/team/Aryan Jadhav y23.jpg";
-import Alisha from "../../assets/team/Alisha Malhotra y23.jpg";
-import Abdul from "../../assets/team/abdulhadi y23.jpeg";
-import Poorvi from "../../assets/team/Poorvi jagga y24.jpg";
-import Praneel from "../../assets/team/Praneel Dev Y24.png";
+import Alisha from "../../assets/team/AlishaMalhotra.jpg";
+import Abdul from "../../assets/team/abdulhadi_y23.jpeg";
+import Poorvi from "../../assets/team/Poorvijagga.jpg";
+import Praneel from "../../assets/team/PraneelDev.png";
 import Anshika from "../../assets/team/Anshika.jpg";
 import Sakash from "../../assets/team/Sakash.jpg";
 import Priyal from "../../assets/team/Priyal.jpg";
@@ -29,12 +29,12 @@ import Diksha from "../../assets/team/Diksha.jpg";
 import Sanskriti from "../../assets/team/Sanskriti.jpg";
 import Akshat from "../../assets/team/Akshat.jpg";
 import Hussain from "../../assets/team/Hussain.jpg";
-import Vedha from "../../assets/team/Vedha Sinkar Y24.JPG";
-import Aditya from "../../assets/team/Aditya Narula Y24.jpg";
-import Tanay from "../../assets/team/Tanay singhvi y24.JPG";
+import Vedha from "../../assets/team/VedhaSinkar.JPG";
+import Aditya from "../../assets/team/AdityaNarula.jpg";
+import Tanay from "../../assets/team/Tanaysinghvi.JPG";
 import Nancy from "../../assets/team/Nancy.jpg";
 import Rahul from "../../assets/team/Rahul.jpg";
-import Manan from "../../assets/team/Manan.jpg";
+// import Manan from "../../assets/team/Manan.jpg";
 import Naman from "../../assets/team/Naman.jpg";
 import Pranav from "../../assets/team/Pranav.jpg";
 import Samar from "../../assets/team/Samar.jpg";
@@ -47,7 +47,7 @@ import Nirmal from "../../assets/team/Nirmal.jpg";
 // import Kunal from "../../assets/team/kunal.jpg";
 // import Chirag from "../../assets/team/chirag.jpg";
 
-import Aayana from "../../assets/team/Aayana.jpg";
+// import Aayana from "../../assets/team/Aayana.jpg";
 import Kunal from "../../assets/team/Kunal Sharma Y23.jpg";
 import Chirag from "../../assets/team/Chirag Mehta_.jpg";
 import Yash from "../../assets/team/Yash.jpg";
@@ -467,7 +467,7 @@ const Team = () => {
         <MemberCard
           name="Manan Vaish"
           link="https://www.linkedin.com/in/manan-vaish"
-          imgSrc={Manan}
+          // imgSrc={Manan}
         />
       </div>
 
@@ -509,7 +509,7 @@ const Team = () => {
           <MemberCard
             name="Aayana Jain"
             link="https://www.linkedin.com/in/aayana-jain"
-            imgSrc={Aayana}
+            // imgSrc={Aayana}
           />
           <MemberCard
             name="Yash"
