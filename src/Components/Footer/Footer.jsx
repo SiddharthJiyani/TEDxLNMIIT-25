@@ -15,7 +15,7 @@ const Footer = () => {
           className="mb-4 mx-auto md:mx-0"
         />
         <p className="font-arimo md:text-[14px] md:leading-[18px] text-xs text-flatwhite-500">
-          ©2023 All Rights Reserved
+          ©2025 All Rights Reserved
           <br />
           This independent TEDx event is operated under license from TED.
         </p>
