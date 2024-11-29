@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import Manav from "../../assets/team/manav.jpg";
 import Sid from "../../assets/team/Siddharth.jpg";
 import Abhey from "../../assets/team/Abhey.jpg";
-// import Abhinav from "../../assets/team/abhinav.jpg";
+import Abhinav from "../../assets/team/ABHINAV_SINGH.jpg";
 import Krishna from "../../assets/team/Krishna.jpg";
 import Suhani from "../../assets/team/Suhani.jpg";
 // import Sahil from "../../assets/team/sahil.jpg";
@@ -17,6 +17,7 @@ import Divay from "../../assets/team/Divay.jpg";
 import Saanvi from "../../assets/team/Saanvi.jpg";
 import Aryanjadhav from "../../assets/team/Aryan Jadhav y23.jpg";
 import Alisha from "../../assets/team/AlishaMalhotra.jpg";
+import Aayana from "../../assets/team/Aayana.jpg";
 import Abdul from "../../assets/team/abdulhadi_y23.jpeg";
 import Poorvi from "../../assets/team/Poorvijagga.jpg";
 import Praneel from "../../assets/team/PraneelDev.png";
@@ -42,7 +43,7 @@ import Vihaan from "../../assets/team/Vihaan.jpg";
 // import Parv from "../../assets/team/parv.jpg";
 import Pratham from "../../assets/team/Pratham_Y23.jpg";
 import Nirmal from "../../assets/team/Nirmal.jpg";
-// import Kanishq from "../../assets/team/kanishq.jpg";
+import Kanishq from "../../assets/team/kanishq.jpg";
 // import Kunal from "../../assets/team/kunal.jpg";
 // import Chirag from "../../assets/team/chirag.jpg";
 
@@ -136,7 +137,7 @@ const Team = () => {
           <MemberCard
             name="Abhinav Singh"
             link="https://www.linkedin.com/in/abhinav-singh"
-            // imgSrc={Abhinav}
+            imgSrc={Abhinav}
           />
         </motion.div>
         <motion.div whileInView="show" variants={itemVariants}>
@@ -480,6 +481,7 @@ const Team = () => {
           <MemberCard
             name="Kanishq Malhotra"
             link="https://www.linkedin.com/in/kanishq-malhotra"
+            imgSrc={Kanishq}
           />
         </div>
       </div>
@@ -508,7 +510,7 @@ const Team = () => {
           <MemberCard
             name="Aayana Jain"
             link="https://www.linkedin.com/in/aayana-jain"
-            // imgSrc={Aayana}
+            imgSrc={Aayana}
           />
           <MemberCard
             name="Yash"
