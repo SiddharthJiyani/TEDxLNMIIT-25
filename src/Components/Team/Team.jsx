@@ -43,7 +43,7 @@ import Vihaan from "../../assets/team/Vihaan.jpg";
 // import Parv from "../../assets/team/parv.jpg";
 import Pratham from "../../assets/team/Pratham_Y23.jpg";
 import Nirmal from "../../assets/team/Nirmal.jpg";
-import Kanishq from "../../assets/team/kanishq.jpg";
+// import Kanishq from "../../assets/team/kanishq.jpg";
 // import Kunal from "../../assets/team/kunal.jpg";
 // import Chirag from "../../assets/team/chirag.jpg";
 
@@ -481,7 +481,7 @@ const Team = () => {
           <MemberCard
             name="Kanishq Malhotra"
             link="https://www.linkedin.com/in/kanishq-malhotra"
-            imgSrc={Kanishq}
+            // imgSrc={Kanishq}
           />
         </div>
       </div>
