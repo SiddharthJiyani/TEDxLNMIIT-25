@@ -121,11 +121,12 @@ const Navbar = () => {
               />
             </a>
 
-            <div className="flex items-center justify-center border border-gray-600 rounded-[60px] p-1 hover:opacity-65 transition-all duration-500 hidden lg:flex">
+            {/* <div className="flex items-center pointer-events-none  justify-center border border-gray-600 rounded-[60px] p-1 hover:opacity-85 transition-all duration-500 hidden lg:flex">
               <Link to="/booktickets">
-                <Button buttonLabel=" Book Tickets Now! " />
+                <Button buttonLabel=" Book Tickets" />
+
               </Link>
-            </div>
+            </div> */}
 
             {/* Hamburger Menu for Mobile */}
             <div className="md:hidden">

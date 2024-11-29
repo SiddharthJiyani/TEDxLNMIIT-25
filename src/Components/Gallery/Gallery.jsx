@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
-import img from "../../assets/pic1.jpg";
+// import img from "../../assets/pic1.jpg";
 import PrevBox from "../PrevSpeakers/PrevBox";
 import RedButton from "../utility/RedButton";
 import { useEffect } from "react";
+import img from "../../assets/tednewlogo.png"
 
 
 const Gallery = () => {
@@ -73,7 +74,7 @@ const Gallery = () => {
           ))}
         </div>
       </div>
-      <RedButton>Click for More Photos</RedButton>
+      {/* <RedButton>Click for More Photos</RedButton> */}
     </div>
   );
 };

@@ -7,6 +7,7 @@ import image4 from "../../assets/sponsors/PP.png";
 import image5 from "../../assets/sponsors/UB.png";
 import PartnerSmallBox from "./PartnerSmallBox";
 import { motion } from "framer-motion";
+import Title from "../utility/Title";
 import Marquee from "react-fast-marquee";
 const Partner = () => {
   useEffect(() => {
@@ -42,10 +43,10 @@ const Partner = () => {
 
   return (
     <div className="flex flex-col items-center bg-black text-white min-h-screen py-20">
-      <h2 className="mt-5 text-7xl font-bold mb-5 text-center">
+      <h2 className="mt-5 text-6xl font-bold mb-5 text-center">
         Current Partners
       </h2>
-      <div className="flex flex-wrap justify-center mb-10">
+      {/* <div className="flex flex-wrap justify-center mb-10">
         {partners.map((partner, index) => (
           <a
             key={index}
@@ -61,8 +62,16 @@ const Partner = () => {
             />
           </a>
         ))}
-      </div>
-      <h3 className="mt-5 text-7xl font-bold mb-5 text-center">
+      </div> */}
+                  <h1 className="text-white text-6xl md:text-8xl font-bold uppercase m-10 mb-28">
+              {/* Revealing <span className="text-red-600">Soon</span> */}
+              <Title
+                text="Revealing"
+                red={"Soon!"}
+                className="text-6xl md:text-8xl font-extrabold"
+              />
+            </h1>
+      <h3 className="mt-5 text-6xl font-bold mb-16 text-center ">
         Previous Partners
       </h3>
       {/* <motion.div
@@ -121,7 +130,7 @@ const Partner = () => {
         ))}
       </Marquee>
       <div className="text-center max-w-2xl px-4 md:px-6 lg:px-8">
-        <h3 className="text-4xl md:text-5xl lg:text-7xl font-semibold mb-4">
+        <h3 className="text-4xl md:text-5xl lg:text-7xl font-semibold mb-4 mt-24">
           Interested in partnership?
         </h3>
         <p className="text-base md:text-lg lg:text-xl mb-4">

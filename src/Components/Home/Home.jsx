@@ -133,12 +133,12 @@ const Home = () => {
                 <h2 className="hero-title text-6xl sm:text-5xl md:text-6xl xl:text-7xl mb-9 font-Audrey rounded-lg p-1">
                   <strong className="text-[#ff3006]">TEDx</strong>
                   <span className="text-white md:font-light font-normal">
-                    Lnmiit
+                    LNMIIT 
                   </span>
                 </h2>
                 <div className="hero-buttons mt-8 space-x-4 font-generalSans">
                   <RedButton to="/buy-tickets">
-                    Registrations Open Soon
+                    Registrations Open Soon !
                   </RedButton>
                 </div>
               </div>
