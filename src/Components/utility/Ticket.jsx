@@ -66,7 +66,7 @@ const Ticket = () => {
           />
         </Marquee>
       </div>
-    </div>
+    </div> 
   );
 };
 
