@@ -1,31 +1,35 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import stars from "../../assets/star.jpg";
+import stars from "./stars.png";
+import qr from "./qrcode.png";
 
 export default function TicketBookingPage() {
   const [loading, setLoading] = useState(false);
-
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    try {
-      const formData = new FormData(e.currentTarget);
-      const data = Object.fromEntries(formData.entries());
-      console.log("Form submitted successfully:", data);
-      // Handle data submission logic here
-    } catch (err) {
-      alert("Error submitting form. Please try again.");
-    } finally {
-      setLoading(false);
-      e.currentTarget.reset();
-    }
+    // e.preventDefault();
+    // setLoading(true);
+    // try {
+    //   const formData = new FormData(e.currentTarget);
+    //   const data = Object.fromEntries(formData.entries());
+    //   console.log("Form submitted successfully:", data);
+    //   // Handle data submission logic here
+    // } catch (err) {
+    //   alert("Error submitting form. Please try again.");
+    // } finally {
+    //   setLoading(false);
+    //   e.currentTarget.reset();
+    // }
   };
 
   // When the page loads, scroll to the top
   useEffect(() => {
-    window.scrollTo(0, 0);
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100); // Delay of 100ms, adjust as necessary
   }, []);
+  
+
 
   return (
     <div className="min-h-screen text-gray-100">
@@ -42,10 +46,10 @@ export default function TicketBookingPage() {
         <div className="absolute inset-0 bg-black opacity-40"></div>
         <div className="container mx-auto pt-10 pb-8 sm:p-4 md:pt-20 md:pb-32 md:px-4 relative z-10 text-center">
           <div className="h-3/5 w-full mx-auto">
-            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-500">
+            {/* <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-500">
               IN A STORM OF IGNORANCE,{" "}
               <span className="text-white">FIND WISDOM</span>.
-            </h1>
+            </h1> */}
           </div>
           <div className="flex justify-center items-center flex-col h-full w-full">
   <h1 className=" text-white text-xl sm:text-2xl md:text-3xl md:pt-36">
@@ -61,7 +65,7 @@ export default function TicketBookingPage() {
     25% discount on all tickets bought by LNMIIT
     students/faculty/employees.{" "}
     <span className="font-bold text-red-500">
-      November 25th, 2023
+      January 11th, 2025
     </span>
     <br />
     <p className="p-7 text-sm sm:text-base md:text-lg">
@@ -145,20 +149,7 @@ export default function TicketBookingPage() {
                     (LNMIIT Students/Faculty)
                   </h1>
                   <div className="bg-white p-4 rounded-lg inline-block">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={2}
-                      stroke="black"
-                      className="w-32 h-32"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M4 4h16v16H4z"
-                      />
-                    </svg>
+                    <img src={qr} alt="QR Code" className="w-32 h-32" />
                   </div>
                 </div>
                 {/* QR Code for General Admission */}
@@ -167,20 +158,7 @@ export default function TicketBookingPage() {
                     (Not Affiliated to LNMIIT)
                   </h1>
                   <div className="bg-white p-4 rounded-lg inline-block">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={2}
-                      stroke="black"
-                      className="w-32 h-32"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M4 4h16v16H4z"
-                      />
-                    </svg>
+                    <img src={qr} alt=" QR Code" className="w-32 h-32" />
                   </div>
                 </div>
               </div>
@@ -256,11 +234,11 @@ export default function TicketBookingPage() {
 
       {/* Footer */}
       <section className="mb-0 flex items-center">
-        <span className="text-white text-4xl font-extrabold">TEDx</span>
+        {/* <span className="text-white text-4xl font-extrabold">TEDx</span>
         <span className="text-red-700 text-4xl font-extrabold">
           LNMIIT
         </span>{" "}
-        <div className="bg-white h-1 w-full"></div>
+        <div className="bg-white h-1 w-full"></div> */}
       </section>
     </div>
   );

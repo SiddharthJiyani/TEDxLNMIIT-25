@@ -137,7 +137,7 @@ const Home = () => {
                   </span>
                 </h2>
                 <div className="hero-buttons mt-8 space-x-4 font-generalSans">
-                  <RedButton to="/buy-tickets">
+                  <RedButton to="#">
                     Registrations Open Soon !
                   </RedButton>
                 </div>

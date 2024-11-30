@@ -22,7 +22,7 @@ const Navbar = () => {
   const isActiveLink = (path) => location.pathname === path;
 
   return (
-    <div className="  sticky top-2 z-50">
+    <div className="  sticky top-0 z-50">
       <nav className="bg-[rgba(20,20,20,0.5)]  absolute -top-3 backdrop-blur-md border border-white/20 p-2 sm:p-3 md:p-4 lg:p-2 left-0 right-0 mx-auto mt-6 max-w-[90%] min-h-[48px] flex items-center justify-between gap-4 rounded-[60px] shadow-lg z-50">
         <div className="container mx-auto flex justify-between items-center">
           <div className="text-white text-xl font-bold flex items-center">
@@ -199,15 +199,17 @@ const Navbar = () => {
               href="https://www.instagram.com/tedxlnmiit/"
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-gray-600 rounded-full p-2 flex items-center justify-center hover:opacity-65 transition-all duration-500"
+              className="border m-6 border-gray-600 rounded-full p-2 flex items-center justify-center hover:opacity-65 transition-all duration-500"
             >
               <FontAwesomeIcon
                 icon={faInstagram}
                 className="text-gray-300 h-7 w-7"
               />
             </a>
-            <Link to="/booktickets">
-              <Button buttonLabel=" Book Tickets Now! " />
+            <Link to="/booktickets"
+              onClick={closeMenu}
+            >
+              {/* <Button buttonLabel=" Book Tickets Now! " /> */}
             </Link>
           </div>
         </div>
