@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import stars from "../../assets/star.jpg";
 
 export default function TicketBookingPage() {
   const [loading, setLoading] = useState(false);
@@ -21,34 +22,59 @@ export default function TicketBookingPage() {
     }
   };
 
-  // when the we come to this url page should scroll to top
+  // When the page loads, scroll to the top
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b  bg-black text-gray-100">
+    <div className="min-h-screen text-gray-100">
       {/* Hero Section */}
-      <section className="mb-16">
-        <div className="relative overflow-hidden p-6">
-          <div className="absolute inset-0 bg-red-600 opacity-20 "></div>
-          <div className="container mx-auto px-4 pt-20 pb-32 relative z-10 text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-500">
+      <section className="mb-16 flex flex-col h-full w-full justify-center items-center relative">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${stars})`,
+            filter: "blur(2px)", // Apply blur to the background image
+            zIndex: -1, // Ensure the background stays behind all other content
+          }}
+        ></div>
+        <div className="absolute inset-0 bg-black opacity-40"></div>
+        <div className="container mx-auto pt-10 pb-8 sm:p-4 md:pt-20 md:pb-32 md:px-4 relative z-10 text-center">
+          <div className="h-3/5 w-full mx-auto">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-500">
               IN A STORM OF IGNORANCE,{" "}
               <span className="text-white">FIND WISDOM</span>.
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-200">
-              Reserve Your Seat for TEDxLNMIIT
-            </p>
-            <p className="text-lg md:text-xl max-w-3xl mx-auto text-gray-300">
-              Experience inspiring talks, interactive workshops, and delightful
-              cuisine. Join us on{" "}
-              <span className="font-bold text-red-500">
-                November 25th, 2023
-              </span>
-              , for an unforgettable event!
-            </p>
           </div>
+          <div className="flex justify-center items-center flex-col h-full w-full">
+  <h1 className=" text-white text-xl sm:text-2xl md:text-3xl md:pt-36">
+    Date | LNMIIT, JAIPUR
+  </h1>
+  <p className="w-3/5 text-base sm:text-xl md:text-2xl mb-8 text-gray-200">
+    Thank you for your interest in TEDxLNMIIT. As the total number of
+    people we can host is limited, we’ll be offering tickets on a
+    first-come-first-serve basis.
+  </p>
+  <p className="pt-11 text-base sm:text-lg md:text-xl max-w-3xl mx-auto text-gray-300">
+    As an act of service to our parent institution, we’re offering a
+    25% discount on all tickets bought by LNMIIT
+    students/faculty/employees.{" "}
+    <span className="font-bold text-red-500">
+      November 25th, 2023
+    </span>
+    <br />
+    <p className="p-7 text-sm sm:text-base md:text-lg">
+      We believe you’ll find our exceptionally well-curated line-up of
+      speakers impressive, and walk out of the conference with a
+      changed perspective towards life. We firmly believe that
+      TEDxLNMIIT will be a memory to cherish and look back to, so what
+      are you waiting for? Reserve your seat at one of the finest
+      conferences of the world now.
+    </p>
+  </p>
+</div>
+
         </div>
       </section>
 
@@ -59,7 +85,7 @@ export default function TicketBookingPage() {
           <h2 className="text-3xl font-bold text-center mb-8 text-red-500">
             Event Details
           </h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 ">
             {[
               {
                 title: "LNMIIT Students/Faculty",
@@ -70,7 +96,7 @@ export default function TicketBookingPage() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="bg-black p-6 rounded-lg border border-gray-700 hover:border-red-500 transition-colors"
+                className="bg-black p-10 rounded-lg  border-gray-700 shadow-[0_0_21px_0px_#ef2800] ease-in-out transform  hover:shadow-[0_0_30px_0px_#ef2800] h-[500px] md:w-[320px] mx-auto"
               >
                 <h3 className="text-2xl font-bold text-center text-gray-100 mb-4">
                   {item.title}
@@ -96,118 +122,145 @@ export default function TicketBookingPage() {
         </section>
 
         {/* Steps to Book */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8 text-red-500 p-10">
-            Steps to Reserve Your Exclusive Seat
+        <section className="mb-16 flex-col h-full w-full justify-center items-center ">
+          <h2 className="text-3xl font-bold text-center mb-8 text-white p-10">
+            STEPS TO RESERVE YOUR EXCLUSIVE SEAT.
+            <div className="line bg-white h-1 w-full mt-4"></div>
           </h2>
-          <div className="space-y-10 ">
+
+          <div className="flex flex-col items-center justify-center space-y-20">
             {/* Step 1 */}
-            <div className="bg-black p-10 rounded-lg border ">
-              <h3 className="text-xl font-semibold mb-4 text-red-400">
-                Step 1: Make the Payment
+            <div className="bg-black mt-8 rounded-lg w-full max-w-3xl md:p-10  ">
+              <h3 className="text-xl text-center font-semibold mb-4 text-white">
+                Step-1: Kindly pay the booking amount by scanning the
+                appropriate QR Code.
               </h3>
-              <p className="mb-4 text-gray-300">
+              <p className="mb-4 text-gray-300 text-center">
                 Scan the appropriate QR code to pay the booking amount:
               </p>
               <div className="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-8">
-                {["LNMIIT Students/Faculty", "General Admission"].map(
-                  (label, idx) => (
-                    <div key={idx} className="text-center">
-                      <p className="mb-2 text-gray-400">{label}</p>
-                      <div className="bg-white p-4 rounded-lg inline-block">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          strokeWidth={2}
-                          stroke="black"
-                          className="w-32 h-32"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M4 4h16v16H4z"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                  )
-                )}
-              </div>
-            </div>
-
-            {/* Step 2 */}
-            <div className="bg-black p-6 rounded-lg border">
-              <h3 className="text-xl font-semibold mb-4 text-red-400">
-                Step 2: Fill the Booking Form
-              </h3>
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="grid md:grid-cols-2 gap-4">
-                  {[
-                    { id: "name", label: "Name", type: "text" },
-                    { id: "email", label: "Email", type: "email" },
-                    { id: "phone", label: "Phone Number", type: "tel" },
-                    { id: "upiid", label: "UPI ID", type: "text" },
-                  ].map((input) => (
-                    <div key={input.id} className="space-y-2">
-                      <label htmlFor={input.id} className="text-gray-300">
-                        {input.label}
-                      </label>
-                      <input
-                        id={input.id}
-                        name={input.id}
-                        type={input.type}
-                        required
-                        className="w-full bg-black border border-gray-600 text-gray-100 rounded-lg p-2"
+                {/* QR Code for LNMIIT Students/Faculty */}
+                <div className="text-center">
+                  <h1 className="mb-2 text-2xl font-semibold text-white">
+                    (LNMIIT Students/Faculty)
+                  </h1>
+                  <div className="bg-white p-4 rounded-lg inline-block">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={2}
+                      stroke="black"
+                      className="w-32 h-32"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M4 4h16v16H4z"
                       />
-                    </div>
-                  ))}
+                    </svg>
+                  </div>
                 </div>
-                <div className="space-y-2">
-                  <label htmlFor="transactionid" className="text-gray-300">
-                    Transaction ID
-                  </label>
-                  <input
-                    id="transactionid"
-                    name="transactionid"
-                    required
-                    className="w-full bg-black border border-gray-600 text-gray-100 rounded-lg p-2"
-                  />
+                {/* QR Code for General Admission */}
+                <div className="text-center">
+                  <h1 className="mb-2 text-2xl font-semibold text-white">
+                    (Not Affiliated to LNMIIT)
+                  </h1>
+                  <div className="bg-white p-4 rounded-lg inline-block">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={2}
+                      stroke="black"
+                      className="w-32 h-32"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M4 4h16v16H4z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-                <button
-                  type="submit"
-                  className="w-full bg-red-600 hover:bg-red-700 text-white rounded-lg py-2"
-                  disabled={loading}
-                >
-                  {loading ? "Processing..." : "Submit Booking"}
-                </button>
-              </form>
-            </div>
+              </div>
 
-            {/* Step 3 */}
-            <div className="bg-black p-6 rounded-lg border">
-              <h3 className="text-xl font-semibold mb-4 text-red-400">
-                Step 3: Confirmation
-              </h3>
-              <p className="text-gray-300">
-                Sit back and relax! Our team will get in touch with you shortly
-                to confirm your seat reservation.
-              </p>
+              <div className="bg-black p-6 rounded-lg">
+                <h3 className="text-xl md:text-lg text-center font-semibold mb-4 text-white">
+                  Step-2: Fill the Booking Form.
+                </h3>
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="grid md:grid-cols-2 gap-4">
+                    {[
+                      { id: "name", label: "Name", type: "text" },
+                      { id: "email", label: "Email", type: "email" },
+                      { id: "phone", label: "Phone Number", type: "tel" },
+                      { id: "upiid", label: "UPI ID", type: "text" },
+                    ].map((input) => (
+                      <div key={input.id} className="space-y-2">
+                        <label
+                          htmlFor={input.id}
+                          className="text-gray-300 text-sm md:text-base"
+                        >
+                          {input.label}
+                        </label>
+                        <input
+                          id={input.id}
+                          name={input.id}
+                          type={input.type}
+                          required
+                          className="w-full bg-black border border-gray-600 text-gray-100 rounded-lg p-2"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                  <div className="space-y-2">
+                    <label
+                      htmlFor="transactionid"
+                      className="text-gray-300 text-sm md:text-base"
+                    >
+                      Transaction ID
+                    </label>
+                    <input
+                      id="transactionid"
+                      name="transactionid"
+                      required
+                      className="w-full bg-black border border-gray-600 text-gray-100 rounded-lg p-2"
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    className="w-full bg-red-600 hover:bg-red-700 text-white rounded-lg py-2"
+                    disabled={loading}
+                  >
+                    {loading ? "Processing..." : "Submit Booking"}
+                  </button>
+                </form>
+              </div>
+
+              {/* Step 3 */}
+              <div className="mt-8 bg-black p-6 rounded-lg">
+                <h3 className="text-xl md:text-lg text-center font-semibold mb-4 text-white">
+                  Step-3: Sit back and relax! Our team will get in touch with
+                  you shortly to confirm your seat reservation in one of the
+                  finest conferences.
+                </h3>
+                <p className=" text-center text-gray-300 text-sm md:text-base">
+                  We thank you for being a part of and supporting TEDxLNMIIT.
+                </p>
+              </div>
             </div>
           </div>
         </section>
       </div>
 
       {/* Footer */}
-      <section className="mb-16">
-        <footer className="bg-black py-8 text-center">
-          <div className="container mx-auto px-4">
-            <p className="text-gray-400 text-lg">
-              Thank you for being part of{" "}
-              <span className="text-red-500 font-bold">TEDxLNMIIT</span>.
-            </p>
-          </div>
-        </footer>
+      <section className="mb-0 flex items-center">
+        <span className="text-white text-4xl font-extrabold">TEDx</span>
+        <span className="text-red-700 text-4xl font-extrabold">
+          LNMIIT
+        </span>{" "}
+        <div className="bg-white h-1 w-full"></div>
       </section>
     </div>
   );
