@@ -137,7 +137,7 @@ const Home = () => {
                   </span>
                 </h2>
                 <div className="hero-buttons mt-8 space-x-4 font-generalSans">
-                  <RedButton to="#">
+                  <RedButton to="/buy-tickets">
                     Registrations Open Soon !
                   </RedButton>
                 </div>
@@ -154,109 +154,110 @@ const Home = () => {
           </div>
 
           {/* Theme heading */}
-          <div className="w-full mt-10 h-full  bg-transparent font-generalSans mb-10 sm:-mb-36">
-            <div className="h-full *:container mx-auto px-4">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                className="relative"
-              >
-                <h2 className="text-5xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-center tracking-tight leading-none">
-                  <span className="inline-block py-5 px-4 bg-clip-text text-transparent animate-red-gradient relative">
-                    Navigating
-                    <span className="absolute inset-0 bg-clip-text text-transparent animate-flowing-shine"></span>
-                  </span>
-                  <span className="inline-block py-5 px-4 bg-clip-text text-transparent animate-white-gradient relative">
-                    the
-                    <span className="absolute inset-0 bg-clip-text text-transparent animate-flowing-shine"></span>
-                  </span>
-                  <span className="inline-block py-5 px-0 md:px-4 bg-clip-text text-transparent animate-red-gradient relative">
-                    New
-                    <span className="absolute inset-0 bg-clip-text text-transparent animate-flowing-shine"></span>
-                  </span>
-                </h2>
-                {/* <div className="absolute -bottom-2 left-1/2 text-[#ce2200d4] transform -translate-x-1/2 w-16 sm:w-24 md:w-32 h-1 bg-gradient-to-r from-gray-400 via-gray-300 to-white"></div> */}
-              </motion.div>
-            </div>
-            <style jsx>{`
-              @keyframes red-gradient {
-                0% {
-                  background-position: 0% 50%;
-                }
-                50% {
-                  background-position: 100% 50%;
-                }
-                100% {
-                  background-position: 0% 50%;
-                }
-              }
-              @keyframes white-gradient {
-                0% {
-                  background-position: 0% 50%;
-                }
-                50% {
-                  background-position: 100% 50%;
-                }
-                100% {
-                  background-position: 0% 50%;
-                }
-              }
-              @keyframes flowing-shine {
-                0% {
-                  transform: translateX(-100%);
-                }
-                100% {
-                  transform: translateX(100%);
-                }
-              }
+          <div className="w-full mt-10 h-screen bg-transparent font-generalSans flex items-center justify-center">
+  <div className="h-full w-full container mx-auto px-4">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="relative text-center"
+    >
+      <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold tracking-tight leading-tight">
+        <span className="inline-block py-3 sm:py-5 px-2 sm:px-4 bg-clip-text text-transparent animate-red-gradient relative">
+          Navigating
+          <span className="absolute inset-0 bg-clip-text text-transparent animate-flowing-shine"></span>
+        </span>
+        <span className="inline-block py-3 sm:py-5 px-2 sm:px-4 bg-clip-text text-transparent animate-white-gradient relative">
+          the
+          <span className="absolute inset-0 bg-clip-text text-transparent animate-flowing-shine"></span>
+        </span>
+        <span className="inline-block py-3 sm:py-5 px-2 sm:px-4 bg-clip-text text-transparent animate-red-gradient relative">
+          New
+          <span className="absolute inset-0 bg-clip-text text-transparent animate-flowing-shine"></span>
+        </span>
+      </h2>
+    </motion.div>
+  </div>
 
-              .animate-red-gradient {
-                background-image: linear-gradient(
-                  90deg,
-                  #ff2c05 0%,
-                  #ff3306 10%,
-                  #f22c04 20%,
-                  #e02603 30%,
-                  #ce2200 40%,
-                  #ff2c05 50%,
-                  #ce2200 60%,
-                  #e02603 70%,
-                  #f22c04 80%,
-                  #ff3306 90%,
-                  #ff2c05 100%
-                );
-                background-size: 200% auto;
-                animation: red-gradient 8s linear infinite;
-              }
+  <style jsx>{`
+    @keyframes red-gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    @keyframes white-gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    @keyframes flowing-shine {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    }
 
-              .animate-white-gradient {
-                background-image: linear-gradient(
-                  90deg,
-                  #4a4a4a 0%,
-                  #8e8e8e 20%,
-                  #c0c0c0 40%,
-                  #ffffff 50%,
-                  #c0c0c0 60%,
-                  #8e8e8e 80%,
-                  #4a4a4a 100%
-                );
-                background-size: 200% auto;
-                animation: white-gradient 8s linear infinite;
-              }
+    .animate-red-gradient {
+      background-image: linear-gradient(
+        90deg,
+        #ff2c05 0%,
+        #ff3306 10%,
+        #f22c04 20%,
+        #e02603 30%,
+        #ce2200 40%,
+        #ff2c05 50%,
+        #ce2200 60%,
+        #e02603 70%,
+        #f22c04 80%,
+        #ff3306 90%,
+        #ff2c05 100%
+      );
+      background-size: 200% auto;
+      animation: red-gradient 8s linear infinite;
+    }
 
-              .animate-flowing-shine {
-                background-image: linear-gradient(
-                  90deg,
-                  transparent 0%,
-                  rgba(255, 255, 255, 0.4) 50%,
-                  transparent 100%
-                );
-                background-size: 200% auto;
-                animation: flowing-shine 3s linear infinite;
-              }
-            `}</style>
-          </div>
+    .animate-white-gradient {
+      background-image: linear-gradient(
+        90deg,
+        #4a4a4a 0%,
+        #8e8e8e 20%,
+        #c0c0c0 40%,
+        #ffffff 50%,
+        #c0c0c0 60%,
+        #8e8e8e 80%,
+        #4a4a4a 100%
+      );
+      background-size: 200% auto;
+      animation: white-gradient 8s linear infinite;
+    }
+
+    .animate-flowing-shine {
+      background-image: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.4) 50%,
+        transparent 100%
+      );
+      background-size: 200% auto;
+      animation: flowing-shine 3s linear infinite;
+    }
+  `}</style>
+</div>
+
         </div>
       </section>
 
