@@ -9,7 +9,7 @@ const PrevBox = ({ imgSrc, altText, name, description, url, className }) => {
           backgroundImage: `url(${x})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-        }}
+        }} 
       >
         {/* Image always shown */}
         <img
