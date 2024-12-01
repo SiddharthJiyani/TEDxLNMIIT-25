@@ -129,7 +129,7 @@ const Navbar = () => {
             </div> */}
 
             {/* Hamburger Menu for Mobile */}
-            <div className="md:hidden">
+            <div className="md:hidden mr-4">
               <Hamburger close={isMenuOpen} toggleMenu={toggleMenu} />
             </div>
           </div>
