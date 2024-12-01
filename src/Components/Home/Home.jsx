@@ -144,7 +144,7 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Timer */}
+            {/* Timer */} 
             <motion.div
               className="border border-white/20 rounded-lg bg-white/10 backdrop-blur-sm p-1 mb-4 md:mt-1 mt-12"
               variants={sectionVariants}
