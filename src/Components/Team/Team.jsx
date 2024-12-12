@@ -3,13 +3,14 @@ import Title from "../utility/Title";
 import MemberCard from "./MemberCard";
 import { useEffect } from "react";
 
+import default_photo from "../../assets/team/Default.jpg";
 import Manav from "../../assets/team/manav.jpg";
 import Sid from "../../assets/team/Siddharth.jpg";
 import Abhey from "../../assets/team/Abhey.jpg";
 import Abhinav from "../../assets/team/ABHINAV_SINGH.jpg";
 import Krishna from "../../assets/team/Krishna.jpg";
 import Suhani from "../../assets/team/Suhani.jpg";
-// import Sahil from "../../assets/team/sahil.jpg";
+import Sahil from "../../assets/team/SahilGaur.png";
 // import Shreyansh from "../../assets/team/shreyansh.jpg";
 import Krishnamanchanda from "../../assets/team/KrishnaManchanda.jpg";
 import Divay from "../../assets/team/Divay.jpg";
@@ -29,25 +30,25 @@ import Diksha from "../../assets/team/Diksha.jpg";
 import Sanskriti from "../../assets/team/Sanskriti.jpg";
 import Akshat from "../../assets/team/Akshat.jpg"; 
 import Hussain from "../../assets/team/Hussain.jpg";
-// import Vedha from "../../assets/team/VedhaSinkar.JPG";
+import Vedha from "../../assets/team/Vedha.jpg";
 import Aditya from "../../assets/team/AdityaNarula.jpg";
-// import Tanay from "../../assets/team/Tanaysinghvi.JPG";
+import Tanay from "../../assets/team/Tanaysinghvi.jpg";
 import Nancy from "../../assets/team/Nancy.jpg";
 import Rahul from "../../assets/team/Rahul.jpg";
-// import Manan from "../../assets/team/Manan.jpg";
+import Manan from "../../assets/team/mananvaishy24.jpg";
 import Naman from "../../assets/team/Naman.jpg";
 import Pranav from "../../assets/team/Pranav.jpg";
 import Samar from "../../assets/team/Samar.jpg";
-// import Anmol from "../../assets/team/anmol.jpg";
+import Anmol from "../../assets/team/Anmol.jpg";
 import Vihaan from "../../assets/team/Vihaan.jpg";
-// import Parv from "../../assets/team/parv.jpg";
+import Parv from "../../assets/team/Parv_Y23.jpg";
 import Pratham from "../../assets/team/Pratham_Y23.jpg";
 import Nirmal from "../../assets/team/Nirmal.jpg";
+import Adwaiy from "../../assets/team/Adwaiy.jpg";
 // import Kanishq from "../../assets/team/kanishqMalhotraY23.jpg";
 // import Kunal from "../../assets/team/kunal.jpg";
 // import Chirag from "../../assets/team/chirag.jpg";
 
-// import Aayana from "../../assets/team/Aayana.jpg";
 import Kunal from "../../assets/team/Kunal Sharma Y23.jpg";
 import Chirag from "../../assets/team/Chirag Mehta_.jpg";
 import Yash from "../../assets/team/Yash.jpg";
@@ -197,7 +198,7 @@ const Team = () => {
               <MemberCard
                 name="Sahil Gaur"
                 link="https://www.linkedin.com/in/sahil-gaur"
-                // imgSrc={Sahil}
+                imgSrc={Sahil}
               />
             </motion.div>
           </motion.div>
@@ -393,12 +394,12 @@ const Team = () => {
           <MemberCard
             name="Tanay Singhvi"
             link="https://www.linkedin.com/in/tanay-singhvi"
-            // imgSrc={Tanay}
+            imgSrc={Tanay}
           />
           <MemberCard
             name="Vedha Sinkar"
             link="https://www.linkedin.com/in/vedha-sinkar"
-            // imgSrc={Vedha}
+            imgSrc={Vedha}
           />
         </div>
       </div>
@@ -424,6 +425,7 @@ const Team = () => {
         <MemberCard
           name="Anmol Adwani"
           link="https://www.linkedin.com/in/anmol-adwani"
+          imgSrc={Anmol}
         />
         <MemberCard
           name="Pranav Vashisth"
@@ -449,6 +451,7 @@ const Team = () => {
         <MemberCard
           name="Parv Khandelwal"
           link="https://www.linkedin.com/in/parv-khandelwal"
+          imgSrc={Parv}
         />
         <MemberCard
           name="Pratham Gupta"
@@ -463,11 +466,12 @@ const Team = () => {
         <MemberCard
           name="Adwaiy Mahajan"
           link="https://www.linkedin.com/in/adwaiy-mahajan"
+          imgSrc={Adwaiy}
         />
         <MemberCard
           name="Manan Vaish"
           link="https://www.linkedin.com/in/manan-vaish"
-          // imgSrc={Manan}
+          imgSrc={Manan}
         />
       </div>
 
@@ -481,7 +485,7 @@ const Team = () => {
           <MemberCard
             name="Kanishq Malhotra"
             link="https://www.linkedin.com/in/kanishq-malhotra"
-            // imgSrc={Kanishq}
+            imgSrc={"https://res.cloudinary.com/dedcazsvk/image/upload/v1733962321/KanishqmalhotraY23_gw3mfd.jpg"}
           />
         </div>
       </div>
