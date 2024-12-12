@@ -19,13 +19,13 @@ const Ticket = () => {
             zIndex: -1,
           }}
         />
-        <Marquee autoFill="true" speed="130" direction="right">
+        <Marquee autoFill="true" speed="70" direction="right">
           <img
             src={Ticketsvg}
             alt="carousel"
             // width={350}
             // height={350}
-            className="md:w-full w-[350px] md:h-[150px] object-cover transform transition-transform duration-500"
+            className="md:w-full hidden md:block w-[250px] md:h-[150px] object-cover transform transition-transform duration-500"
           />
         </Marquee>
       </div>
@@ -35,16 +35,17 @@ const Ticket = () => {
         <img
           src={Ticketsvg}
           alt="ticket"
-          className="object-cover transform transition-transform duration-500"
+          className="object-cover transform transition-transform duration-500 group-hover:scale-105
+          "
         />
-        {/* <Link
+        <Link
           to="/booktickets"
           className="md:absolute md:right-[21.6rem] md:top-[30.3rem] px-6 py-2 bg-white text-red-500 font-bold rounded-lg shadow-md transition-all duration-300 ease-in-out  overflow-hidden group">
           <span className="absolute inset-0 bg-black translate-x-full transition-transform duration-500 ease-in-out group-hover:translate-x-0"></span>
           <span className="relative z-10 transition-colors duration-500 ease-in-out group-hover:text-white">
             Buy Ticket
           </span>
-        </Link> */}
+        </Link>
       </Link>
 
       {/* Bottom marquee with red gradient background */}
@@ -56,13 +57,13 @@ const Ticket = () => {
             zIndex: -1,
           }}
         />
-        <Marquee autoFill="true" speed="130">
+        <Marquee autoFill="true" speed="70">
           <img
             src={Ticketsvg}
             alt="carousel"
             // width={350}
             // height={350}
-            className="md:w-full w-[350px]  md:h-[150px] object-cover transform transition-transform duration-500"
+            className="md:w-full hidden md:block w-[250px]  md:h-[150px] object-cover transform transition-transform duration-500"
           />
         </Marquee>
       </div>

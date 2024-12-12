@@ -9,11 +9,11 @@ export default function Youtube() {
         titleComponent={
           <>
             <h1 className="text-4xl font-semibold text-black dark:text-white">
-              <span className="text-4xl md:text-[6rem] font-bold mt-1 mb-14 leading-none flex gap-2 flex-col">
+              <span className="text-4xl md:text-[6rem] font-bold mt-1 md:mb-9 -mb-20 leading-none flex gap-2 flex-col">
                 <Title
                   text="After"
                   red="Movie"
-                  className="text-2xl md:text-[6rem] md:-mb-12 -mb-72 font-bold mt-1 leading-none"
+                  className="text-2xl md:text-[6rem]  font-bold mt-1 leading-none"
                 />
                 {/* <Title text="TEDxLNMIIT" red="'24" className="text-4xl md:text-[6rem] -mb-16 font-bold mt-12 leading-none" /> */}
               </span>

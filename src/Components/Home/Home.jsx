@@ -92,7 +92,7 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
   });
 
   return (
@@ -130,7 +130,7 @@ const Home = () => {
             {/* Title and Button */}
             <div className="hero-title-wrap xxxs:pl-4 sm:pl-7 xxxs:mr-0 md:mr-56 mb-6 md:mb-0">
               <div>
-                <h2 className="hero-title text-6xl sm:text-5xl md:text-6xl xl:text-7xl mb-9 font-Audrey rounded-lg p-1">
+                <h2 className="hero-title text-[46px] sm:text-5xl md:text-6xl xl:text-7xl mb-9 font-Audrey rounded-lg p-1">
                   <strong className="text-[#ff3006]">TEDx</strong>
                   <span className="text-white md:font-light font-normal">
                     LNMIIT 
@@ -162,7 +162,7 @@ const Home = () => {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="relative"
               >
-                <h2 className="text-5xl sm:text-4xl ml-10 md:ml-5 lg:ml-10 xl:ml-28 md:font-generalSans font-bigshouldersdisplay md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-center tracking-tight leading-none">
+                <h2 className="text-5xl sm:text-4xl ml-10 md:ml-5 lg:ml-10 xl:ml-28 font-generalSans md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-center tracking-tight leading-none">
                   <span className="inline-block py-5 px-4 bg-clip-text text-transparent animate-red-gradient relative">
                     Navigating
                     <span className="absolute inset-0 bg-clip-text text-transparent animate-flowing-shine"></span>
@@ -173,7 +173,7 @@ const Home = () => {
                   </span>
                   <span className="inline-block py-5 px-0 md:px-4 bg-clip-text text-transparent animate-red-gradient relative">
                     New
-                    <span className="absolute inset-0 bg-clip-text text-transparent animate-flowing-shine"></span>
+                    <span className="absolute inet-0 bg-clip-text text-transparent animate-flowing-shine"></span>
                   </span>
                 </h2>
                 {/* <div className="absolute -bottom-2 left-1/2 text-[#ce2200d4] transform -translate-x-1/2 w-16 sm:w-24 md:w-32 h-1 bg-gradient-to-r from-gray-400 via-gray-300 to-white"></div> */}
@@ -227,7 +227,7 @@ const Home = () => {
                   #ff2c05 100%
                 );
                 background-size: 200% auto;
-                animation: red-gradient 8s linear infinite;
+                animation: red-gradient 6s linear infinite;
               }
 
               .animate-white-gradient {
@@ -242,7 +242,7 @@ const Home = () => {
                   #4a4a4a 100%
                 );
                 background-size: 200% auto;
-                animation: white-gradient 8s linear infinite;
+                animation: white-gradient 6s linear infinite;
               }
 
               .animate-flowing-shine {
@@ -253,7 +253,7 @@ const Home = () => {
                   transparent 100%
                 );
                 background-size: 200% auto;
-                animation: flowing-shine 3s linear infinite;
+                animation: flowing-shine 4s linear infinite;
               }
             `}</style>
           </div>
@@ -326,12 +326,12 @@ const Home = () => {
       </section>
 
       {/* Other Sections */}
-      <motion.section id="speakers" className="py-20 bg-black">
+      <motion.section id="speakers" className=" bg-black">
         <Speakers />
       </motion.section>
       <motion.section
         id="about"
-        className="about-section py-20 w-full flex flex-col justify-center items-center bg-black text-red-500 overflow-hidden"
+        className="about-section w-full flex flex-col justify-center items-center bg-black text-red-500 overflow-hidden"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }} // Triggers only when the section is in view
@@ -355,25 +355,26 @@ const Home = () => {
       <Ticket />
 
       {/* FAQ Section */}
+
       <motion.section
-        id="faq"
-        className="faq-section py-20 w-full flex flex-col justify-center items-center bg-black text-red-500"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={sectionVariants}
-      >
-        <Faq />
-      </motion.section>
-      <motion.section
-        id="faq"
-        className="faq-section  w-full flex flex-col justify-center items-center bg-black text-red-500"
+        id="yt"
+        className="faq-section -mt-56 md:-mt-40  w-full flex flex-col justify-center items-center bg-black text-red-500"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={sectionVariants}
       >
         <Youtube />
+      </motion.section>
+      <motion.section
+        id="faq"
+        className="faq-section mb-24 -mt-64  w-full flex flex-col justify-center items-center bg-black text-red-500"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={sectionVariants}
+      >
+        <Faq />
       </motion.section>
     </div>
   );

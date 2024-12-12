@@ -157,7 +157,7 @@ const Team = () => {
         </motion.div>
       </motion.div>
 
-      <div className="flex flex-wrap justify-between">
+      <div className="flex flex-wrap justify-center">
         {/* Website Development Head */}
         <div className="w-full md:w-1/3 px-4">
           <motion.h2
@@ -204,26 +204,6 @@ const Team = () => {
           </motion.div>
         </div>
 
-        {/* Sponsorship Head */}
-        <div className="w-full md:w-1/3 px-4">
-          <motion.h2
-            variants={itemVariants}
-            className="text-2xl font-semibold mt-10 mb-6"
-          >
-            Sponsorship Head
-          </motion.h2>
-          <motion.div
-            className="flex justify-center gap-6"
-            variants={containerVariants}
-          >
-            <motion.div variants={itemVariants}>
-              <MemberCard
-                name="Shreyansh Badoni"
-                link="https://www.linkedin.com/in/shreyansh-badoni"
-              />
-            </motion.div>
-          </motion.div>
-        </div>
       </div>
 
       {/* Creative Head */}
@@ -480,7 +460,7 @@ const Team = () => {
       <div className="w-full md:w-screen px-4">
         <h2 className="text-2xl font-semibold mb-4 text-center">
           Social Media
-        </h2> 
+        </h2>
         <div className="flex justify-center gap-6">
           <MemberCard
             name="Kanishq Malhotra"

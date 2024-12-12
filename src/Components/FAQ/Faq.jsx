@@ -11,9 +11,9 @@ function Faq() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-black text-white h-screen w-screen">
-      <div className="mt-14 faq-container bg-black text-white py-10 px-6 md:px-12 max-w-xl mx-auto">
+      <div className=" faq-container bg-black text-white px-6 md:px-12 max-w-xl mx-auto">
         <h2 className="text-4xl font-bold mb-8 text-center text-gray-200">
-          <Title text={"Frequently Asked"} red={"Questions"} className="text-2xl" />
+          <Title text={"Frequently Asked"} red={"Questions"} className="text-[40px] md:text-5xl" />
         </h2>
         <ul className="mt-10 faq-list space-y-6">
           {/* FAQ Items */}
