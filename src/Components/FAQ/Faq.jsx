@@ -10,13 +10,22 @@ function Faq() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-black text-white h-screen w-screen">
-      <div className=" faq-container bg-black text-white px-6 md:px-12 max-w-xl mx-auto">
-        <h2 className="text-4xl font-bold mb-8 text-center text-gray-200">
-          <Title text={"Frequently Asked"} red={"Questions"} className="text-[40px] md:text-5xl" />
+    <div className="mt-16 min-h-screen flex items-center justify-center bg-black text-white h-screen w-screen">
+      <div className="faq-container bg-black text-white px-6 md:px-12 max-w-xl mx-auto">
+        <h2 className="text-4xl font-bold mb-8 my-20 text-center text-gray-200">
+          <Title text={"Frequently Asked"} red={"Questions"} className="block text-[40px] md:text-5xl" />
         </h2>
-        <ul className="mt-10 faq-list space-y-6">
+        <ul className="mt-10 faq-list space-y-4">
           {/* FAQ Items */}
+          {/* <li className=" opacity-0 scale-0 right-0">
+            <FaqBox
+              index={-1}
+              question="What is TEDx?"
+              answer="TEDx is a locally organized event that is licensed by TED, allowing communities to host live speakers who share their ideas, experiences, and viewpoints."
+              isActive={activeSection === -1}
+              handleClick={handleSectionClick}
+            />
+          </li> */}
           <li>
             <FaqBox
               index={0}
