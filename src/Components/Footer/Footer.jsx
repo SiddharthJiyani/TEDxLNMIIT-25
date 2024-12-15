@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="relative z-10 bg-[#141414] p-10 text-white flex flex-col md:flex-row justify-between items-center">
+    <div className="relative z-10 bg-[#141414] px-10 pt-5 pb-3 text-white flex flex-col md:flex-row justify-between items-center">
       <div className="text-center md:text-left">
         <img
           src={tedxlnm}
@@ -14,10 +14,10 @@ const Footer = () => {
           alt="TEDx LNMIIT logo"
           className="mb-4 mx-auto md:mx-0"
         />
-        <p className="font-arimo md:text-[14px] md:leading-[18px] text-xs text-flatwhite-500">
+        <p className="font-arimo md:text-[14px] md:leading-[18px] text-xs w text-flatwhite-500">
           ©2025 All Rights Reserved
           <br />
-          This independent TEDx event is operated under license from TED.
+          This independent TEDx event is operated under <br /> license from TED.
         </p>
         <div className="flex gap-2 text-flatwhite-500 md:gap-6 mt-4 justify-center md:justify-start">
           <a
