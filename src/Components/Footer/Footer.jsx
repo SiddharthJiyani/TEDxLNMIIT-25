@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="relative z-10 bg-[#141414] px-10 pt-5 pb-3 text-white flex flex-col md:flex-row justify-between items-center">
+    <div className="relative z-10 bg-[#141414] px-10 pt-5 pb-10 md:pb-3 text-white flex flex-col md:flex-row justify-between items-center">
       <div className="text-center md:text-left">
         <img
           src={tedxlnm}

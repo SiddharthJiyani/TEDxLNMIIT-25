@@ -66,7 +66,7 @@ const Partner = () => {
       </div> */}
       <h1 className="text-white text-6xl md:text-8xl font-bold uppercase m-10 mb-28">
         {/* Revealing <span className="text-red-600">Soon</span> */}
-        <h1 className="text-gray-400 text-5xl font-normal">Revealing Soon!!</h1>
+        <h1 className="text-gray-500 text-5xl font-normal mx-auto text-center">Revealing Soon!!</h1>
       </h1>
       <h3 className="mt-5 text-6xl font-bold mb-16 text-center ">
         <Title
