@@ -72,7 +72,7 @@ const Partner = () => {
         <Title
           text="Previous"
           red={"Partners"}
-          className="text-6xl font-bold"
+          className="text-6xl font-bold" 
         />
       </h3>
       {/* <motion.div
