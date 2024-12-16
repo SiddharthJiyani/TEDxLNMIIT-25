@@ -102,13 +102,10 @@ const Team = () => {
 
   return (
     <motion.div
-      className="bg-red py-20 text-center text-white overflow-hidden"
-      initial="hidden"
-      whileInView="show"
-      variants={containerVariants}
+      className="bg-red py-10 text-center text-white overflow-hidden"
     >
       {/* Team Section Title */}
-      <motion.div variants={itemVariants} whileInView="show">
+      <motion.div>
         {/* <h1 className="text-8xl  w-full"> */}
         <Title text="Our" red={"Team"} className=" !text-6xl md:!text-8xl" />
         {/* </h1> */}
@@ -260,7 +257,7 @@ const Team = () => {
       <hr className="m-5 mx-5"></hr>
 
       {/* Web Development */}
-      <div className="w-full md:w-screen px-4">
+      <div className="w-full md:w-screenpx-4 mb-10">
         <h2 className="text-2xl font-semibold mt-10 mb-6">Web Development</h2>
         <div className="flex flex-wrap justify-center gap-6">
           <MemberCard
@@ -277,8 +274,10 @@ const Team = () => {
       </div>
       <hr className="m-5 mx-5"></hr>
       {/* Content Writing */}
-      <div className="w-full md:w-screen px-4">
-        <h2 className="text-2xl font-semibold mt-10 mb-6">Content Writing</h2>
+      <div className="w-full md:w-screenpx-4 mb-10">
+        <h2 className="text-2xl font-semibold mb-4 text-center">
+        Content Writing
+        </h2>
         <div className="flex flex-wrap justify-center gap-6">
           <MemberCard
             name="Aryan Jadhav"
@@ -347,7 +346,7 @@ const Team = () => {
 
       <hr className="m-5 mx-5"></hr>
       {/* Graphic Designing */}
-      <div className="w-full md:w-screen px-4 mb-10">
+      <div className="w-full md:w-screenpx-4 mb-10">
         <h2 className="text-2xl font-semibold mb-4 text-center">
           Graphic Designing
         </h2>
@@ -475,7 +474,7 @@ const Team = () => {
       </div>
       <hr className="m-5 mx-5"></hr>
       {/* Video Editing */}
-      <div className="w-full md:w-screen px-4">
+      <div className="w-full md:w-screenpx-4 mb-10">
         <h2 className="text-2xl font-semibold mb-4 text-center">
           Video Editing
         </h2>

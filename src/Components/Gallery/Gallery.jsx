@@ -14,6 +14,7 @@ const Gallery = () => {
 
   // Array of Cloudinary image URLs
   const imageUrls = [
+    "https://res.cloudinary.com/dvhjoqdm6/image/upload/v1734287102/_DSC0512_q0lej7.jpg",
     "https://res.cloudinary.com/dvhjoqdm6/image/upload/v1734284836/IMG20240113144027_npuamh.jpg",
     "https://res.cloudinary.com/dvhjoqdm6/image/upload/v1734284836/IMG20240113124622_ncigry.jpg",
     "https://res.cloudinary.com/dvhjoqdm6/image/upload/v1734284835/_DSC0525_grzcpd.jpg",
@@ -28,7 +29,6 @@ const Gallery = () => {
     "https://res.cloudinary.com/dvhjoqdm6/image/upload/f_auto/v1734284830/IMG_1122_mwrzac.heic",
     "https://res.cloudinary.com/dvhjoqdm6/image/upload/f_auto/v1734284830/IMG_1227_y52t89.heic",
     "https://res.cloudinary.com/dvhjoqdm6/image/upload/f_auto/v1734284828/IMG_4682_yi556w.heic",
-    "https://res.cloudinary.com/dvhjoqdm6/image/upload/v1734287102/_DSC0512_q0lej7.jpg",
   ];
 
   return (
