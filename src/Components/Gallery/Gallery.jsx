@@ -45,7 +45,7 @@ const Gallery = () => {
             >
               {/* Wrap the PrevBox in an anchor tag to make it clickable */}
               <a href={url} target="_blank" rel="noopener noreferrer">
-                <PrevBox imgSrc={url} className="xxxs:ml-8 xxs:ml-10 xs:ml-14 sm:gap-1" />
+                <PrevBox imgSrc={url} className="xxxs:ml-8 xxs:ml-10 xs:ml-14 sm:gap-1 brightness-110" />
               </a>
             </motion.div>
           ))}

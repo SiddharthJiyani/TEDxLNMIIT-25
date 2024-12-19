@@ -121,12 +121,13 @@ const Navbar = () => {
               />
             </a>
 
-            {/* <div className="flex items-center pointer-events-none  justify-center border border-gray-600 rounded-[60px] p-1 hover:opacity-85 transition-all duration-500 hidden lg:flex">
+            <div className="flex items-center pointer-events-none justify-center border border-gray-600 rounded-[60px] p-1 hover:opacity-85 transition-all duration-500 hidden lg:flex">
               <Link to="/booktickets">
-                <Button buttonLabel=" Book Tickets" />
+                {/* <Button buttonLabel=" Book Tickets" /> */}
+                <Button buttonLabel=" Booking opens soon!" />
 
               </Link>
-            </div> */}
+            </div>
 
             {/* Hamburger Menu for Mobile */}
             <div className="md:hidden mr-4">
@@ -209,7 +210,7 @@ const Navbar = () => {
             <Link to="/booktickets"
               onClick={closeMenu}
             >
-              {/* <Button buttonLabel=" Book Tickets Now! " /> */}
+              <Button buttonLabel=" Book Tickets Now! " />
             </Link>
           </div>
         </div>
