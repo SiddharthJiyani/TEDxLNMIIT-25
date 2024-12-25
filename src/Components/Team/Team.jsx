@@ -194,7 +194,7 @@ const Team = () => {
             <motion.div variants={itemVariants}>
               <MemberCard
                 name="Sahil Gaur"
-                link="https://www.linkedin.com/in/sahil-gaur"
+                link="https://www.linkedin.com/in/links1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                 imgSrc={Sahil}
               />
             </motion.div>
@@ -225,7 +225,7 @@ const Team = () => {
             <motion.div variants={itemVariants}>
               <MemberCard
                 name="Divay Yadav"
-                link="https://www.linkedin.com/in/krishna-rohira-537a4524b/overlay/about-this-profile/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BDJR1kpxyQYKtZaUURWNItA%3D%3D"
+                link="https://www.linkedin.com/in/divay-yadav-52237724b/"
                 imgSrc={Divay}
               />
             </motion.div>
@@ -247,7 +247,7 @@ const Team = () => {
             <motion.div variants={itemVariants}>
               <MemberCard
                 name="Nemil Kamdar"
-                link="https://www.linkedin.com/in/nemil-kamdar"
+                link="https://www.linkedin.com/in/nemil-kamdar-7638b0319/"
                 imgSrc={Nemil}
               />
             </motion.div>
@@ -332,7 +332,7 @@ const Team = () => {
 
           <MemberCard
             name="Aditya Jain"
-            link="https://www.linkedin.com/in/aditya-jain"
+            link="https://www.linkedin.com/in/aditya-jain-790743322?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
             imgSrc={AdityaJ}
           />
 
@@ -363,7 +363,7 @@ const Team = () => {
           />
           <MemberCard
             name="Hussain Haidary"
-            link="https://www.linkedin.com/in/hussain-haidary"
+            link="https://www.linkedin.com/in/hussain-haidary-44610b286/"
             imgSrc={Hussain}
           />
 
@@ -390,7 +390,7 @@ const Team = () => {
       <div className="flex flex-wrap justify-center gap-6">
         <MemberCard
           name="Nancy"
-          link="https://www.linkedin.com/in/nancy"
+          link="https://www.linkedin.com/in/nancy-garg-781734237/"
           imgSrc={Nancy}
         />
         <MemberCard
@@ -400,22 +400,22 @@ const Team = () => {
         />
         <MemberCard
           name="Naman Agarwal"
-          link="https://www.linkedin.com/in/naman-agarwal"
+          link="https://www.linkedin.com/in/naman-agarwal-53b26030b/"
           imgSrc={Naman}
         />
         <MemberCard
           name="Anmol Adwani"
-          link="https://www.linkedin.com/in/anmol-adwani"
+          link="https://www.linkedin.com/in/anmol-adwani-727ba72a3/"
           imgSrc={Anmol}
         />
         <MemberCard
           name="Pranav Vashisth"
-          link="https://www.linkedin.com/in/pranav-vashisth"
+          link="https://www.linkedin.com/in/pranav-vashisth-2b7906320/"
           imgSrc={Pranav}
         />
         <MemberCard
           name="Samar Goyal"
-          link="https://www.linkedin.com/in/samar-goel"
+          link="https://www.linkedin.com/in/samar-goyal-164383314/"
           imgSrc={Samar}
         />
       </div>
@@ -465,7 +465,7 @@ const Team = () => {
         <div className="flex justify-center gap-6">
           <MemberCard
             name="Kanishq Malhotra"
-            link="https://www.linkedin.com/in/sakash-srivastava/?originalSubdomain=in"
+            link="https://www.linkedin.com/in/kanishq-malhotra-47b400294/"
             imgSrc={
               "https://res.cloudinary.com/dedcazsvk/image/upload/v1733962321/KanishqmalhotraY23_gw3mfd.jpg"
             }
@@ -481,7 +481,7 @@ const Team = () => {
         <div className="flex flex-wrap justify-center gap-6">
           <MemberCard
             name="Kunal Sharma"
-            link="https://www.linkedin.com/in/kunal-sharma"
+            link="https://www.linkedin.com/in/kunal-sharma-8a4121333/"
             imgSrc={Kunal}
           />
           <MemberCard
@@ -502,7 +502,7 @@ const Team = () => {
 
           <MemberCard
             name="Yash"
-            link="https://www.linkedin.com/in/yash"
+            link="https://www.linkedin.com/in/yash-jain-agkj11"
             imgSrc={Yash}
           />
         </div>
