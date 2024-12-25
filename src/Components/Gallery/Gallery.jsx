@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import PrevBox from "../PrevSpeakers/PrevBox";
 import { useEffect } from "react";
+import y21 from "../../assets/Y21.jpg"
 
 const Gallery = () => {
 
@@ -11,7 +12,8 @@ const Gallery = () => {
   // Array of Cloudinary image URLs
   const imageUrls = [
     "https://res.cloudinary.com/dvhjoqdm6/image/upload/v1734287102/_DSC0512_q0lej7.jpg",
-    "https://res.cloudinary.com/dvhjoqdm6/image/upload/v1734284836/IMG20240113144027_npuamh.jpg",
+    `${y21}`,
+    // "https://res.cloudinary.com/dvhjoqdm6/image/upload/v1734284836/IMG20240113144027_npuamh.jpg",
     "https://res.cloudinary.com/dvhjoqdm6/image/upload/v1734284836/IMG20240113124622_ncigry.jpg",
     "https://res.cloudinary.com/dvhjoqdm6/image/upload/v1734284835/_DSC0525_grzcpd.jpg",
     "https://res.cloudinary.com/dvhjoqdm6/image/upload/v1734284836/IMG20240113165706_ndioaf.jpg",
