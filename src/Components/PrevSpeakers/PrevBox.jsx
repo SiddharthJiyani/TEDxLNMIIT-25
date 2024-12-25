@@ -18,6 +18,7 @@ const PrevBox = ({ imgSrc, altText, name, description, url, className }) => {
           }`}
           src={imgSrc}
           alt={altText}
+          loading="lazy"
         />
 
         {/* Conditional hover content */}

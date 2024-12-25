@@ -31,7 +31,7 @@ const Ticket = () => {
       </div>
 
       {/* Ticket display section */}
-      <Link className="flex flex-col items-center h-[50%] justify-center mt-8 space-y-6" to={"/booktickets"}>
+      <Link className="flex flex-col items-center h-[50%] pointer-events-none justify-center mt-8 space-y-6" to={"/booktickets"}>
         <img
           src={Ticketsvg}
           alt="ticket"

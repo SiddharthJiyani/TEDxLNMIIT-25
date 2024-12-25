@@ -3,10 +3,6 @@ import PrevBox from "../PrevSpeakers/PrevBox";
 import { useEffect } from "react";
 
 const Gallery = () => {
-  const fadeIn = {
-    hidden: { opacity: 0, y: 20, scale: 0.7 },
-    visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.3 } },
-  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -39,9 +35,6 @@ const Gallery = () => {
           {imageUrls.map((url, index) => (
             <motion.div
               key={index}
-              variants={fadeIn}
-              initial="hidden"
-              whileInView="visible"
             >
               {/* Wrap the PrevBox in an anchor tag to make it clickable */}
               <a href={url} target="_blank" rel="noopener noreferrer">
