@@ -267,7 +267,7 @@ const Team = () => {
           />
           <MemberCard
             name="Manav Desai"
-            link="https://www.linkedin.com/in/manav-desai"
+            link="https://www.linkedin.com/in/manav-desai-985aab326/"
             imgSrc={Manav}
           />
         </div>
@@ -326,7 +326,7 @@ const Team = () => {
           />
           <MemberCard
             name="Priyal Maheshwari"
-            link="https://www.linkedin.com/in/yash-jain-a78329285/"
+            link="https://www.linkedin.com/in/priyal-maheshwari-001494284/"
             imgSrc={Priyal}
           />
 
