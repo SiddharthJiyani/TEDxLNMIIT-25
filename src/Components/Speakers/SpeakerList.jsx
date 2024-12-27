@@ -35,7 +35,7 @@ const SpeakerList = () => {
         instagram:
           "https://www.instagram.com/anandmegalingamofficial?igsh=MWx0a256cXljY2JmZw==",
       },
-      websiteUrl: "https://www.anandmegalingam.com", // Correct website URL for speaker1
+      websiteUrl: "https://www.spacezoneindia.com/anand-megalingam-ceo/", // Correct website URL for speaker1
     },
   ];
 
