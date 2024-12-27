@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import Speakers from "./Speakers";
 import Title from "../utility/Title";
 
-
 import currentspeaker1 from "../../assets/Speakers/speaker1.png";
 import currentspeaker2 from "../../assets/PastSpeakers/speaker2.png";
 import currentspeaker3 from "../../assets/PastSpeakers/speaker3.png";
@@ -29,17 +28,16 @@ const SpeakerList = () => {
       imgSrc: currentspeaker1,
       altText: "Anand Megalingam",
       name: "Anand Megalingam",
-      bio: "Anand Megalingam is a leading expert in AI and technology.",
+      bio: "He is the visionary Founder and CEO of Space Zone India, is at the forefront of advancing India's space technology through innovative hybrid propulsion systems. As the architect of India's first reusable hybrid rocket launch, his pioneering efforts have earned him national recognition, including honors from the Prime Minister’s Office and the Young Scientist award.",
       socialHandles: {
-        linkedin: "https://www.linkedin.com/in/anand-megalingam/?originalSubdomain=in",
-        instagram: "https://www.instagram.com/anandmegalingamofficial?igsh=MWx0a256cXljY2JmZw==",
+        linkedin:
+          "https://www.linkedin.com/in/anand-megalingam/?originalSubdomain=in",
+        instagram:
+          "https://www.instagram.com/anandmegalingamofficial?igsh=MWx0a256cXljY2JmZw==",
       },
       websiteUrl: "https://www.anandmegalingam.com", // Correct website URL for speaker1
     },
-    
   ];
-  
-  
 
   return (
     <section className="py-16 text-white">
@@ -48,16 +46,16 @@ const SpeakerList = () => {
           className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
+          transition={{ duration: 0.5 }}>
           <Title text="Speakers" />
         </motion.h1>
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center"
+          // className="grid md:block  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center"
+          //className="flex mr-14 md:mr-0 items-center flex-wrap gap-8 justify-center sm:w-1/2 lg:w-1/3 xl:w-1/4"
+          className="flex mr-14 md:mr-0 items-center flex-wrap gap-8 justify-center "
           variants={containerVariants}
           initial="hidden"
-          animate="visible"
-        >
+          animate="visible">
           {speakersData.map((speaker, index) => (
             <Speakers
               key={index}

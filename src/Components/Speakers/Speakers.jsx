@@ -14,7 +14,7 @@ const Speakers = ({
     <div>
       {/* Container with a dynamic background image */}
       <div
-  className={` m-10 border-[1px] border-bordorColor rounded-2xl w-[100%] md:w-[250px] h-[230px] bg-[#141414] relative hover:scale-110 transition-all duration-300 hover:overflow-hidden flex flex-col justify-center items-end`}
+  className={` m-10 border-[1px] border-bordorColor rounded-2xl w-[100%] md:w-[260px] h-[300px] bg-[#141414] relative hover:scale-110 transition-all duration-300 hover:overflow-hidden flex flex-col justify-center items-end`}
   style={{
     backgroundImage: `url(x)`,
     backgroundSize: "cover",
@@ -30,13 +30,14 @@ const Speakers = ({
 
   {/* Social media icons */}
   <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#141414] p-1 rounded-2xl opacity-0 hover:opacity-100 transition-opacity duration-300">
-    <div className="text-white text-center">
-      <h2 className="m-4 text-xl font-extrabold text-[#e4dbdb]">
+    <div className="text-white text-center px-2">
+
+      <h2 className="m-4 text-[18px] font-extrabold text-[#e4dbdb]">
         {name}
       </h2>
-      {description && <p className="text-sm mb-2">{description}</p>}
-      <div className="flex flex-col justify-center items-center gap-5 mt-2">
-        <h2>Checkout Our Speaker Here :</h2>
+      {description && <p className="text-[12px] text-justify mb-4">{description}</p>}
+
+      <div className="flex flex-col justify-center items-center gap-5 bottom-0">
         <div className="flex gap-5">
           {instagramUrl && (
             <a
@@ -45,7 +46,7 @@ const Speakers = ({
               rel="noopener noreferrer"
               className="text-pink-500 hover:text-pink-600 transition-colors duration-300"
             >
-              <FaInstagram size={24} />
+              <FaInstagram size={21} />
             </a>
           )}
           {linkedinUrl && (
@@ -55,7 +56,7 @@ const Speakers = ({
               rel="noopener noreferrer"
               className="text-blue-500 hover:text-blue-600 transition-colors duration-300"
             >
-              <FaLinkedin size={24} />
+              <FaLinkedin size={21} />
             </a>
           )}
           {websiteUrl && (
@@ -65,7 +66,7 @@ const Speakers = ({
               rel="noopener noreferrer"
               className="text-green-500 hover:text-green-600 transition-colors duration-300"
             >
-              <FaGlobe size={24} />
+              <FaGlobe size={21} />
             </a>
           )}
         </div>

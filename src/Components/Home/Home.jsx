@@ -156,7 +156,7 @@ const Home = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="relative">
-                <h2 className="text-5xl sm:text-4xl ml-10 md:ml-5 lg:ml-10 xl:ml-28 font-generalSans md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-center tracking-tight leading-none">
+                <h2 className="text-5xl sm:text-4xl ml-10 md:ml-5 lg:ml-10 font-generalSans md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-center tracking-tight leading-none">
                   <span className="inline-block py-5 px-4 bg-clip-text text-transparent animate-red-gradient relative">
                     Navigating
                     <span className="absolute inset-0 bg-clip-text text-transparent animate-flowing-shine"></span>
@@ -296,7 +296,7 @@ const Home = () => {
               {/* <span className="text-[#ff3006]">Navigating</span> the{" "}
               <span className="text-[#ff3006]">New</span> */}
             </h1>
-            <p className="text-lg text-red-100 p-4 text-justify bg-white/5 shadow-[0px_2px_32px_2px_rgba(255,48,6,0.9)] backdrop-blur-md border border-white/20 rounded-lg hyphens-auto">
+            <p className="text-lg text-red-100 p-4 mb-10 md:mb-0 text-justify bg-white/5 shadow-[0px_2px_32px_2px_rgba(255,48,6,0.9)] backdrop-blur-md border border-white/20 rounded-lg hyphens-auto">
               In a world where change accelerates daily, we gather to explore
               the evolving frontiers of innovation, resilience, and discovery.
               TEDxLNMIIT brings together forward-thinking individuals and
