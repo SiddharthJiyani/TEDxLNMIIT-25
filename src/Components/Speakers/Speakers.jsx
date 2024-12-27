@@ -1,6 +1,6 @@
 import React from "react";
 import { FaInstagram, FaLinkedin, FaGlobe } from "react-icons/fa"; // FaGlobe imported
-
+import x from "../../assets/x.png";
 const Speakers = ({
   imgSrc,
   altText,
@@ -16,7 +16,7 @@ const Speakers = ({
       <div
   className={` m-10 border-[1px] border-bordorColor rounded-2xl w-[100%] md:w-[260px] h-[300px] bg-[#141414] relative hover:scale-110 transition-all duration-300 hover:overflow-hidden flex flex-col justify-center items-end`}
   style={{
-    backgroundImage: `url(x)`,
+    backgroundImage: `url(${x})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
   }}
