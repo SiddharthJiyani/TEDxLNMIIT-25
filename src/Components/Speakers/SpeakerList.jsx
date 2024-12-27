@@ -37,7 +37,7 @@ const SpeakerList = () => {
       },
       websiteUrl: "https://www.spacezoneindia.com/anand-megalingam-ceo/", // Correct website URL for speaker1
     },
-  ];
+  ]; 
 
   return (
     <section className="py-16 text-white">
