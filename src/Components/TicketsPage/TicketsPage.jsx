@@ -106,13 +106,13 @@ export default function TicketBookingPage() {
                 title: "LNMIIT Students/Staff ",
                 price: "₹799",
                 // discount: "25% discount applied",
-                formlink: "#",
+                formlink: "https://forms.gle/TGPJJENketVHWvaV6",
               },
               {
                 title: "General Admission",
                 price: "₹999",
                 discount: null,
-                formlink: "#",
+                formlink: "https://forms.gle/yM9kiR7To2iVAoJU6",
               },
             ].map((item, index) => (
               <motion.div
@@ -158,7 +158,7 @@ export default function TicketBookingPage() {
                   <p className="text-center">
                   <span className="text-center font-sans !font-bold text-red-700 ">OR</span>
                     <br/>
-                   use UPI ID: <span className="text-[#ff2b05]">thelnm51089005531@sbi</span> 
+                   use UPI ID: <span className="text-[#ff2b05] cursor-pointer">thelnm51089005531@sbi</span> 
                   </p>
 
                   <div className="mt-5 flex justify-center">
@@ -166,9 +166,10 @@ export default function TicketBookingPage() {
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
-                      <Button className="bg-red-600 hover:bg-red-700 text-white">
-                        Buy Now
-                      </Button>
+                     <Button className="bg-red-600 hover:bg-red-700 text-white">
+  <a href={item.formlink} target="_blank" rel="noopener noreferrer">Buy Now</a>
+</Button>
+
                     </motion.div>
                   </div>
                 </Card>
