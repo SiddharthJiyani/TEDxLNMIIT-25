@@ -10,6 +10,7 @@ import birdSvg from "../../assets/Bird.svg";
 import Ticket from "../utility/Ticket";
 import Youtube from "../utility/Youtube";
 import Title from "../utility/Title";
+import { Link } from "react-router-dom";
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -135,7 +136,11 @@ const Home = () => {
                   </span>
                 </h2>
                 <div className="hero-buttons mt-8 space-x-4 font-generalSans">
-                  <RedButton to="#">Book Your Tickets Now !</RedButton>
+                  <RedButton to="#">
+                    <Link to={"/booktickets"}>
+                    Book Your Tickets Now !
+                    </Link>
+                  </RedButton>
                 </div>
               </div>
             </div>

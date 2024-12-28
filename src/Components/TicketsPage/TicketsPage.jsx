@@ -149,7 +149,18 @@ export default function TicketBookingPage() {
                       {item.discount}
                     </p>
                   )}
-                  <img src={qr} className="h-44 w-44 mx-auto m-5"></img>
+                  <img src={qr}
+                    width = {250}
+                    height={250}
+                  className=" mx-auto m-5"></img>
+
+                  {/* add a text which says: or UPI ID:  thelnm51089005531@sbi  */}
+                  <p className="text-center">
+                  <span className="text-center font-sans !font-bold text-red-700 ">OR</span>
+                    <br/>
+                   use UPI ID: <span className="text-[#ff2b05]">thelnm51089005531@sbi</span> 
+                  </p>
+
                   <div className="mt-5 flex justify-center">
                     <motion.div
                       whileHover={{ scale: 1.05 }}
