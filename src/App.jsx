@@ -11,7 +11,7 @@ import Faq from "./Components/FAQ/Faq.jsx";
 import Footer from "./Components/Footer/Footer.jsx";
 import Particle from "./Particle.jsx";
 import TicketsPage from "./Components/TicketsPage/TicketsPage.jsx";
- 
+  
 export default function App() {
   return (
     <Router>
