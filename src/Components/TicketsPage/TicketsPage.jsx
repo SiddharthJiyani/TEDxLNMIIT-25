@@ -12,7 +12,8 @@ const Button = ({ children, className, ...props }) => (
     style={{
       boxShadow: "0 0 15px rgba(239, 68, 68, 0.5)",
     }}
-    {...props}>
+    {...props}
+  >
     {children}
   </motion.button>
 );
@@ -20,7 +21,8 @@ const Button = ({ children, className, ...props }) => (
 const Card = ({ children, className, ...props }) => (
   <div
     className={`bg-black bg-opacity-50 backdrop-blur-md rounded-2xl p-6 ${className}`}
-    {...props}>
+    {...props}
+  >
     {children}
   </div>
 );
@@ -29,7 +31,8 @@ const SVGIcon = ({ d, className }) => (
   <svg
     viewBox="0 0 24 24"
     fill="currentColor"
-    className={`w-6 h-6 ${className}`}>
+    className={`w-6 h-6 ${className}`}
+  >
     <path d={d} />
   </svg>
 );
@@ -65,31 +68,40 @@ export default function TicketBookingPage() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="relative z-10 container mx-auto w-5/6 px-4 py-12 sm:py-24 mt-16 md:mt-0">
+        className="relative z-10 container mx-auto w-5/6 px-4 py-12 sm:py-24 mt-16 md:mt-0"
+      >
         <section className="text-center mb-16">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-transparent bg-clip-text bg-[#ff2a05] text-[#ff2a05]">
             TEDx<span className="text-white">LNMIIT</span>
           </h1>
           <p className="text-xl sm:text-2xl mb-8 text-gray-300">
-            Date: 11<span><sup>th</sup></span> January 2025 | LNMIIT, JAIPUR
+            Date: 11
+            <span>
+              <sup>th</sup>
+            </span>{" "}
+            January 2025 | LNMIIT, JAIPUR
           </p>
-            <div class="relative bg-gradient-to-l from-transparent via-red-600 to-transparent text-white py-4 px-6 rounded-lg">
-              <div class="flex justify-center items-center">
-                <span class="text-xl font-semibold">Book Your Ticket Now</span>
-              </div>
-
-              <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gray-800 to-transparent"></div>
+          <div class="relative bg-gradient-to-l from-transparent via-red-600 to-transparent text-white py-4 px-6 rounded-lg">
+            <div class="flex justify-center items-center">
+              <span class="text-xl font-semibold">Book Your Ticket Now</span>
             </div>
+
+            <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gray-800 to-transparent"></div>
+          </div>
         </section>
 
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-center mb-8 text-red-500">
-            <Title text={"Choose Your"} red={"Experience"} className="!text-5xl" />
+            <Title
+              text={"Choose Your"}
+              red={"Experience"}
+              className="!text-5xl"
+            />
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {[
               {
-                title: "LNMIIT Students/Faculty",
+                title: "LNMIIT Students/Staff ",
                 price: "₹799",
                 // discount: "25% discount applied",
                 formlink: "#",
@@ -105,7 +117,8 @@ export default function TicketBookingPage() {
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}>
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+              >
                 <Card className="shadow-[0_0_21px_0px_#ef2800] hover:shadow-[0_0_30px_0px_#ef2800] transition-shadow duration-300">
                   <h3 className="text-2xl font-bold text-center text-gray-100 mb-4">
                     {item.title}
@@ -129,7 +142,8 @@ export default function TicketBookingPage() {
                   <div className="mt-5 flex justify-center">
                     <motion.div
                       whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}>
+                      whileTap={{ scale: 0.95 }}
+                    >
                       <Button className="bg-red-600 hover:bg-red-700 text-white">
                         Buy Now
                       </Button>
@@ -168,7 +182,8 @@ export default function TicketBookingPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="bg-zinc-700 bg-opacity-40 backdrop-blur-sm p-6 rounded-lg text-center">
+                className="bg-zinc-700 bg-opacity-40 backdrop-blur-sm p-6 rounded-lg text-center"
+              >
                 <SVGIcon
                   d={item.icon}
                   className="w-12 h-12 mx-auto mb-4 text-red-500"
@@ -208,7 +223,8 @@ export default function TicketBookingPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="bg-zinc-700 bg-opacity-40 backdrop-blur-sm p-4 rounded-lg text-center">
+                className="bg-zinc-700 bg-opacity-40 backdrop-blur-sm p-4 rounded-lg text-center"
+              >
                 <SVGIcon
                   d={item.icon}
                   className="w-10 h-10 mx-auto mb-3 text-red-500"
@@ -218,7 +234,6 @@ export default function TicketBookingPage() {
             ))}
           </div>
         </section>
-
       </motion.div>
     </div>
   );
