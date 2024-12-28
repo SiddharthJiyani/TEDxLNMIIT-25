@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Footer from "../Footer/Footer";
 import Title from "../utility/Title";
+import qr from "../../assets/qrcode.png";
+
 const Button = ({ children, className, ...props }) => (
   <motion.button
     whileHover={{ scale: 1.05 }}
@@ -139,6 +141,7 @@ export default function TicketBookingPage() {
                       {item.discount}
                     </p>
                   )}
+                  <img src={qr} className="h-44 w-44 mx-auto m-5"></img>
                   <div className="mt-5 flex justify-center">
                     <motion.div
                       whileHover={{ scale: 1.05 }}
