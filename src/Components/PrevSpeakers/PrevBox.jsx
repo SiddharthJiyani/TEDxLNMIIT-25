@@ -9,7 +9,7 @@ const PrevBox = ({ imgSrc, altText, name, description, url, className }) => {
           backgroundImage: `url(${x})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-        }} 
+        }}
       >
         {/* Image always shown */}
         <img
@@ -48,9 +48,7 @@ const PrevBox = ({ imgSrc, altText, name, description, url, className }) => {
           </div>
         )}
       </div>
-      <h2 className="text-xl text-[#7d7d7d] text-left pl-1 md:pl-10 xxxs:ml-8 xxs:ml-10   xs:ml-14 sm:gap-1 ">
-        {name}
-      </h2>
+      <h2 className="text-xl text-[#7d7d7d] text-center md:pl-9">{name}</h2>
     </div>
   );
 };
