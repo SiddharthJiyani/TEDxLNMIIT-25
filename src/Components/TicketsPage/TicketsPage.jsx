@@ -127,10 +127,18 @@ export default function TicketBookingPage() {
                   </h3>
                   <ul className="list-disc list-inside space-y-2 text-gray-300 mb-4">
                     <li>Access to all TEDxLNMIIT talks and workshops</li>
+                    {item.title === "General Admission" ? (
+                      <li className="text-justify">
+                        LNMIIT campus experience and student exposure
+                      </li>
+                    ) : null}
                     <li>Interaction sessions with speakers</li>
-                    <li>Delicious meals and refreshments</li>
-                    <li>Exclusive TEDxLNMIIT experiences</li>
-                    <li>Exciting Goodies absolutely free</li>
+                    <li>Delicious meal and refreshments</li>
+                    <li>Exclusive TEDxLNMIIT experience</li>
+                    <li>
+                      Exciting complimentary goodies including a t-shirt, a
+                      bottle and a badge
+                    </li>
                   </ul>
                   <div className="border-t border-gray-600 my-4"></div>
                   <p className="text-3xl font-bold text-center text-red-500">
