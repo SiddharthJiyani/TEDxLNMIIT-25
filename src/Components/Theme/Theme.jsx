@@ -98,7 +98,7 @@ const Theme = () => {
 
       {/* Background Animation */}
       <motion.div
-        className="absolute inset-0 pointer-events-none "
+        className="absolute inset-0  "
         style={{
           opacity: backgroundOpacity,
           scale: backgroundScale,

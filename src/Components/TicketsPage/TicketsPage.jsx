@@ -137,11 +137,11 @@ export default function TicketBookingPage() {
                     <li>Exclusive TEDxLNMIIT experience</li>
                     <li>
                       Exciting complimentary goodies including a t-shirt, a
-                      bottle and a badge
+                      bottle &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and a badge
                     </li>
                   </ul>
-                  <div className="border-t border-gray-600 my-4"></div>
-                  <p className="text-3xl font-bold text-center text-red-500">
+                  <div className={`border-t border-gray-600 my-4 ${item.price==="₹799"?"mt-12":""}`}></div>
+                  <p className={`text-3xl font-bold text-center text-red-500 `}>
                     {item.price}
                   </p>
                   {item.discount && (

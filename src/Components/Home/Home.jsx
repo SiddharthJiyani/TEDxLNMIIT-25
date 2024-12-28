@@ -135,7 +135,7 @@ const Home = () => {
                   </span>
                 </h2>
                 <div className="hero-buttons mt-8 space-x-4 font-generalSans">
-                  <RedButton to="#">Booking Opens Soon !</RedButton>
+                  <RedButton to="#">Book Your Tickets Now !</RedButton>
                 </div>
               </div>
             </div>
@@ -271,7 +271,7 @@ const Home = () => {
           style={{ backgroundColor: "black" }}></canvas>
 
         <motion.div
-          className="absolute inset-0 pointer-events-none"
+          className="absolute inset-0 "
           style={{
             opacity: backgroundOpacity,
             scale: backgroundScale,

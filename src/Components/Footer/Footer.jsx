@@ -94,10 +94,10 @@ const Footer = () => {
         </p>
       </div>
 
-      <div className="mt-4 md:mt-0 pointer-events-none">
+      <div className="mt-4 md:mt-0 ">
         <Link to="/booktickets">
           {/* <Button buttonLabel=" Book Tickets Now! " /> */}
-          <Button buttonLabel=" Booking opens soon!" />
+          <Button buttonLabel=" Book Your Tickets Now!" />
         </Link>
       </div>
     </div>
