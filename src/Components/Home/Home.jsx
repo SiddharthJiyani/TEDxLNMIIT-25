@@ -11,7 +11,7 @@ import Ticket from "../utility/Ticket";
 import Youtube from "../utility/Youtube";
 import Title from "../utility/Title";
 import { Link } from "react-router-dom";
-
+import CampusAmbassedor from "../CampusAmb/CampAmb";
 const sectionVariants = {
   hidden: { opacity: 0, y: 50 },
   visible: {
@@ -349,7 +349,7 @@ const Home = () => {
       </motion.section>
 
       <Ticket />
-
+          
       {/* FAQ Section */}
 
       <motion.section
@@ -362,6 +362,15 @@ const Home = () => {
         <Youtube />
       </motion.section>
       <motion.section
+        id="CampusAmb"
+        className="prev-speakers-section py-20 w-full flex flex-col justify-center items-center bg-black text-red-500"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={sectionVariants}>
+         <CampusAmbassedor/>
+      </motion.section>
+      <motion.section
         id="faq"
         className="faq-section mb-24 -mt-64  w-full flex flex-col justify-center items-center bg-black text-red-500"
         initial="hidden"
@@ -369,6 +378,8 @@ const Home = () => {
         viewport={{ once: true }}
         variants={sectionVariants}>
         <Faq />
+     
+       
       </motion.section>
     </div>
   );

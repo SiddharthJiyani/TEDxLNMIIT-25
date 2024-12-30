@@ -9,6 +9,7 @@ function Faq() {
     setActiveSection(index === activeSection ? null : index);
   };
 
+
   return (
     <div className="mt-16 min-h-screen flex items-center justify-center bg-black text-white h-screen w-screen">
       <div className="faq-container bg-black text-white px-6 md:px-12 max-w-xl mx-auto">

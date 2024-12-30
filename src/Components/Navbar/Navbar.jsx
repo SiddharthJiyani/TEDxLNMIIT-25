@@ -22,8 +22,8 @@ const Navbar = () => {
   const isActiveLink = (path) => location.pathname === path;
 
   return (
-    <div className="  sticky top-0 z-50">
-      <nav className="bg-[rgba(20,20,20,0.5)]  absolute -top-3 backdrop-blur-md border border-white/20 p-2 sm:p-3 md:p-4 lg:p-2 left-0 right-0 mx-auto mt-6 max-w-[90%] min-h-[48px] flex items-center justify-between gap-4 rounded-[60px] shadow-lg z-50">
+    <div className="sticky top-0 z-50">
+      <nav className="bg-[rgba(20,20,20,0.5)] absolute -top-3 backdrop-blur-md border border-white/20 p-2 sm:p-3 md:p-4 lg:p-2 left-0 right-0 mx-auto mt-6 max-w-[90%] min-h-[48px] flex items-center justify-between gap-4 rounded-[60px] shadow-lg z-50">
         <div className="container mx-auto flex justify-between items-center">
           <div className="text-white text-xl font-bold flex items-center">
             <Link smooth to="/" className="text-xl text-white">
@@ -67,6 +67,18 @@ const Navbar = () => {
             >
               FAQ
             </Link>
+
+            {/* Add Campus Ambassador Link here */}
+            <Link
+              to="/#CampusAmb"
+              className={`hover:text-white ${
+                isActiveLink("/campus-amb") ? "text-red-500" : ""
+              }`}
+              onClick={closeMenu}
+            >
+              Campus Ambassador
+            </Link>
+
             <Link
               to="/team"
               className={`hover:text-white ${
@@ -121,11 +133,9 @@ const Navbar = () => {
               />
             </a>
 
-            <div className="flex items-center  justify-center  rounded-[60px] p-1 hover:opacity-85 transition-all duration-500 hidden lg:flex">
+            <div className="flex items-center justify-center rounded-[60px] p-1 hover:opacity-85 transition-all duration-500 hidden lg:flex">
               <Link to="/booktickets">
-                {/* <Button buttonLabel=" Book Tickets" /> */}
                 <Button buttonLabel=" Book Tickets" />
-
               </Link>
             </div>
 
@@ -163,6 +173,16 @@ const Navbar = () => {
           >
             FAQ
           </Link>
+
+          {/* Add Campus Ambassador Link here */}
+          <Link
+            to="/#CampusAmb"
+            className="text-white hover:text-gray-300"
+            onClick={closeMenu}
+          >
+            Campus Ambassador
+          </Link>
+
           <Link
             to="/team"
             className="text-white hover:text-gray-300"
@@ -207,9 +227,7 @@ const Navbar = () => {
                 className="text-gray-300 h-7 w-7"
               />
             </a>
-            <Link to="/booktickets"
-              onClick={closeMenu}
-            >
+            <Link to="/booktickets" onClick={closeMenu}>
               <Button buttonLabel=" Book Tickets Now! " />
             </Link>
           </div>
