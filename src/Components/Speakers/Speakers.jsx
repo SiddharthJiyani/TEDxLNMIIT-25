@@ -19,7 +19,7 @@ const Speakers = ({
           backgroundImage: `url(${x})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-        }}
+        }} 
       >
         {/* Foreground Image positioned to center */}
         <img
