@@ -40,9 +40,7 @@ const Navbar = () => {
             <Link
               smooth
               to="/"
-              className={`hover:text-white ${
-                isActiveLink("/") ? "text-red-500" : ""
-              }`}
+              className={`hover:text-white ${isActiveLink("/") ? "text-red-500" : ""}`}
               onClick={closeMenu}
             >
               Home
@@ -50,9 +48,7 @@ const Navbar = () => {
             <Link
               smooth
               to="/#about"
-              className={`hover:text-white ${
-                isActiveLink("/#about") ? "text-red-500" : ""
-              }`}
+              className={`hover:text-white ${isActiveLink("/#about") ? "text-red-500" : ""}`}
               onClick={closeMenu}
             >
               About us
@@ -60,52 +56,43 @@ const Navbar = () => {
             <Link
               smooth
               to="/#faq"
-              className={`hover:text-white ${
-                isActiveLink("/#faq") ? "text-red-500" : ""
-              }`}
+              className={`hover:text-white ${isActiveLink("/#faq") ? "text-red-500" : ""}`}
               onClick={closeMenu}
             >
               FAQ
             </Link>
 
             {/* Add Campus Ambassador Link here */}
-            <Link
-              to="/#CampusAmb"
-              className={`hover:text-white ${
-                isActiveLink("/campus-amb") ? "text-red-500" : ""
-              }`}
-              onClick={closeMenu}
-            >
-              Campus Ambassador
-            </Link>
+            
 
             <Link
               to="/team"
-              className={`hover:text-white ${
-                isActiveLink("/team") ? "text-red-500" : ""
-              }`}
+              className={`hover:text-white ${isActiveLink("/team") ? "text-red-500" : ""}`}
               onClick={closeMenu}
             >
               Team
             </Link>
             <Link
               to="/partner"
-              className={`hover:text-white ${
-                isActiveLink("/partner") ? "text-red-500" : ""
-              }`}
+              className={`hover:text-white ${isActiveLink("/partner") ? "text-red-500" : ""}`}
               onClick={closeMenu}
             >
               Partner
             </Link>
             <Link
               to="/gallery"
-              className={`hover:text-white ${
-                isActiveLink("/gallery") ? "text-red-500" : ""
-              }`}
+              className={`hover:text-white ${isActiveLink("/gallery") ? "text-red-500" : ""}`}
               onClick={closeMenu}
             >
               Gallery
             </Link>
+            <Link
+            to="/campus-amb"
+            className={`hover:text-white ${isActiveLink("/campus-amb") ? "text-red-500" : ""}`}
+            onClick={closeMenu}
+          >
+            Campus Ambassador
+          </Link>
           </div>
 
           {/* Right Side - Social Icons and Contact Button */}
@@ -175,13 +162,7 @@ const Navbar = () => {
           </Link>
 
           {/* Add Campus Ambassador Link here */}
-          <Link
-            to="/#CampusAmb"
-            className="text-white hover:text-gray-300"
-            onClick={closeMenu}
-          >
-            Campus Ambassador
-          </Link>
+          
 
           <Link
             to="/team"
@@ -203,6 +184,13 @@ const Navbar = () => {
             onClick={closeMenu}
           >
             Gallery
+          </Link>
+          <Link
+            to="/campus-amb"
+            className={`hover:text-white ${isActiveLink("/campus-amb") ? "text-red-500" : ""}`}
+            onClick={closeMenu}
+          >
+            Campus Ambassador
           </Link>
           <div className="flex flex-col items-center">
             <a

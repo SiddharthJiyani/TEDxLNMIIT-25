@@ -4,8 +4,10 @@ import Title from "../utility/Title";
 import { Link } from "react-router-dom";
 const CampAmb = () => {
   return (
-    <div className="min-h-[60%] bg-black-900 text-white p-8 flex flex-col justify-center items-center gap-14">
-       <Title text={"Campus"} red={"Ambessedor"} className="block text-[40px] md:text-5xl" />
+    <div className="min-h-[60%] bg-black-900 text-white px-8 flex flex-col justify-center items-center gap-14">
+       <h2 className="text-4xl font-bold mb-8 my-20 text-center text-gray-200">
+          <Title text={"Campus"} red={"Ambassador"} className="block text-[40px] md:text-6xl" />
+        </h2>
       <p className="text-lg mb-6 text-center w-[60%]">
         TEDxLNMIIT is giving you a chance to not only create meaningful
         connections through this program but much more than that! TEDxLNMIIT

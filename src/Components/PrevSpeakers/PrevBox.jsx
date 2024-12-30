@@ -1,12 +1,12 @@
 import youtube from "../../assets/youtube.png";
-import x from "../../assets/x.png";
+import xprev from "../../assets/xprev.png";
 const PrevBox = ({ imgSrc, altText, name, description, url, className }) => {
   return (
     <div className="hover:-translate-y-3 transition-transform duration-300">
       <div
         className={`m-4 group relative border-[1px] border-bordorColor  rounded-2xl w-[80%] md:w-[250px] h-[80%] md:h-[290px] p-1 bg-[#141414] overflow-hidden ${className} `}
         style={{
-          backgroundImage: `url(${x})`,
+          backgroundImage: `url(${xprev})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

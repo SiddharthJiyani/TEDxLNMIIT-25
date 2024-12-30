@@ -353,34 +353,35 @@ const Home = () => {
       {/* FAQ Section */}
 
       <motion.section
-        id="yt"
-        className="faq-section -mt-56 md:-mt-40  w-full flex flex-col justify-center items-center bg-black text-red-500"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={sectionVariants}>
-        <Youtube />
-      </motion.section>
-      <motion.section
-        id="CampusAmb"
-        className="prev-speakers-section py-20 w-full flex flex-col justify-center items-center bg-black text-red-500"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={sectionVariants}>
-         <CampusAmbassedor/>
-      </motion.section>
-      <motion.section
-        id="faq"
-        className="faq-section mb-24 -mt-64  w-full flex flex-col justify-center items-center bg-black text-red-500"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={sectionVariants}>
-        <Faq />
-     
-       
-      </motion.section>
+  id="yt"
+  className="faq-section mt-32 md:mt-40 w-full flex flex-col justify-center items-center bg-black text-red-500"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+  variants={sectionVariants}>
+  <Youtube />
+</motion.section>
+
+<motion.section
+  id="CampusAmb"
+  className="mb-16 w-full flex flex-col justify-center items-center bg-black text-red-500"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+  variants={sectionVariants}>
+  <CampusAmbassedor />
+</motion.section>
+
+<motion.section
+  id="faq"
+  className="faq-section mb-24  w-full flex flex-col justify-center items-center bg-black text-red-500"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+  variants={sectionVariants}>
+  <Faq />
+</motion.section>
+
     </div>
   );
 };
