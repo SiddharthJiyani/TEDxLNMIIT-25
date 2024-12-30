@@ -14,7 +14,7 @@ import Sahil from "../../assets/team/SahilGaur.png";
 // import Shreyansh from "../../assets/team/shreyansh.jpg";
 import Krishnamanchanda from "../../assets/team/KrishnaManchanda.jpg";
 import Divay from "../../assets/team/Divay.jpg";
-import Nemil from "../../assets/team/Nemil Kamdar.jpg";
+//import Nemil from "../../assets/team/Nemil Kamdar.jpg";
 import Saanvi from "../../assets/team/Saanvi.jpg";
 import Aryanjadhav from "../../assets/team/Aryan Jadhav y23.jpg";
 import Alisha from "../../assets/team/AlishaMalhotra.jpg";
@@ -203,7 +203,7 @@ const Team = () => {
       </div>
 
       {/* Creative Head */}
-      <div className="flex flex-wrap justify-between">
+      <div className="flex flex-wrap justify-center">
         <div className="w-full md:w-1/2 px-4">
           <motion.h2
             variants={itemVariants}
@@ -232,27 +232,7 @@ const Team = () => {
           </motion.div>
         </div>
 
-        {/* Event Management Head */}
-        <div className="w-full md:w-1/2 px-4">
-          <motion.h2
-            variants={itemVariants}
-            className="text-2xl font-semibold mt-10 mb-6"
-          >
-            Event Management Head
-          </motion.h2>
-          <motion.div
-            className="flex flex-wrap justify-center gap-6"
-            variants={containerVariants}
-          >
-            <motion.div variants={itemVariants}>
-              <MemberCard
-                name="Nemil Kamdar"
-                link="https://www.linkedin.com/in/nemil-kamdar-7638b0319/"
-                imgSrc={Nemil}
-              />
-            </motion.div>
-          </motion.div>
-        </div>
+        
       </div>
       <hr className="m-5 mx-5"></hr>
 
