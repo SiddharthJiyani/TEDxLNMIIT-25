@@ -187,34 +187,36 @@ const Navbar = () => {
           </Link>
           <Link
             to="/campus-amb"
-            className={`hover:text-white ${isActiveLink("/campus-amb") ? "text-red-500" : ""}`}
+            className={`text-white hover:text-gray-300 ${isActiveLink("/campus-amb") ? "text-red-500" : ""}`}
             onClick={closeMenu}
           >
             Campus Ambassador
           </Link>
-          <div className="flex flex-col items-center">
-            <a
-              href="https://www.linkedin.com/company/tedxlnmiit/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border border-gray-600 rounded-full p-2 flex items-center justify-center hover:opacity-65 transition-all duration-500"
-            >
-              <FontAwesomeIcon
-                icon={faLinkedin}
-                className="text-gray-300 h-7 w-7"
-              />
-            </a>
-            <a
-              href="https://www.instagram.com/tedxlnmiit/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border m-6 border-gray-600 rounded-full p-2 flex items-center justify-center hover:opacity-65 transition-all duration-500"
-            >
-              <FontAwesomeIcon
-                icon={faInstagram}
-                className="text-gray-300 h-7 w-7"
-              />
-            </a>
+          <div className="flex flex-col items-center -mt-6">
+              <div className="flex md:flex-col justify-center items-center ml-6 -mt-3">
+              <a
+                href="https://www.linkedin.com/company/tedxlnmiit/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-gray-600 rounded-full p-2 flex items-center justify-center hover:opacity-65 transition-all duration-500"
+              >
+                <FontAwesomeIcon
+                  icon={faLinkedin}
+                  className="text-gray-300 h-7 w-7"
+                />
+              </a>
+              <a
+                href="https://www.instagram.com/tedxlnmiit/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border m-6 border-gray-600 rounded-full p-2 flex items-center justify-center hover:opacity-65 transition-all duration-500"
+              >
+                <FontAwesomeIcon
+                  icon={faInstagram}
+                  className="text-gray-300 h-7 w-7"
+                />
+              </a>
+            </div>
             <Link to="/booktickets" onClick={closeMenu}>
               <Button buttonLabel=" Book Tickets Now! " />
             </Link>
