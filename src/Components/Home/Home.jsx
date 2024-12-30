@@ -93,9 +93,9 @@ const Home = () => {
     };
   }, []);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  });
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // });
 
   return (
     <div className="custom-container overflow-hidden relative">
@@ -137,9 +137,7 @@ const Home = () => {
                 </h2>
                 <div className="hero-buttons mt-8 space-x-4 font-generalSans">
                   <RedButton to="#">
-                    <Link to={"/booktickets"}>
-                    Book Your Tickets Now !
-                    </Link>
+                    <Link to={"/booktickets"}>Book Your Tickets Now !</Link>
                   </RedButton>
                 </div>
               </div>
@@ -349,39 +347,36 @@ const Home = () => {
       </motion.section>
 
       <Ticket />
-          
-      {/* FAQ Section */}
 
       <motion.section
-  id="yt"
-  className="faq-section mt-32 md:mt-40 w-full flex flex-col justify-center items-center bg-black text-red-500"
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true }}
-  variants={sectionVariants}>
-  <Youtube />
-</motion.section>
+        id="yt"
+        className="faq-section -mt-40 w-full flex flex-col justify-center items-center bg-black text-red-500"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={sectionVariants}>
+        <Youtube />
+      </motion.section>
 
-<motion.section
-  id="CampusAmb"
-  className="mb-16 w-full flex flex-col justify-center items-center bg-black text-red-500"
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true }}
-  variants={sectionVariants}>
-  <CampusAmbassedor />
-</motion.section>
+      <motion.section
+        id="CampusAmb"
+        className=" -mt-48 w-full flex flex-col justify-center items-center bg-black text-red-500"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={sectionVariants}>
+        <CampusAmbassedor />
+      </motion.section>
 
-<motion.section
-  id="faq"
-  className="faq-section mb-24  w-full flex flex-col justify-center items-center bg-black text-red-500"
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true }}
-  variants={sectionVariants}>
-  <Faq />
-</motion.section>
-
+      <motion.section
+        id="faq"
+        className="faq-section mb-24  w-full flex flex-col justify-center items-center bg-black text-red-500"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={sectionVariants}>
+        <Faq />
+      </motion.section>
     </div>
   );
 };
