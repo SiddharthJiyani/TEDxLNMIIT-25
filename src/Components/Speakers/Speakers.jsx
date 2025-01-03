@@ -14,7 +14,7 @@ const Speakers = ({
     <div>
       {/* Container with a dynamic background image */}
       <div
-        className={` m-10 border-[1px] border-bordorColor rounded-2xl w-[100%] md:w-[260px] h-[300px] bg-[#141414] relative hover:scale-110 transition-all duration-300 hover:overflow-hidden flex flex-col justify-center items-end`}
+        className={` m-10 border-[1px] border-bordorColor rounded-2xl w-[100%] min-w-[185px]   md:w-[260px] h-[300px] bg-[#141414] relative hover:scale-110 transition-all duration-300 hover:overflow-hidden flex flex-col justify-center items-end`}
         style={{
           backgroundImage: `url(${x})`,
           backgroundSize: "cover",
@@ -23,7 +23,7 @@ const Speakers = ({
       >
         {/* Foreground Image positioned to center */}
         <img
-          className="w-full h-[280px] absolute bottom-0  font-amsterdam rounded-2xl transition-all duration-300 "
+          className="w-full h-[280px] absolute bottom-0  font-amsterdam rounded-2xl transition-all duration-300 object-cover "
           src={imgSrc}
           alt={altText}
         />
