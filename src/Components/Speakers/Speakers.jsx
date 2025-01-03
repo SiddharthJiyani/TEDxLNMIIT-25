@@ -19,11 +19,11 @@ const Speakers = ({
           backgroundImage: `url(${x})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-        }} 
+        }}
       >
         {/* Foreground Image positioned to center */}
         <img
-          className="w-full h-[280px] absolute bottom-0 font-amsterdam rounded-2xl transition-all duration-300"
+          className="w-full h-[280px] absolute bottom-0  font-amsterdam rounded-2xl transition-all duration-300 "
           src={imgSrc}
           alt={altText}
         />

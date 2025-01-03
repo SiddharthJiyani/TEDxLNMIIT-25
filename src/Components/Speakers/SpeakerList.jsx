@@ -5,7 +5,7 @@ import Speakers from "./Speakers";
 import Title from "../utility/Title";
 
 import currentspeaker1 from "../../assets/Speakers/speaker1.png";
-import currentspeaker2 from "../../assets/PastSpeakers/speaker2.png";
+import currentspeaker2 from "../../assets/Speakers/speaker2.png";
 import currentspeaker3 from "../../assets/PastSpeakers/speaker3.png";
 import currentspeaker4 from "../../assets/PastSpeakers/speaker4.png";
 import currentspeaker5 from "../../assets/PastSpeakers/speaker5.png";
@@ -37,7 +37,18 @@ const SpeakerList = () => {
       },
       websiteUrl: "https://www.spacezoneindia.com/anand-megalingam-ceo/", // Correct website URL for speaker1
     },
-  ]; 
+    {
+      imgSrc: currentspeaker2, // Update with the correct image source for Aabha Hanjura
+      altText: "Aabha Hanjura",
+      name: "Aabha Hanjura",
+      bio: "She is a celebrated Indian singer-songwriter and founder of the band Sufistication. Having carved a unique niche in music by seamlessly blending Kashmiri folk, Sufi, and contemporary pop, she has earned nationwide acclaim in her journey. Her rendition of the Kashmiri classic 'Hukus Bukus' gained widespread recognition and was featured in the hit OTT series, 'The Family Man.'",
+      socialHandles: {
+        linkedin: "https://www.linkedin.com/in/aabha-hanjura-94182b15/", // Update with actual LinkedIn link if available
+        instagram: "https://www.instagram.com/aabhahanjura/", // Update with actual Instagram link if available
+      },
+      websiteUrl: "", // Update with the correct website URL for Aabha Hanjura
+    },
+  ];
 
   return (
     <section className="py-16 text-white">
@@ -46,7 +57,8 @@ const SpeakerList = () => {
           className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}>
+          transition={{ duration: 0.5 }}
+        >
           <Title text="Speakers" />
         </motion.h1>
         <motion.div
@@ -55,7 +67,8 @@ const SpeakerList = () => {
           className="flex mr-14 md:mr-0 items-center flex-wrap gap-8 justify-center "
           variants={containerVariants}
           initial="hidden"
-          animate="visible">
+          animate="visible"
+        >
           {speakersData.map((speaker, index) => (
             <Speakers
               key={index}
