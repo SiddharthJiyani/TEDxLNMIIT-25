@@ -86,7 +86,7 @@ const SpeakerList = () => {
       },
       websiteUrl: "", // Official website not found
     },
-    {
+    { 
       imgSrc: currentspeaker6, // Update with the correct image source for Dr. Kamna Chhibber
       altText: "Dr. Kamna Chhibber",
       name: "Dr. Kamna Chhibber",
