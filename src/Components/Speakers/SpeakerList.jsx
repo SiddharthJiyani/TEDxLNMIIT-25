@@ -6,12 +6,17 @@ import Title from "../utility/Title";
 
 import currentspeaker1 from "../../assets/Speakers/speaker1.png";
 import currentspeaker2 from "../../assets/Speakers/speaker2.png";
-import currentspeaker3 from "../../assets/PastSpeakers/speaker3.png";
-import currentspeaker4 from "../../assets/PastSpeakers/speaker4.png";
-import currentspeaker5 from "../../assets/PastSpeakers/speaker5.png";
-import currentspeaker6 from "../../assets/PastSpeakers/speaker6.png";
-import currentspeaker7 from "../../assets/PastSpeakers/speaker7.png";
-import currentspeaker9 from "../../assets/PastSpeakers/speaker9.png";
+import currentspeaker3 from "../../assets/Speakers/2.png";
+import currentspeaker4 from "../../assets/Speakers/6.png";
+import currentspeaker5 from "../../assets/Speakers/3.png";
+import currentspeaker6 from "../../assets/Speakers/4.png";
+import currentspeaker7 from "../../assets/Speakers/5.png";
+// import currentspeaker3 from "../../assets/PastSpeakers/speaker3.png";
+// import currentspeaker4 from "../../assets/PastSpeakers/speaker4.png";
+// import currentspeaker5 from "../../assets/PastSpeakers/speaker5.png";
+// import currentspeaker6 from "../../assets/PastSpeakers/speaker6.png";
+// import currentspeaker7 from "../../assets/PastSpeakers/speaker7.png";
+// import currentspeaker9 from "../../assets/PastSpeakers/speaker9.png";
 
 const SpeakerList = () => {
   const containerVariants = {
@@ -47,6 +52,61 @@ const SpeakerList = () => {
         instagram: "https://www.instagram.com/aabhahanjura/", // Update with actual Instagram link if available
       },
       websiteUrl: "", // Update with the correct website URL for Aabha Hanjura
+    },
+    {
+      imgSrc: currentspeaker3, // Update with the correct image source for Preksha Kaparwan
+      altText: "Preksha Kaparwan",
+      name: "Preksha Kaparwan",
+      bio: "Preksha Kaparwan – the dynamic entrepreneur and storyteller revolutionizing the way we access and understand data! As the Co-Founder and CMO of Alphaa AI, she’s on a mission to democratize data using AI and NLP, building a platform that empowers users to interact with data effortlessly. A passionate marketer and a curious technologist, Preksha blends creativity and innovation to drive change.",
+      socialHandles: {
+        linkedin: "https://www.linkedin.com/in/prekshak/", // Update with actual LinkedIn link if available
+        instagram: "https://www.instagram.com/bossymiss/", // Update with actual Instagram link if available
+      },
+      websiteUrl: "", // Update with the correct website URL for Preksha Kaparwan
+    },
+    {
+      imgSrc: currentspeaker4, // Update with the correct image source for Shelly Jyoti
+      altText: "Shelly Jyoti",
+      name: "Shelly Jyoti",
+      bio: "Shelly Jyoti is a contemporary artist, designer, and poet whose work explores Gandhi's principles of nation-building and moral societies. She collaborates with Ajrakh artisans to revive ancient textile traditions, blending khadi and Ajrakh with modern narratives.",
+      socialHandles: {
+        linkedin: "", // LinkedIn profile not found
+        instagram: "https://www.instagram.com/shellyjyoti1211/", // Instagram profile
+      },
+      websiteUrl: "https://www.shellyjyoti.com/", // Official website
+    },
+    {
+      imgSrc: currentspeaker5, // Update with the correct image source for Dr. Lopa Mudraa
+      altText: "Dr. Lopa Mudraa",
+      name: "Dr. Lopa Mudraa",
+      bio: "Dr. Lopa Mudraa is a trailblazing Security Evangelist with over two decades of expertise in Information Security, Data Privacy, and Risk Management. Recognized as a 4x Global 100 Chief Information Security Officer awardee, she transforms security into a business enabler, inspiring organizations to achieve growth through secure, trusted platforms.",
+      socialHandles: {
+        linkedin: "https://www.linkedin.com/in/drlopamudraabasuu/", // LinkedIn profile not found
+        instagram: "", // Instagram profile not found
+      },
+      websiteUrl: "", // Official website not found
+    },
+    {
+      imgSrc: currentspeaker6, // Update with the correct image source for Dr. Kamna Chhibber
+      altText: "Dr. Kamna Chhibber",
+      name: "Dr. Kamna Chhibber",
+      bio: "Dr. Kamna Chhibber, Head of Mental Health at Fortis Healthcare, is a renowned clinical psychologist with over 15 years of experience specializing in Cognitive Behaviour Therapy, relationships, trauma, and abuse. A passionate advocate for mental health awareness, she is an accomplished author and speaker whose insights have shaped the discourse on mental well-being across leading platforms.",
+      socialHandles: {
+        linkedin: "https://www.linkedin.com/in/kamna-chhibber-15a18b31/", // LinkedIn profile
+        instagram: "https://www.instagram.com/fortismentalhealth/", // Instagram profile
+      },
+      websiteUrl: "", // Official website not found
+    },
+    {
+      imgSrc: currentspeaker7, // Update with the correct image source for Dr. Ajay Data
+      altText: "Dr. Ajay Data",
+      name: "Dr. Ajay Data",
+      bio: "Dr. Ajay Data, Managing Director of Data Group of Industries, is a visionary entrepreneur who introduced the internet to Rajasthan. As founder of Data XGen Technologies, he developed the world’s first linguistic email solution, driving global digital inclusion.",
+      socialHandles: {
+        linkedin: "", // LinkedIn profile
+        instagram: "https://www.instagram.com/ajaydata/", // Instagram profile
+      },
+      websiteUrl: "https://www.ajaydata.com/", // Official website
     },
   ];
 
@@ -88,4 +148,3 @@ const SpeakerList = () => {
 };
 
 export default SpeakerList;
- 
