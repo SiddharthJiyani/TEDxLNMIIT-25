@@ -8,7 +8,7 @@ import image5 from "../../assets/sponsors/UB.png";
 import imagec1 from "../../assets/sponsors/vrj.png";
 import imagec2 from "../../assets/sponsors/waffle.png";
 import imagec3 from "../../assets/sponsors/fern.jpg";
-// import imagec4 from "../../assets/sponsors/PP.png";
+import imagec4 from "../../assets/sponsors/cb.png";
 // import imagec5 from "../../assets/sponsors/UB.png";
 import PartnerSmallBox from "./PartnerSmallBox";
 import { motion } from "framer-motion";
@@ -59,6 +59,11 @@ const Partner = () => {
     },
     {
       imgSrc: imagec3,
+      name: "",
+      link: "",
+    },
+    {
+      imgSrc: imagec4,
       name: "",
       link: "",
     },
