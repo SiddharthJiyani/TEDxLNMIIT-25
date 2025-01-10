@@ -5,6 +5,11 @@ import image2 from "../../assets/sponsors/EP.png";
 import image3 from "../../assets/sponsors/HP.png";
 import image4 from "../../assets/sponsors/PP.png";
 import image5 from "../../assets/sponsors/UB.png";
+import imagec1 from "../../assets/sponsors/vrj.png";
+import imagec2 from "../../assets/sponsors/waffle.png";
+import imagec3 from "../../assets/sponsors/fern.jpg";
+// import imagec4 from "../../assets/sponsors/PP.png";
+// import imagec5 from "../../assets/sponsors/UB.png";
 import PartnerSmallBox from "./PartnerSmallBox";
 import { motion } from "framer-motion";
 import Title from "../utility/Title";
@@ -41,14 +46,33 @@ const Partner = () => {
     },
   ];
 
+  const currPartners = [
+    {
+      imgSrc: imagec1,
+      name: "",
+      link: "",
+    },
+    {
+      imgSrc: imagec2,
+      name: "",
+      link: "",
+    },
+    {
+      imgSrc: imagec3,
+      name: "",
+      link: "",
+    },
+  ];
+
+
   return (
     <div className="flex flex-col items-center bg-black text-white min-h-screen py-20">
       <h2 className="mt-5 text-6xl font-bold mb-5 text-center">
         {/* Current Partners */}
         <Title text="Current" red={"Partners"} className="text-6xl font-bold" />
       </h2>
-      {/* <div className="flex flex-wrap justify-center mb-10">
-        {partners.map((partner, index) => (
+      <div className="flex flex-wrap justify-center mb-10">
+        {currPartners.map((partner, index) => (
           <a
             key={index}
             href={partner.link}
@@ -63,11 +87,10 @@ const Partner = () => {
             />
           </a>
         ))}
-      </div> */}
-      <h1 className="text-white text-6xl md:text-8xl font-bold uppercase m-10 mb-28">
-        {/* Revealing <span className="text-red-600">Soon</span> */}
+      </div>
+      {/* <h1 className="text-white text-6xl md:text-8xl font-bold uppercase m-10 mb-28">
         <h1 className="text-gray-500 text-5xl font-normal mx-auto text-center">Revealing Soon!!</h1>
-      </h1>
+      </h1> */}
       <h3 className="mt-5 text-6xl font-bold mb-16 text-center ">
         <Title
           text="Previous"
