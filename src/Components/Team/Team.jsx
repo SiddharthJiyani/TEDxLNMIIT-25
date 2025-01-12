@@ -48,7 +48,7 @@ import Adwaiy from "../../assets/team/Adwaiy.jpg";
 // import Kanishq from "../../assets/team/kanishqMalhotraY23.jpg";
 // import Kunal from "../../assets/team/kunal.jpg";
 // import Chirag from "../../assets/team/chirag.jpg";
-import Naren from "../../assets/team/dr-narendra-kumar.jpg";
+import Naren from "../../assets/team/narendra_sir.jpg";
 
 import Kunal from "../../assets/team/Kunal Sharma Y23.jpg";
 import Chirag from "../../assets/team/Chirag Mehta_.jpg";
