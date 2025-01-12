@@ -48,6 +48,7 @@ import Adwaiy from "../../assets/team/Adwaiy.jpg";
 // import Kanishq from "../../assets/team/kanishqMalhotraY23.jpg";
 // import Kunal from "../../assets/team/kunal.jpg";
 // import Chirag from "../../assets/team/chirag.jpg";
+import Naren from "../../assets/team/dr-narendra-kumar.jpg";
 
 import Kunal from "../../assets/team/Kunal Sharma Y23.jpg";
 import Chirag from "../../assets/team/Chirag Mehta_.jpg";
@@ -101,9 +102,7 @@ const Team = () => {
   };
 
   return (
-    <motion.div
-      className="bg-red py-10 text-center text-white overflow-hidden"
-    >
+    <motion.div className="bg-red py-10 text-center text-white overflow-hidden">
       {/* Team Section Title */}
       <motion.div>
         {/* <h1 className="text-8xl  w-full"> */}
@@ -115,15 +114,32 @@ const Team = () => {
       <motion.h2
         whileInView="show"
         variants={itemVariants}
-        className="text-2xl font-semibold mt-10 mb-6"
-      >
+        className="text-2xl font-semibold mt-10 mb-6">
+        Faculty Mentor
+      </motion.h2>
+      <motion.div
+        className="flex flex-wrap justify-center gap-6"
+        whileInView="show"
+        variants={containerVariants}>
+        <motion.div whileInView="show" variants={itemVariants}>
+          <MemberCard
+            name="Dr. Narendra Kumar"
+            // link="https://www.linkedin.com/in/abhey-raheja-19a7b525b/"
+            imgSrc={Naren}
+          />
+        </motion.div>
+      </motion.div>
+      {/* Organizer */}
+      <motion.h2
+        whileInView="show"
+        variants={itemVariants}
+        className="text-2xl font-semibold mt-10 mb-6">
         Organizer
       </motion.h2>
       <motion.div
         className="flex flex-wrap justify-center gap-6"
         whileInView="show"
-        variants={containerVariants}
-      >
+        variants={containerVariants}>
         <motion.div whileInView="show" variants={itemVariants}>
           <MemberCard
             name="Abhey Raheja"
@@ -160,15 +176,13 @@ const Team = () => {
           <motion.h2
             variants={itemVariants}
             whileInView="show"
-            className="text-2xl font-semibold mt-10 mb-6"
-          >
+            className="text-2xl font-semibold mt-10 mb-6">
             Development Head
           </motion.h2>
           <motion.div
             className="flex justify-center gap-6"
             variants={containerVariants}
-            whileInView="show"
-          >
+            whileInView="show">
             <motion.div whileInView="show" variants={itemVariants}>
               <MemberCard
                 name="Siddharth Jiyani"
@@ -183,14 +197,12 @@ const Team = () => {
         <div className="w-full md:w-1/3 px-4">
           <motion.h2
             variants={itemVariants}
-            className="text-2xl font-semibold mt-10 mb-6"
-          >
+            className="text-2xl font-semibold mt-10 mb-6">
             Content Writing Head
           </motion.h2>
           <motion.div
             className="flex justify-center gap-6"
-            variants={containerVariants}
-          >
+            variants={containerVariants}>
             <motion.div variants={itemVariants}>
               <MemberCard
                 name="Sahil Gaur"
@@ -207,14 +219,12 @@ const Team = () => {
         <div className="w-full md:w-1/2 px-4">
           <motion.h2
             variants={itemVariants}
-            className="text-2xl font-semibold mt-10 mb-6"
-          >
+            className="text-2xl font-semibold mt-10 mb-6">
             Creative Head
           </motion.h2>
           <motion.div
             className="flex flex-wrap justify-center gap-6"
-            variants={containerVariants}
-          >
+            variants={containerVariants}>
             <motion.div variants={itemVariants}>
               <MemberCard
                 name="Krishna Manchanda"
@@ -231,8 +241,6 @@ const Team = () => {
             </motion.div>
           </motion.div>
         </div>
-
-        
       </div>
       <hr className="m-5 mx-5"></hr>
 
@@ -256,7 +264,7 @@ const Team = () => {
       {/* Content Writing */}
       <div className="w-full md:w-screenpx-4 mb-10">
         <h2 className="text-2xl font-semibold mb-4 text-center">
-        Content Writing
+          Content Writing
         </h2>
         <div className="flex flex-wrap justify-center gap-6">
           <MemberCard

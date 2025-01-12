@@ -22,12 +22,12 @@ const MemberCard = ({ name, position, link, imgSrc }) => {
       {/* Hovered Component */}
       <div
         className={`absolute mt-4 ml-4 w-40 h-40 inset-0 rounded-full flex flex-col items-center justify-center bg-gradient-to-b from-[#DA0400] to-[#890300] opacity-0 transition-all duration-300 group-hover:opacity-100 ${
-          name === "Krishna Manchanda" ? "ml-6" : ""
+          name === "Krishna Manchanda" || "Dr. Narendra Kumar" ? "ml-6" : ""
         }`}
       >
         <h3
           className={`select-none text-center text-sm/[110%] capitalize leading-none text-white md:text-lg/[110%] md:leading-tight word-break mb-2 ${
-            name === "Krishna Manchanda" ? "md:text-base" : ""
+            name === "Krishna Manchanda" || "Dr. Narendra Kumar" ? "md:text-base" : ""
           }`}
         >
           {name}
