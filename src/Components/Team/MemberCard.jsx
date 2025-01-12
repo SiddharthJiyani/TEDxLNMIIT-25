@@ -14,7 +14,9 @@ const MemberCard = ({ name, position, link, imgSrc }) => {
       </div>
 
       {/* Name section */}
-      <h3 className="mt-4 text-xl font-bold text-red-500">{name}</h3>
+      <h3 className={`mt-4 text-xl font-bold text-red-500 ${name ==="Dr. Narendra Kumar" ? "!text-lg" : ""} 
+      `}>
+      {name}</h3>
 
       {/* Title section */}
       <p className="text-lg italic text-gray-400">{position}</p>
@@ -22,7 +24,7 @@ const MemberCard = ({ name, position, link, imgSrc }) => {
       {/* Hovered Component */}
       <div
         className={`absolute mt-4 ml-4 w-40 h-40 inset-0 rounded-full flex flex-col items-center justify-center bg-gradient-to-b from-[#DA0400] to-[#890300] opacity-0 transition-all duration-300 group-hover:opacity-100 ${
-          name === "Krishna Manchanda" || "Dr. Narendra Kumar" ? "ml-6" : ""
+          name === ("Krishna Manchanda" || "Dr. Narendra Kumar" )? "ml-6" : ""
         }`}
       >
         <h3
